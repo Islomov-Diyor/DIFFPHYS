@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<style>
+  body { font-family: DejaVu Sans; font-size: 12px; }
+  h1, h2 { color:#0d6efd; }
+  .box { border:1px solid #999; padding:8px; margin-bottom:10px; }
+  img { width:100%; margin-bottom:10px; }
+</style>
+</head>
+<body>
+
+<h1>RLC zanjiri — sonli modellashtirish natijalari</h1>
+
+<h2>1. Kiritilgan parametrlar</h2>
+<div class="box">
+R={{R}} Ohm<br>
+L={{L}} H<br>
+C={{C}} F<br>
+V0={{V0}} V<br>
+q0={{q0}} C<br>
+i0={{i0}} A<br>
+T={{t_end}} s<br>
+dt={{dt}} s
+</div>
+
+<h2>2. Grafik natijalar</h2>
+
+<div class="box">
+<b>Tok i(t)</b><br>
+<img src="data:image/png;base64,{{ img_i }}">
+</div>
+
+<div class="box">
+<b>Kondensator kuchlanishi Vc(t)</b><br>
+<img src="data:image/png;base64,{{ img_vc }}">
+</div>
+
+<div class="box">
+<b>Zaryad q(t)</b><br>
+<img src="data:image/png;base64,{{ img_q }}">
+</div>
+
+<h2>3. Xulosa</h2>
+<div class="box">
+{{ conclusion }}
+</div>
+
+</body>
+</html>

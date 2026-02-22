@@ -1,0 +1,263 @@
+{% load static %}
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mass–Spring 2 | DiffPhys</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .soft-card{ border:0; border-radius:16px; box-shadow:0 10px 30px rgba(10,20,40,08); background:#fff; }
+    .btn-pill{ border-radius:999px; padding:.65rem 1.1rem; }
+    .img-frame{ border-radius:14px; border:1px solid #eef0f6; background:#fff; overflow:hidden; }
+    .muted{ color:#6c757d; }
+
+    .hero{
+      border-radius:22px; color:#fff; position:relative; overflow:hidden;
+      border:1px solid rgba(0,0,0,08);
+      background: linear-gradient(135deg, #0f172a 0%, #334155 45%, #22c55e 110%);
+      padding:22px 28px;
+    }
+    .pill{ display:inline-flex; align-items:center; gap:8px; padding:.45rem .8rem; border-radius:999px;
+      border:1px solid rgba(255,255,255,28); background: rgba(255,255,255,16); font-size:.92rem; }
+    .nav-pills .nav-link{ border-radius:999px; background:#f3f5fb; border:1px solid #e7ebf6; color:#3b3b3b; }
+    .nav-pills .nav-link.active{ background:#111827; border-color:#111827; color:#fff; }
+    .form-control, .form-select{ border-radius:12px; padding:.6rem .8rem; }
+
+    #phase3d{ height: 520px; width: 100%; }
+  </style>
+</head>
+
+<body>
+<div class="container py-4">
+
+  <div class="hero mb-4">
+    <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
+      <div>
+       <h2 class="mb-1">Prujina–massa (2-tartibli ODE) — tahlil</h2>
+        <div style="opacity:.92;">m x'' + c x' + k x = 0  &nbsp;|&nbsp; (vertical bo‘lsa: muvozanat x<sub>eq</sub>=mg/k)</div>
+      </div>
+      <div class="d-flex align-items-center gap-2 flex-wrap">
+        <a href="/" class="btn btn-light btn-pill">Interaktiv xizmatlarga qaytish</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <!-- INPUTS -->
+    <div class="col-12 col-lg-4">
+      <div class="card soft-card">
+        <div class="card-body p-4">
+          <h5 class="mb-3">Parametrlar</h5>
+
+          <!-- MUHIM: GET bilan ishlaydi -->
+          <form method="get" action="{% url 'ai_module:mass_spring2' %}" class="vstack gap-3">
+
+            <div>
+              <label class="form-label">Rejim</label>
+              <select class="form-select" name="mode">
+                <option value="horizontal" {% if form.mode == "horizontal" %}selected{% endif %}>Horizontal (oddiy Hooke)</option>
+                <option value="vertical" {% if form.mode == "vertical" %}selected{% endif %}>Vertical (mg hisobga olinadi)</option>
+              </select>
+              <div class="muted small mt-1">Vertical bo‘lsa x_eq = m·g/k, grafiklar x - x_eq bo‘yicha tahlil qilinadi.</div>
+            </div>
+
+            <div><label class="form-label">m (kg)</label>
+              <input class="form-control" name="m" type="number" step="any" value="{{ form.m }}">
+            </div>
+
+            <div><label class="form-label">k (N/m)</label>
+              <input class="form-control" name="k" type="number" step="any" value="{{ form.k }}">
+            </div>
+
+            <div><label class="form-label">c (N·s/m)</label>
+              <input class="form-control" name="c" type="number" step="any" value="{{ form.c }}">
+              <div class="muted small mt-1">c=0 bo‘lsa undamped (so‘nishsiz) tebranish.</div>
+            </div>
+
+            <div><label class="form-label">g (m/s²)</label>
+              <input class="form-control" name="g" type="number" step="any" value="{{ form.g }}">
+              <div class="muted small mt-1">Faqat vertical rejimda ishlatiladi.</div>
+            </div>
+
+            <hr class="my-2">
+
+            <div><label class="form-label">x(0) (m)</label>
+              <input class="form-control" name="x0" type="number" step="any" value="{{ form.x0 }}">
+            </div>
+
+            <div><label class="form-label">v(0) (m/s)</label>
+              <input class="form-control" name="v0" type="number" step="any" value="{{ form.v0 }}">
+            </div>
+
+            <hr class="my-2">
+
+            <div><label class="form-label">tmax (s)</label>
+              <input class="form-control" name="tmax" type="number" step="any" value="{{ form.tmax }}">
+            </div>
+
+            <div><label class="form-label">nt (nuqtalar soni)</label>
+              <input class="form-control" name="nt" type="number" step="1" value="{{ form.nt }}">
+            </div>
+
+            <button class="btn btn-primary btn-pill w-100" type="submit">Hisoblash</button>
+          </form>
+
+          {% if stats %}
+          <div class="mt-4">
+            <h6 class="mb-2">Tahlil (mass_spring2 uchun)</h6>
+
+            <div class="p-3 bg-light rounded-3">
+              <div class="muted">ω₀ = √(k/m)</div>
+              <div class="fw-semibold">{{ stats.omega0 }}</div>
+            </div>
+
+            <div class="p-3 bg-light rounded-3 mt-2">
+              <div class="muted">ζ = c / (2√(mk))</div>
+              <div class="fw-semibold">{{ stats.zeta }}</div>
+            </div>
+
+            <div class="p-3 bg-light rounded-3 mt-2">
+              <div class="muted">Rejim (damping)</div>
+              <div class="fw-semibold">{{ stats.regime }}</div>
+            </div>
+
+            {% if stats.x_eq is not None %}
+            <div class="p-3 bg-light rounded-3 mt-2">
+              <div class="muted">x_eq = m·g/k (vertical)</div>
+              <div class="fw-semibold">{{ stats.x_eq }}</div>
+            </div>
+            {% endif %}
+
+            <hr class="my-3">
+
+            <div class="p-3 bg-light rounded-3">
+              <div class="muted">x_max / x_min</div>
+              <div class="fw-semibold">{{ stats.x_max }} / {{ stats.x_min }}</div>
+            </div>
+
+            <div class="p-3 bg-light rounded-3 mt-2">
+              <div class="muted">v_max / v_min</div>
+              <div class="fw-semibold">{{ stats.v_max }} / {{ stats.v_min }}</div>
+            </div>
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+
+    <!-- OUTPUTS -->
+    <div class="col-12 col-lg-8">
+      <div class="card soft-card">
+        <div class="card-body p-4">
+
+          <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+            <h5 class="mb-0">Natijalar</h5>
+            <div class="muted small">x(t), v(t) va 3D fazoviy trayektoriya</div>
+          </div>
+
+          {% if plot_x_base64 %}
+            <ul class="nav nav-pills mb-3" role="tablist">
+              <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#px" type="button">x(t)</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#pv" type="button">v(t)</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#pa" type="button">a(t)</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#p3d" type="button">Fazoviy (3D)</button></li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="px">
+                <div class="img-frame p-2"><img class="img-fluid" src="data:image/png;base64,{{ plot_x_base64 }}" alt="x(t)"></div>
+              </div>
+              <div class="tab-pane fade" id="pv">
+                <div class="img-frame p-2"><img class="img-fluid" src="data:image/png;base64,{{ plot_v_base64 }}" alt="v(t)"></div>
+              </div>
+              <div class="tab-pane fade" id="pa">
+                <div class="img-frame p-2"><img class="img-fluid" src="data:image/png;base64,{{ plot_a_base64 }}" alt="a(t)"></div>
+              </div>
+
+              <div class="tab-pane fade" id="p3d">
+                {% if plotly_payload %}
+                  <div class="muted small mb-2">X: x (m), Y: v (m/s), Z: t (s)</div>
+                  <div class="img-frame p-2"><div id="phase3d"></div></div>
+                {% else %}
+                  <div class="p-4 bg-light rounded-4 text-center">
+                    <div class="fs-6 fw-semibold mb-2">3D grafik hali yo‘q</div>
+                    <div class="muted">Parametrlarni kiriting va <b>Hisoblash</b> tugmasini bosing.</div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+
+            {% if conclusion %}
+              <div class="card soft-card mt-3">
+                <div class="card-body">
+                  <h5 class="mb-2">Xulosa</h5>
+                  <p class="mb-0">{{ conclusion }}</p>
+                </div>
+              </div>
+            {% endif %}
+
+            <!-- PDF -->
+            <div class="d-flex gap-2 mt-3 flex-wrap">
+              <form method="post" action="{% url 'ai_module:mass_spring2_pdf' %}">
+                {% csrf_token %}
+                <input type="hidden" name="mode" value="{{ form.mode }}">
+                <input type="hidden" name="m" value="{{ form.m }}">
+                <input type="hidden" name="k" value="{{ form.k }}">
+                <input type="hidden" name="c" value="{{ form.c }}">
+                <input type="hidden" name="g" value="{{ form.g }}">
+                <input type="hidden" name="x0" value="{{ form.x0 }}">
+                <input type="hidden" name="v0" value="{{ form.v0 }}">
+                <input type="hidden" name="tmax" value="{{ form.tmax }}">
+                <input type="hidden" name="nt" value="{{ form.nt }}">
+                <input type="hidden" name="conclusion" value="{{ conclusion }}">
+                <button type="submit" class="btn btn-outline-dark btn-pill">PDF yuklab olish</button>
+              </form>
+            </div>
+
+          {% else %}
+            <div class="p-4 bg-light rounded-4 text-center">
+              <div class="fs-5 fw-semibold mb-2">Grafiklar hali yo‘q</div>
+              <div class="muted">Parametrlarni kiriting va <b>Hisoblash</b> tugmasini bosing.</div>
+            </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-4 muted small">© DiffPhys • Django + Matplotlib + Plotly • Tebranishlar</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+
+{% if plotly_payload %}
+<script>
+  const payload = {{ plotly_payload|safe }};
+
+  function render3D(){
+    Plotly.newPlot('phase3d', payload.data, payload.layout, {responsive:true, displaylogo:false});
+  }
+  document.addEventListener("DOMContentLoaded", render3D);
+
+  // Tab ochilganda resize
+  document.querySelectorAll('button[data-bs-toggle="pill"]').forEach(btn => {
+    btn.addEventListener('shown.bs.tab', function (event) {
+      if (event.target.getAttribute('data-bs-target') === '#p3d') {
+        setTimeout(() => {
+          const gd = document.querySelector('#phase3d .plotly-graph-div');
+          if (gd) Plotly.Plots.resize(gd);
+        }, 150);
+      }
+    });
+  });
+</script>
+{% endif %}
+
+</body>
+</html>

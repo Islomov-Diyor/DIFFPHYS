@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="hero-section text-center text-white d-flex align-items-start justify-content-center"
+     style="
+        background-image: url('{% static 'images/edu_sup.jpg' %}');
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-top: 20px;">
+    <div>
+        <h1 class="fw-bold display-1">Metodik ta'minot</h1>
+    </div>
+</div>
+
+
+<div class="container my-5">
+    <div class="row">
+        {% for texnologiya in ped_texnologiyalar %}
+        <div class="col-md-6 col-lg-3 mb-4">
+           <div class="card shadow interactive-block" style="min-height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ texnologiya.sarlavha }}</h5>
+                    <a href="{% url 'download_ped_texnologiya' texnologiya.id %}"
+                       class="btn btn-outline-success d-flex align-items-center justify-content-between">
+                        Yuklab olish <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                    <p class="mt-3 mb-0 text-primary downloads-count"> Yuklashlar soni: {{ texnologiya.yuklashlar_soni }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        {% for mezon in baholash_mezonlari %}
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card shadow interactive-block" style="min-height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ mezon.sarlavha }}</h5>
+                    <a href="{% url 'download_baholash_mezon' mezon.id %}"
+                       class="btn btn-outline-success d-flex align-items-center justify-content-between">
+                        Yuklab olish <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                    <p class="mt-3 mb-0 text-primary downloads-count"> Yuklashlar soni: {{ mezon.yuklashlar_soni }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        {% for maslahat in maslahat_tavsiyalar %}
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card shadow interactive-block" style="min-height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ maslahat.sarlavha }}</h5>
+                    <a href="{% url 'download_maslahat' maslahat.id %}"
+                       class="btn btn-outline-success d-flex align-items-center justify-content-between">
+                        Yuklab olish <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                    <p class="mt-3 mb-0 text-primary downloads-count"> Yuklashlar soni: {{ maslahat.yuklashlar_soni }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        {% for ish in mashgulot_ishlanmalari %}
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div class="card shadow interactive-block" style="min-height: 200px;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ ish.sarlavha }}</h5>
+                    <a href="{% url 'download_mashgulot' ish.id %}"
+                       class="btn btn-outline-success d-flex align-items-center justify-content-between">
+                        Yuklab olish <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                    <p class="mt-3 mb-0 text-primary downloads-count"> Yuklashlar soni: {{ ish.yuklashlar_soni }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

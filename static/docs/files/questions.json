@@ -1,0 +1,1502 @@
+[
+    {
+        "question": "Axborot texnologiyalarining til o‘rganishdagi qanday zamonaviy tendensiyasi talabaga istalgan vaqtda va joyda o‘rganish imkonini beradi?",
+        "options": [
+            "Sun’iy intellekt",
+            "Masofaviy ta’lim va onlayn platformalar",
+            "Virtual laboratoriyalar",
+            "Interaktiv doskalar"
+        ],
+        "correct_answer": "Masofaviy ta’lim va onlayn platformalar"
+    },
+    {
+        "question": "Quyidagilardan qaysi biri mobil ilovalarga misol bo‘la oladi?",
+        "options": [
+            "Duolingo",
+            "Moodle",
+            "SMART Board",
+            "Google Translate"
+        ],
+        "correct_answer": "Duolingo"
+    },
+    {
+        "question": "Quyidagilardan qaysi biri til o‘rganishda chat-botlarning foydali jihatidir?",
+        "options": [
+            "Video materiallar tayyorlash",
+            "Grammatika nazariyasini yoritish",
+            "Yozma va og‘zaki ko‘nikmalarni rivojlantirish",
+            "Testlar tuzish"
+        ],
+        "correct_answer": "Yozma va og‘zaki ko‘nikmalarni rivojlantirish"
+    },
+    {
+        "question": "O‘yinlashtirish metodi qanday foyda keltiradi?",
+        "options": [
+            "Talabani faolroq o‘rganishga undaydi",
+            "Kompyuter sozlamalarini yaxshilaydi",
+            "O‘quv xonasini bezatadi",
+            "Interfeys dizaynini optimallashtiradi"
+        ],
+        "correct_answer": "Talabani faolroq o‘rganishga undaydi"
+    },
+    {
+        "question": "Quyidagilardan qaysi biri zamonaviy o‘quv texnik vosita emas?",
+        "options": [
+            "Interaktiv doska",
+            "Videoproektor",
+            "Qog‘ozli ensiklopediya",
+            "Mobil qurilmalar"
+        ],
+        "correct_answer": "Qog‘ozli ensiklopediya"
+    },
+    {
+        "question": "Sun’iy intellekt asosida ishlovchi vositalar qanday ta’limni qo‘llab-quvvatlaydi?",
+        "options": [
+            "Avtonom o‘qituvchi tayyorlash",
+            "Faqat ingliz tili o‘rganishni",
+            "Individual ehtiyojlarga mos ta’lim",
+            "Faoliyatni rejalashtirish"
+        ],
+        "correct_answer": "Individual ehtiyojlarga mos ta’lim"
+    },
+    {
+        "question": "Virtual haqiqat (VR) texnologiyasi yordamida talabalar nima qilishi mumkin?",
+        "options": [
+            "Matnli fayllarni tahrirlash",
+            "Tilni real hayotiy vaziyatlarda qo‘llash",
+            "Mobil telefonlarni sozlash",
+            "Elektron pochta yuborish"
+        ],
+        "correct_answer": "Tilni real hayotiy vaziyatlarda qo‘llash"
+    },
+    {
+        "question": "Interaktiv doskaning asosiy vazifasi nima?",
+        "options": [
+            "Mobil ilova yaratish",
+            "Internetga ulanishni ta’minlash",
+            "Vizual va interaktiv darslar o‘tkazish",
+            "Matnlarni tarjima qilish"
+        ],
+        "correct_answer": "Vizual va interaktiv darslar o‘tkazish"
+    },
+    {
+        "question": "Elektron lug‘atlar va tarjima vositalari qanday yordam beradi?",
+        "options": [
+            "Qog‘ozli darsliklarni almashtiradi",
+            "Yangi so‘zlarni o‘rganish va tushunishga yordam beradi",
+            "Telefon sozlamalarini o‘zgartiradi",
+            "Multimediya yaratishga xizmat qiladi"
+        ],
+        "correct_answer": "Yangi so‘zlarni o‘rganish va tushunishga yordam beradi"
+    },
+    {
+        "question": "Podcastlar va video kontentlar qanday maqsadda ishlatiladi?",
+        "options": [
+            "Kompyuter texnikasini o‘rganish",
+            "Chat-bot dasturlash",
+            "Tinglab tushunish va talaffuzni yaxshilash",
+            "Server o‘rnatish"
+        ],
+        "correct_answer": "Tinglab tushunish va talaffuzni yaxshilash"
+    },
+    {
+        "question": "Zamonaviy axborot texnologiyalari dasturiy vositalari nechta asosiy turga bo‘linadi?",
+        "options": [
+            "Ikki turga",
+            "To‘rt turga",
+            "Besh turga",
+            "Uch turga"
+        ],
+        "correct_answer": "Uch turga"
+    },
+    {
+        "question": "Operatsion tizimlarning asosiy vazifalaridan biri nima?",
+        "options": [
+            "Foydalanuvchini ro‘yxatdan o‘tkazish",
+            "Grafik dizaynni yaratish",
+            "Dasturlarni ishlatish va xotirani boshqarish",
+            "Ma’lumotlarni internetga yuklash"
+        ],
+        "correct_answer": "Dasturlarni ishlatish va xotirani boshqarish"
+    },
+    {
+        "question": "Quyidagilardan qaysi biri tizimli dasturiy ta'minotga kiradi?",
+        "options": [
+            "Photoshop",
+            "MySQL",
+            "Antivirus dasturlari",
+            "Microsoft Word"
+        ],
+        "correct_answer": "Antivirus dasturlari"
+    },
+    {
+        "question": "Amaliy dasturiy ta’minot qanday maqsadda qo‘llaniladi?",
+        "options": [
+            "Kompyuterning texnik qismini sozlash uchun",
+            "Xavfsizlikni ta’minlash uchun",
+            "Foydalanuvchining aniq ishlarini bajarish uchun",
+            "Operatsion tizimni boshqarish uchun"
+        ],
+        "correct_answer": "Foydalanuvchining aniq ishlarini bajarish uchun"
+    },
+    {
+        "question": "Bulutli texnologiyalar foydalanuvchiga qanday imkoniyat beradi?",
+        "options": [
+            "Faqat mobil ilovalarga kirish",
+            "Ma’lumotlarni masofadan saqlash va boshqarish",
+            "Kompyuterni himoya qilish",
+            "Faqat ofis dasturlarini ishga tushirish"
+        ],
+        "correct_answer": "Ma’lumotlarni masofadan saqlash va boshqarish"
+    },
+    {
+        "question": "Kiberxavfsizlik dasturlarining asosiy vazifasi nima?",
+        "options": [
+            "Foydalanuvchi interfeysini yaratish",
+            "Dasturlarni kompilyatsiya qilish",
+            "Tizimni virus va tahdidlardan himoya qilish",
+            "Matnli fayllarni tahrirlash"
+        ],
+        "correct_answer": "Tizimni virus va tahdidlardan himoya qilish"
+    },
+    {
+        "question": "Quyidagilardan qaysi biri tarmoq operatsion tizimlariga tegishli emas?",
+        "options": [
+            "WindowsNT",
+            "UNIX",
+            "MS-DOS",
+            "Linux"
+        ],
+        "correct_answer": "MS-DOS"
+    },
+    {
+        "question": "Ochiq kodli dasturiy ta’minotning afzalligi nimada?",
+        "options": [
+            "Narxining yuqoriligi",
+            "Kodni yashirish",
+            "Foydalanuvchilarni cheklash",
+            "Moslashuvchanligi va rivojlantirish imkoniyati"
+        ],
+        "correct_answer": "Moslashuvchanligi va rivojlantirish imkoniyati"
+    },
+    {
+        "question": "Internet narsalar (IoT) qaysi texnologiyani anglatadi?",
+        "options": [
+            "Faqat mobil ilovalarni yaratish",
+            "Kompyuter o‘yinlarini ishlab chiqish",
+            "Qurilmalar o‘rtasidagi ma’lumot almashinuvi",
+            "Virtual reallikni yaratish"
+        ],
+        "correct_answer": "Qurilmalar o‘rtasidagi ma’lumot almashinuvi"
+    },
+    {
+        "question": "Avtonom tizimlarning asosiy xususiyati nima?",
+        "options": [
+            "Foydalanuvchisiz ishlay olmaslik",
+            "Manba kodi yopiq bo‘lishi",
+            "Mustaqil qaror qabul qilish va harakatlanish",
+            "Faqat tarmoqli muhitda ishlash"
+        ],
+        "correct_answer": "Mustaqil qaror qabul qilish va harakatlanish"
+    },
+    {
+        "question": "MS Word dasturi qanday dastur turiga kiradi?",
+        "options": [
+            "Grafik muharrir",
+            "Matn protsessori",
+            "Tizim dasturi",
+            "Brauzer"
+        ],
+        "correct_answer": "Matn protsessori"
+    },
+    {
+        "question": "[Ctrl]+[C] tugmalari qanday vazifani bajaradi?",
+        "options": [
+            "Matnni o‘chirish",
+            "Matnni tahrirlash",
+            "Matndan nusxa olish",
+            "Matnni chop etish"
+        ],
+        "correct_answer": "Matndan nusxa olish"
+    },
+    {
+        "question": "Word dasturida matnni qalin yozish uchun qaysi tugma kombinatsiyasi ishlatiladi?",
+        "options": [
+            "Ctrl+I",
+            "Ctrl+U",
+            "Ctrl+B",
+            "Ctrl+L"
+        ],
+        "correct_answer": "Ctrl+B"
+    },
+    {
+        "question": "Word dasturida lentaning asosiy guruhi qaysi?",
+        "options": [
+            "Havolalar",
+            "Bosh lenta",
+            "Taqrizlash",
+            "Ko‘rinish"
+        ],
+        "correct_answer": "Bosh lenta"
+    },
+    {
+        "question": "Matnni chapdan tekislash uchun qaysi tugma kombinatsiyasi ishlatiladi?",
+        "options": [
+            "Ctrl+E",
+            "Ctrl+R",
+            "Ctrl+J",
+            "Ctrl+L"
+        ],
+        "correct_answer": "Ctrl+L"
+    },
+    {
+        "question": "Word dasturida diagramma qayerdan qo‘shiladi?",
+        "options": [
+            "Приложения",
+            "Символы",
+            "Иллюстрации",
+            "Мультимедиа"
+        ],
+        "correct_answer": "Иллюстрации"
+    },
+    {
+        "question": "Word dasturida tezkor saqlash uchun qaysi tugmalar ishlatiladi?",
+        "options": [
+            "Ctrl+O",
+            "Ctrl+S",
+            "Ctrl+P",
+            "Ctrl+N"
+        ],
+        "correct_answer": "Ctrl+S"
+    },
+    {
+        "question": "Matn fonini o‘zgartirish uchun qaysi bo‘lim ishlatiladi?",
+        "options": [
+            "Страницы",
+            "Абзац",
+            "Стиль",
+            "Шрифт"
+        ],
+        "correct_answer": "Абзац"
+    },
+    {
+        "question": "Word dasturida havola yaratish uchun qaysi lenta ishlatiladi?",
+        "options": [
+            "Вставка",
+            "Ссылки",
+            "Рассылки",
+            "Вид"
+        ],
+        "correct_answer": "Ссылки"
+    },
+    {
+        "question": "Word dasturidan chiqish uchun qanday tugmalar bosiladi?",
+        "options": [
+            "Ctrl+W",
+            "Alt+F4",
+            "Ctrl+Q",
+            "Ctrl+Z"
+        ],
+        "correct_answer": "Alt+F4"
+    },
+    {
+        "question": "Taqdimot dasturlarining asosiy vazifasi nima?",
+        "options": [
+            "Matn tahrirlash",
+            "Ma’lumotlar bazasini boshqarish",
+            "Axborotni vizual tarzda ifodalash",
+            "Hisob-kitoblarni bajarish"
+        ],
+        "correct_answer": "Axborotni vizual tarzda ifodalash"
+    },
+    {
+        "question": "MS PowerPoint dasturida yangi slayd qo‘shish uchun qaysi menyu ishlatiladi?",
+        "options": [
+            "Home",
+            "Insert",
+            "Design",
+            "View"
+        ],
+        "correct_answer": "Insert"
+    },
+    {
+        "question": "Slayd dizaynini o‘zgartirish uchun qaysi menyu ishlatiladi?",
+        "options": [
+            "Insert",
+            "Animations",
+            "Design",
+            "File"
+        ],
+        "correct_answer": "Design"
+    },
+    {
+        "question": "MS PowerPoint dasturida animatsiya qayerdan qo‘shiladi?",
+        "options": [
+            "View",
+            "Animations",
+            "Design",
+            "Review"
+        ],
+        "correct_answer": "Animations"
+    },
+    {
+        "question": "MS PowerPoint dasturida tayyor taqdimotni ko‘rish rejimi qaysi menyudan boshlanadi?",
+        "options": [
+            "File",
+            "Review",
+            "Slide Show",
+            "Format"
+        ],
+        "correct_answer": "Slide Show"
+    },
+    {
+        "question": "Slaydlardagi obyektlarni guruhlash uchun nima ishlatiladi?",
+        "options": [
+            "Format → Group",
+            "Insert → Object",
+            "Design → Arrange",
+            "View → Zoom"
+        ],
+        "correct_answer": "Format → Group"
+    },
+    {
+        "question": "MS PowerPoint faylining kengaytmasi qanday?",
+        "options": [
+            ".docx",
+            ".xlsx",
+            ".pptx",
+            ".accdb"
+        ],
+        "correct_answer": ".pptx"
+    },
+    {
+        "question": "MS PowerPoint dasturida slaydlar soni qayerda ko‘rsatiladi?",
+        "options": [
+            "Status bar",
+            "Menu panel",
+            "Insert menyusi",
+            "Home menyusi"
+        ],
+        "correct_answer": "Status bar"
+    },
+    {
+        "question": "Taqdimotga musiqa yoki audio fayl qayerdan qo‘shiladi?",
+        "options": [
+            "Insert → Picture",
+            "Insert → Audio",
+            "View → Audio",
+            "Format → Media"
+        ],
+        "correct_answer": "Insert → Audio"
+    },
+    {
+        "question": "Slaydlar o‘rtasida o‘tish effektlari qaysi menyuda joylashgan?",
+        "options": [
+            "Animations",
+            "Transitions",
+            "Design",
+            "View"
+        ],
+        "correct_answer": "Transitions"
+    },
+    {
+        "question": "Ma’lumotlar bazasi nima?",
+        "options": [
+            "Faqat grafik ma’lumotlar to‘plami",
+            "Kompyuter viruslarini aniqlash vositasi",
+            "Tizimli ma’lumotlar to‘plami",
+            "Matn tahrirlovchi dastur"
+        ],
+        "correct_answer": "Tizimli ma’lumotlar to‘plami"
+    },
+    {
+        "question": "Relyatsion ma’lumotlar bazasi qanday tuzilgan?",
+        "options": [
+            "Jadvallar asosida",
+            "Rasmli diagrammalar asosida",
+            "Faqat matnli fayllar orqali",
+            "Foydalanuvchi interfeysi yordamida"
+        ],
+        "correct_answer": "Jadvallar asosida"
+    },
+    {
+        "question": "Microsoft Access dasturining asosiy vazifasi nima?",
+        "options": [
+            "Faqat internet sahifalarini ko‘rish",
+            "Kompyuter o‘yinlarini yaratish",
+            "Ma’lumotlar bazasini yaratish va boshqarish",
+            "Viruslarni aniqlash"
+        ],
+        "correct_answer": "Ma’lumotlar bazasini yaratish va boshqarish"
+    },
+    {
+        "question": "Qaysi maydon turi faqat \"Ha\" va \"Yo‘q\" qiymatlarni oladi?",
+        "options": [
+            "Matn",
+            "Raqam",
+            "Mantiqiy",
+            "Giperhavola"
+        ],
+        "correct_answer": "Mantiqiy"
+    },
+    {
+        "question": "So‘rovlar nima uchun kerak?",
+        "options": [
+            "Faqat rasmni tahrirlash uchun",
+            "Ma’lumotlar ustida operatsiyalar bajarish uchun",
+            "Tizimni himoyalash uchun",
+            "Ma’lumotlar formatini o‘zgartirish uchun"
+        ],
+        "correct_answer": "Ma’lumotlar ustida operatsiyalar bajarish uchun"
+    },
+    {
+        "question": "Access dasturida forma qanday vazifani bajaradi?",
+        "options": [
+            "Ma’lumotlarni kiritish va tahrirlash",
+            "Internetda izlash",
+            "Antivirus sifatida ishlash",
+            "Hujjatlarni bosmaga chiqarish"
+        ],
+        "correct_answer": "Ma’lumotlarni kiritish va tahrirlash"
+    },
+    {
+        "question": "“Тип данных” nima?",
+        "options": [
+            "Ma’lumot turini bildiradi",
+            "Hujjat turini bildiradi",
+            "Faqat belgilar sonini bildiradi",
+            "Dastur turi"
+        ],
+        "correct_answer": "Ma’lumot turini bildiradi"
+    },
+    {
+        "question": "Asosiy (kalit) maydon qanday bo‘ladi?",
+        "options": [
+            "Har bir yozuv uchun bir xil",
+            "Faqat matndan iborat",
+            "Har bir yozuv uchun noyob",
+            "Bo‘sh qolishi mumkin"
+        ],
+        "correct_answer": "Har bir yozuv uchun noyob"
+    },
+    {
+        "question": "Qaysi menyu orqali Accessda yangi MB yaratiladi?",
+        "options": [
+            "Главная",
+            "Работа с базами данных",
+            "Файл → Создать",
+            "Внешние данные"
+        ],
+        "correct_answer": "Файл → Создать"
+    },
+    {
+        "question": "MS Accessda “Формы” menyusi qanday funktsiyani bajaradi?",
+        "options": [
+            "Faqat chop etish",
+            "Ma’lumotlarni ko‘rish va kiritish",
+            "Hujjatlarni import qilish",
+            "Parol o‘rnatish"
+        ],
+        "correct_answer": "Ma’lumotlarni ko‘rish va kiritish"
+    },
+    {
+        "question": "Til o‘rganishda qo‘llaniladigan dasturiy vositalarning asosiy vazifasi nima?",
+        "options": [
+            "Tilga oid ma’lumotlarni saqlash",
+            "Faqat tarjima qilish",
+            "Til o‘rganish jarayonini interaktiv tashkil etish",
+            "O‘yin ko‘rinishida test tuzish"
+        ],
+        "correct_answer": "Til o‘rganish jarayonini interaktiv tashkil etish"
+    },
+    {
+        "question": "Duolingo dasturi qanday vosita hisoblanadi?",
+        "options": [
+            "Ofis dasturi",
+            "Interaktiv til o‘rgatuvchi platforma",
+            "Grafik muharrir",
+            "Tarjimon qurilmasi"
+        ],
+        "correct_answer": "Interaktiv til o‘rgatuvchi platforma"
+    },
+    {
+        "question": "Google Translate dasturining vazifasi nima?",
+        "options": [
+            "Matnni formatlash",
+            "Til o‘rganish bo‘yicha test tuzish",
+            "Matnni tarjima qilish",
+            "Til qoidalarini tahlil qilish"
+        ],
+        "correct_answer": "Matnni tarjima qilish"
+    },
+    {
+        "question": "Qaysi vosita so‘zlashuv tilini eshitib mashq qilish imkonini beradi?",
+        "options": [
+            "PowerPoint",
+            "Google Translate",
+            "BBC Learning English",
+            "Word"
+        ],
+        "correct_answer": "BBC Learning English"
+    },
+    {
+        "question": "LingQ dasturining asosiy xususiyati nima?",
+        "options": [
+            "Til grammatikasini testlash",
+            "Asosan eshitish va o‘qish orqali o‘rganish",
+            "Tarjimonlik qilish",
+            "Til kurslarini baholash"
+        ],
+        "correct_answer": "Asosan eshitish va o‘qish orqali o‘rganish"
+    },
+    {
+        "question": "Til o‘rganish vositalarining interaktiv bo‘lishi nimani ta’minlaydi?",
+        "options": [
+            "Statik o‘rganish muhitini",
+            "O‘yin ko‘rinishidagi testlar",
+            "Foydalanuvchi bilan faol muloqotni",
+            "Faqat o‘qish malakasini"
+        ],
+        "correct_answer": "Foydalanuvchi bilan faol muloqotni"
+    },
+    {
+        "question": "Qaysi vosita til o‘rganishdagi talaffuzni tekshiradi?",
+        "options": [
+            "MS Excel",
+            "Quizlet",
+            "Elsa Speak",
+            "Notepad"
+        ],
+        "correct_answer": "Elsa Speak"
+    },
+    {
+        "question": "Quizlet dasturi qanday imkoniyatni beradi?",
+        "options": [
+            "Faqat grammatikani tushuntirish",
+            "O‘yin o‘ynash",
+            "Kartochkalar orqali so‘z yodlash",
+            "Video tahrirlash"
+        ],
+        "correct_answer": "Kartochkalar orqali so‘z yodlash"
+    },
+    {
+        "question": "Til o‘rganish jarayonida multimedia vositalarining o‘rni qanday?",
+        "options": [
+            "Chalg‘ituvchi omil",
+            "Yordamchi resurs sifatida",
+            "Asosiy grafik vosita",
+            "Faqat internetga ulanmasdan foydalaniladi"
+        ],
+        "correct_answer": "Yordamchi resurs sifatida"
+    },
+    {
+        "question": "Til o‘rganishda dasturiy vositalardan foydalanish natijasida nima kuchayadi?",
+        "options": [
+            "Internet tezligi",
+            "Grammatika bazasi",
+            "O‘zlashtirish darajasi",
+            "Kompyuter xotirasi"
+        ],
+        "correct_answer": "O‘zlashtirish darajasi"
+    },
+    {
+        "question": "iSpring dasturining asosiy vazifasi nima?",
+        "options": [
+            "Rasm tahrirlash",
+            "Video montaj qilish",
+            "Ta’limiy materiallar yaratish",
+            "Matnni tarjima qilish"
+        ],
+        "correct_answer": "Ta’limiy materiallar yaratish"
+    },
+    {
+        "question": "Elektron o‘quv vositalari qanday afzallikka ega?",
+        "options": [
+            "Har doim internet kerak",
+            "Faqat matnli bo‘ladi",
+            "Interaktivlik va qulaylik",
+            "Faqat test saqlaydi"
+        ],
+        "correct_answer": "Interaktivlik va qulaylik"
+    },
+    {
+        "question": "iSpring Suite dasturi qanday platformada ishlaydi?",
+        "options": [
+            "Word",
+            "Excel",
+            "PowerPoint",
+            "Photoshop"
+        ],
+        "correct_answer": "PowerPoint"
+    },
+    {
+        "question": "Elektron darsliklar qanday formatda bo‘lishi mumkin?",
+        "options": [
+            "Faqat .docx",
+            "Faqat .jpg",
+            ".html, .exe, .pdf",
+            "Faqat .xlsx"
+        ],
+        "correct_answer": ".html, .exe, .pdf"
+    },
+    {
+        "question": "iSpring dasturida video dars yaratishda nima muhim?",
+        "options": [
+            "Ekran o‘lchami",
+            "Tashqi ko‘rinish",
+            "Ssenariy va interaktivlik",
+            "Matn uzunligi"
+        ],
+        "correct_answer": "Ssenariy va interaktivlik"
+    },
+    {
+        "question": "iSpring QuizMaker yordamida nima yaratiladi?",
+        "options": [
+            "Video",
+            "Rasm",
+            "Test va viktorinalar",
+            "Prezentatsiya"
+        ],
+        "correct_answer": "Test va viktorinalar"
+    },
+    {
+        "question": "iSpring Learn nima?",
+        "options": [
+            "Matn muharriri",
+            "Elektron pochta",
+            "Onlayn ta’lim platformasi",
+            "Tarmoq o‘yini"
+        ],
+        "correct_answer": "Onlayn ta’lim platformasi"
+    },
+    {
+        "question": "Elektron o‘quv vositalarining asosiy turlari?",
+        "options": [
+            "Matnli va grafik",
+            "Faqat video",
+            "Animatsion va testli",
+            "Matnli, video, audio, test va animatsion"
+        ],
+        "correct_answer": "Matnli, video, audio, test va animatsion"
+    },
+    {
+        "question": "PowerPoint orqali iSpring vositasidan qanday foydalaniladi?",
+        "options": [
+            "Mustaqil dastur sifatida",
+            "Word orqali",
+            "PowerPoint plagin sifatida",
+            "Excel bilan"
+        ],
+        "correct_answer": "PowerPoint plagin sifatida"
+    },
+    {
+        "question": "iSpring vositasida tayyorlangan materiallar qayerga joylashtiriladi?",
+        "options": [
+            "Matn fayliga",
+            "Vikipediyaga",
+            "LMS tizimiga",
+            "YouTube’ga"
+        ],
+        "correct_answer": "LMS tizimiga"
+    },
+    {
+        "question": "Adobe Photoshop dasturining asosiy vazifalaridan biri nima?",
+        "options": [
+            "Matn hujjatlarini yaratish",
+            "Audio fayllarni tahrirlash",
+            "Grafik tasvirlarga ishlov berish",
+            "Vektor animatsiyalarini kodlash"
+        ],
+        "correct_answer": "Grafik tasvirlarga ishlov berish"
+    },
+    {
+        "question": "Qaysi format raster grafikaga mansub?",
+        "options": [
+            "SVG",
+            "EPS",
+            "JPEG",
+            "AI"
+        ],
+        "correct_answer": "JPEG"
+    },
+    {
+        "question": "Photoshopda qatlamlar nima uchun kerak?",
+        "options": [
+            "Internetga ulanish uchun",
+            "Tasvirni strukturalash va alohida qismlarni boshqarish uchun",
+            "Audio yozishni boshlash uchun",
+            "Faylni bosib chiqarish uchun"
+        ],
+        "correct_answer": "Tasvirni strukturalash va alohida qismlarni boshqarish uchun"
+    },
+    {
+        "question": "Photoshopdagi ‘Magic Wand’ asbobi nima vazifa bajaradi?",
+        "options": [
+            "Ranglarni aralashtiradi",
+            "Rasmni kesadi",
+            "O‘xshash rangdagi joylarni tanlaydi",
+            "Chizmalarni o‘chiradi"
+        ],
+        "correct_answer": "O‘xshash rangdagi joylarni tanlaydi"
+    },
+    {
+        "question": "Qaysi tugma yordamida yangi qatlam yaratiladi?",
+        "options": [
+            "CTRL + M",
+            "SHIFT + CTRL + N",
+            "CTRL + Q",
+            "CTRL + X"
+        ],
+        "correct_answer": "SHIFT + CTRL + N"
+    },
+    {
+        "question": "‘Hue/Saturation’ bu nima?",
+        "options": [
+            "Filtr turi",
+            "Rasm format turi",
+            "Rang, to‘yinganlik va yorqinlikni boshqaruvchi sozlama",
+            "Kadrni aylantirish funksiyasi"
+        ],
+        "correct_answer": "Rang, to‘yinganlik va yorqinlikni boshqaruvchi sozlama"
+    },
+    {
+        "question": "Qaysi format vektor grafikaga tegishli?",
+        "options": [
+            "JPEG",
+            "PNG",
+            "GIF",
+            "SVG"
+        ],
+        "correct_answer": "SVG"
+    },
+    {
+        "question": "Photoshopda ‘Crop’ asbobi nima uchun ishlatiladi?",
+        "options": [
+            "Rasmni bo‘yoqlash uchun",
+            "Tanlangan qismini kesish va o‘lchamni sozlash uchun",
+            "Matn yozish uchun",
+            "Yangi hujjat yaratish uchun"
+        ],
+        "correct_answer": "Tanlangan qismini kesish va o‘lchamni sozlash uchun"
+    },
+    {
+        "question": "GIF animatsiyalarini yaratish uchun qaysi paneldan foydalaniladi?",
+        "options": [
+            "Layer Panel",
+            "Adjustment Panel",
+            "Timeline Panel",
+            "Properties Panel"
+        ],
+        "correct_answer": "Timeline Panel"
+    },
+    {
+        "question": "Photoshopda CTRL + Z tugmalari nima vazifani bajaradi?",
+        "options": [
+            "Tasvirni saqlaydi",
+            "Tasvirni ochadi",
+            "So‘nggi harakatni bekor qiladi",
+            "Tasvirni eksport qiladi"
+        ],
+        "correct_answer": "So‘nggi harakatni bekor qiladi"
+    },
+    {
+        "question": "Audio materiallar qanday maqsadlarda ta'lim jarayonida qo'llaniladi?",
+        "options": [
+            "Faqat eshitish uchun",
+            "Til o‘rganish, masofaviy ta’lim, qulaylik yaratish",
+            "Video ko‘rish uchun",
+            "Faqat musiqiy maqsadlar uchun"
+        ],
+        "correct_answer": "Til o‘rganish, masofaviy ta’lim, qulaylik yaratish"
+    },
+    {
+        "question": "Qaysi dastur bepul va ochiq kodli audio yozish dasturidir?",
+        "options": [
+            "Adobe Audition",
+            "GarageBand",
+            "Audacity",
+            "iSpring"
+        ],
+        "correct_answer": "Audacity"
+    },
+    {
+        "question": "Adobe Audition dasturining asosiy afzalliklaridan biri nima?",
+        "options": [
+            "Bepul va ochiq manbali",
+            "Sun'iy intellekt yordamida ishlov berish",
+            "Faqat Mac uchun",
+            "Internetga ulanmasdan ishlaydi"
+        ],
+        "correct_answer": "Sun'iy intellekt yordamida ishlov berish"
+    },
+    {
+        "question": "Ovoz sintetikasi deganda nimani tushunasiz?",
+        "options": [
+            "Inson ovozini yozish",
+            "Ovozga effektlar qo‘shish",
+            "Matnni ovozga aylantirish",
+            "Ovozli qurilma sozlash"
+        ],
+        "correct_answer": "Matnni ovozga aylantirish"
+    },
+    {
+        "question": "MP3 formati qanday turdagi format hisoblanadi?",
+        "options": [
+            "Yo‘qotishsiz",
+            "Siqilmagan",
+            "Siqilgan (Lossy)",
+            "Faqat professional"
+        ],
+        "correct_answer": "Siqilgan (Lossy)"
+    },
+    {
+        "question": "Qaysi format eng yuqori sifatli, lekin hajmi katta bo‘ladi?",
+        "options": [
+            "MP3",
+            "WAV",
+            "AAC",
+            "OGG"
+        ],
+        "correct_answer": "WAV"
+    },
+    {
+        "question": "GarageBand dasturi qaysi tizim foydalanuvchilari uchun mo‘ljallangan?",
+        "options": [
+            "Windows",
+            "Linux",
+            "MacOS",
+            "Android"
+        ],
+        "correct_answer": "MacOS"
+    },
+    {
+        "question": "Sun’iy intellekt yordamida ovoz tahrirlashda qaysi imkoniyat mavjud?",
+        "options": [
+            "Faqat kesish",
+            "Faqat siqish",
+            "Shovqinni kamaytirish",
+            "Musiqa yaratish"
+        ],
+        "correct_answer": "Shovqinni kamaytirish"
+    },
+    {
+        "question": "Qaysi format ko‘pchilik qurilmalarda qo‘llab-quvvatlanadi va hajmi kichik?",
+        "options": [
+            "WAV",
+            "AAC",
+            "MP3",
+            "FLAC"
+        ],
+        "correct_answer": "MP3"
+    },
+    {
+        "question": "Adobe Audition dasturidan odatda kimlar foydalanadi?",
+        "options": [
+            "Talabalar",
+            "Oddiy foydalanuvchilar",
+            "Professional ovoz muharrirlari",
+            "Mobil foydalanuvchilar"
+        ],
+        "correct_answer": "Professional ovoz muharrirlari"
+    },
+    {
+        "question": "Video materiallar ta’limda qanday afzalliklarga ega?",
+        "options": [
+            "Faqat ko‘rish imkoniyati",
+            "Qiziqarli o‘qitish, vizual tushuncha",
+            "Oddiy eshitish imkoniyati",
+            "Fikr bildirish imkoniyati"
+        ],
+        "correct_answer": "Qiziqarli o‘qitish, vizual tushuncha"
+    },
+    {
+        "question": "Qaysi dastur video montaj qilish uchun keng qo‘llaniladi?",
+        "options": [
+            "MS Word",
+            "Adobe Photoshop",
+            "Audacity",
+            "Adobe Premiere Pro"
+        ],
+        "correct_answer": "Adobe Premiere Pro"
+    },
+    {
+        "question": "Video tahrirlashda 'timeline' nima uchun kerak?",
+        "options": [
+            "Matn kiritish uchun",
+            "Faylni yuklash uchun",
+            "Yorqinlikni sozlash uchun",
+            "Kadrlar tartibini boshqarish uchun"
+        ],
+        "correct_answer": "Kadrlar tartibini boshqarish uchun"
+    },
+    {
+        "question": "Qaysi format video fayllar uchun mos keladi?",
+        "options": [
+            "MP3",
+            "JPG",
+            "MP4",
+            "DOCX"
+        ],
+        "correct_answer": "MP4"
+    },
+    {
+        "question": "Screencast degani nima?",
+        "options": [
+            "Ovoz yozuvi",
+            "Matnli slayd",
+            "Ekrandagi harakatlarni yozib olish",
+            "Fikr so‘rovi"
+        ],
+        "correct_answer": "Ekrandagi harakatlarni yozib olish"
+    },
+    {
+        "question": "Adobe Premiere Pro dasturida video faylga qanday effekt qo‘shiladi?",
+        "options": [
+            "Layer orqali",
+            "Transition orqali",
+            "Table orqali",
+            "Filter orqali"
+        ],
+        "correct_answer": "Transition orqali"
+    },
+    {
+        "question": "YouTube video platformasi qanday vazifani bajaradi?",
+        "options": [
+            "Rasm tahrirlash",
+            "Audio siqish",
+            "Video tarqatish va almashish",
+            "Matn tarjimasi"
+        ],
+        "correct_answer": "Video tarqatish va almashish"
+    },
+    {
+        "question": "Kadrlar soni sekundiga (fps) nima uchun muhim?",
+        "options": [
+            "Hajmni aniqlash uchun",
+            "Yorqinlikni belgilash uchun",
+            "Harakat silliqligini ta’minlash uchun",
+            "Ranglarni sozlash uchun"
+        ],
+        "correct_answer": "Harakat silliqligini ta’minlash uchun"
+    },
+    {
+        "question": "Video yozishda fon musiqasining vazifasi nima?",
+        "options": [
+            "Shovqinni kuchaytirish",
+            "Vizualni yo‘q qilish",
+            "Atmosferani yaratish va kayfiyatni oshirish",
+            "Yorqinlikni kamaytirish"
+        ],
+        "correct_answer": "Atmosferani yaratish va kayfiyatni oshirish"
+    },
+    {
+        "question": "Qaysi platforma onlayn dars yozuvlarini joylashtirish uchun mos?",
+        "options": [
+            "Excel",
+            "Telegram",
+            "YouTube",
+            "Audacity"
+        ],
+        "correct_answer": "YouTube"
+    },
+    {
+        "question": "Internet tarmog‘ining yaratilish tarixi qanday bog‘liq?",
+        "options": [
+            "ARPA loyihasi bilan",
+            "Google bilan",
+            "Facebook bilan",
+            "IBM bilan"
+        ],
+        "correct_answer": "ARPA loyihasi bilan"
+    },
+    {
+        "question": "Wi-Fi tarmog‘i qanday texnologiyaga asoslangan?",
+        "options": [
+            "Optik tolali aloqa",
+            "Radioto‘lqin",
+            "Bluetooth",
+            "Infrakizil nurlanish"
+        ],
+        "correct_answer": "Radioto‘lqin"
+    },
+    {
+        "question": "Internetda eng mashhur qidiruv tizimi bu –",
+        "options": [
+            "Yahoo",
+            "Google",
+            "Bing",
+            "Rambler"
+        ],
+        "correct_answer": "Google"
+    },
+    {
+        "question": "Wi-Fi tarmog‘i texnologiyasining afzalliklaridan biri bu –",
+        "options": [
+            "Qimmatligi",
+            "Mobil emasligi",
+            "Simsiz ulanish",
+            "Past tezlik"
+        ],
+        "correct_answer": "Simsiz ulanish"
+    },
+    {
+        "question": "Wi-Fi tarmog‘i texnologiyasining kamchiliklaridan biri bu –",
+        "options": [
+            "Ulanishda simlar yo‘qligi",
+            "Yuqori energiya iste’moli",
+            "Yuqori mobililik",
+            "Tezlikning yuqoriligi"
+        ],
+        "correct_answer": "Yuqori energiya iste’moli"
+    },
+    {
+        "question": "Internet tarmog‘ida axborot qanday qidiriladi?",
+        "options": [
+            "Elektron pochta orqali",
+            "Qidiruv tizimlari orqali",
+            "Telefon orqali",
+            "Fax orqali"
+        ],
+        "correct_answer": "Qidiruv tizimlari orqali"
+    },
+    {
+        "question": "Wi-Fi moduli maksimal necha metrga ma’lumot uzata oladi?",
+        "options": [
+            "100 metr",
+            "500 metr",
+            "1000 metr",
+            "50 metr"
+        ],
+        "correct_answer": "500 metr"
+    },
+    {
+        "question": "Intranet qanday tarmoqqa asoslanadi?",
+        "options": [
+            "Internet",
+            "Telefon",
+            "Kabelli televideniya",
+            "Satelit"
+        ],
+        "correct_answer": "Internet"
+    },
+    {
+        "question": "Internet tarmog‘ida ma’lumotni topishda foydalanuvchi nima qiladi?",
+        "options": [
+            "So‘z yoki jumla kiritadi",
+            "Shunchaki kutadi",
+            "Rasm chizadi",
+            "Qo‘ng‘iroq qiladi"
+        ],
+        "correct_answer": "So‘z yoki jumla kiritadi"
+    },
+    {
+        "question": "Internet provayderlar vazifasi nima?",
+        "options": [
+            "Faks yuborish",
+            "Aloqa ta’minoti",
+            "Telefon o‘rnatish",
+            "Kompyuterlarni yig‘ish"
+        ],
+        "correct_answer": "Aloqa ta’minoti"
+    },
+    {
+        "question": "Web sahifa nima?",
+        "options": [
+            "Ofis dasturi",
+            "Ma’lumotlar bazasi",
+            "Internetdagi hujjat",
+            "Kompyuter o‘yini"
+        ],
+        "correct_answer": "Internetdagi hujjat"
+    },
+    {
+        "question": "HTML tili nimani anglatadi?",
+        "options": [
+            "HyperText Markup Language",
+            "HighText Machine Language",
+            "Hyper Tabular Markup Language",
+            "None of the above"
+        ],
+        "correct_answer": "HyperText Markup Language"
+    },
+    {
+        "question": "Qaysi dastur web-sahifa yaratishda ishlatilmaydi?",
+        "options": [
+            "Notepad++",
+            "Sublime Text",
+            "MS Excel",
+            "VS Code"
+        ],
+        "correct_answer": "MS Excel"
+    },
+    {
+        "question": "CSS nimaga xizmat qiladi?",
+        "options": [
+            "Strukturani aniqlash",
+            "Sahifa dizaynini bezash",
+            "Ma’lumotlar bazasini boshqarish",
+            "JavaScript kod yozish"
+        ],
+        "correct_answer": "Sahifa dizaynini bezash"
+    },
+    {
+        "question": "JavaScript orqali nima bajariladi?",
+        "options": [
+            "Ma’lumotlar bazasi bilan ishlash",
+            "Sahifa strukturasini belgilash",
+            "Interaktiv elementlarni boshqarish",
+            "Rasmlarni tahrirlash"
+        ],
+        "correct_answer": "Interaktiv elementlarni boshqarish"
+    },
+    {
+        "question": "Web saytlar qanday texnologiyaga asoslanadi?",
+        "options": [
+            "C++",
+            "Internet texnologiyasi",
+            "Python",
+            "Windows"
+        ],
+        "correct_answer": "Internet texnologiyasi"
+    },
+    {
+        "question": "Web sahifada kontent deganda nimani tushunasiz?",
+        "options": [
+            "Matn, rasm, video va havolalar",
+            "Fayl tizimi",
+            "Kodlar",
+            "Dastur kodi"
+        ],
+        "correct_answer": "Matn, rasm, video va havolalar"
+    },
+    {
+        "question": "CMS nima?",
+        "options": [
+            "Central Machine Server",
+            "Computer Management System",
+            "Content Management System",
+            "Content Modeling Syntax"
+        ],
+        "correct_answer": "Content Management System"
+    },
+    {
+        "question": "WordPress nimaga mo‘ljallangan?",
+        "options": [
+            "Web sayt yaratish",
+            "Ofis ishlarini bajarish",
+            "Raqamli imzo yaratish",
+            "Kod kompilyatsiyasi"
+        ],
+        "correct_answer": "Web sayt yaratish"
+    },
+    {
+        "question": "Web sahifa uchun rasm formati qanday?",
+        "options": [
+            "DOCX",
+            "JPG/PNG/GIF",
+            "MP3",
+            "XLSX"
+        ],
+        "correct_answer": "JPG/PNG/GIF"
+    },
+    {
+        "question": "Google Drive qanday xizmat turiga kiradi?",
+        "options": [
+            "Offline dastur",
+            "Kompyuter o‘yini",
+            "Bulutli xizmat",
+            "Elektron pochta"
+        ],
+        "correct_answer": "Bulutli xizmat"
+    },
+    {
+        "question": "Google Docs orqali nima qilish mumkin?",
+        "options": [
+            "Video montaj qilish",
+            "Matnli hujjat yaratish va tahrirlash",
+            "Audio yozish",
+            "Sayt yaratish"
+        ],
+        "correct_answer": "Matnli hujjat yaratish va tahrirlash"
+    },
+    {
+        "question": "Microsoft OneDrive xizmatining vazifasi nima?",
+        "options": [
+            "Saytlarni saqlash",
+            "Ma’lumotlarni bulutga saqlash",
+            "Antivirusni ishga tushirish",
+            "Elektron kitob o‘qish"
+        ],
+        "correct_answer": "Ma’lumotlarni bulutga saqlash"
+    },
+    {
+        "question": "Google Meet orqali nima amalga oshiriladi?",
+        "options": [
+            "Hujjatlarni saqlash",
+            "Rasmlar tahriri",
+            "Onlayn videokonferensiyalar",
+            "Matnni tarjima qilish"
+        ],
+        "correct_answer": "Onlayn videokonferensiyalar"
+    },
+    {
+        "question": "Google Sheets qaysi turdagi fayllar uchun mo‘ljallangan?",
+        "options": [
+            "Rasm fayllari",
+            "Jadval ko‘rinishidagi fayllar",
+            "Audio fayllar",
+            "PDF fayllar"
+        ],
+        "correct_answer": "Jadval ko‘rinishidagi fayllar"
+    },
+    {
+        "question": "Microsoft Teams orqali qanday imkoniyatlar mavjud?",
+        "options": [
+            "Jamoaviy muloqot va loyihalar ustida ishlash",
+            "Faylni faqat yuklash",
+            "Kod yozish",
+            "Kino tomosha qilish"
+        ],
+        "correct_answer": "Jamoaviy muloqot va loyihalar ustida ishlash"
+    },
+    {
+        "question": "Google Slides nima uchun ishlatiladi?",
+        "options": [
+            "Audio yozish",
+            "Taqdimot tayyorlash",
+            "Matnli hujjat yozish",
+            "Rasmni tahrirlash"
+        ],
+        "correct_answer": "Taqdimot tayyorlash"
+    },
+    {
+        "question": "Outlook dasturi orqali nima amalga oshiriladi?",
+        "options": [
+            "Elektron pochta yuborish va qabul qilish",
+            "Sayt yaratish",
+            "Taqdimot tayyorlash",
+            "Video kesish"
+        ],
+        "correct_answer": "Elektron pochta yuborish va qabul qilish"
+    },
+    {
+        "question": "Google Forms orqali nima yaratiladi?",
+        "options": [
+            "Sayt",
+            "So‘rovnoma va testlar",
+            "Rasm",
+            "Kod editori"
+        ],
+        "correct_answer": "So‘rovnoma va testlar"
+    },
+    {
+        "question": "Microsoft Word dasturi nimaga mo‘ljallangan?",
+        "options": [
+            "Matnli hujjatlarni yaratish va tahrirlash",
+            "Audio fayllarni kesish",
+            "Kod kompilyatsiya qilish",
+            "Tarmoq sozlamalari"
+        ],
+        "correct_answer": "Matnli hujjatlarni yaratish va tahrirlash"
+    },
+    {
+        "question": "Masofaviy ta’limning asosiy afzalligi nimada?",
+        "options": [
+            "Faqat auditoriyada o‘tiladi",
+            "Ko‘p mablag‘ talab qiladi",
+            "Istalgan joyda o‘qish imkoniyati mavjud",
+            "Faqat kechqurun o‘qiladi"
+        ],
+        "correct_answer": "Istalgan joyda o‘qish imkoniyati mavjud"
+    },
+    {
+        "question": "Moodle tizimi nima uchun ishlatiladi?",
+        "options": [
+            "Audio yozish",
+            "Tarmoq sozlash",
+            "Elektron ta’limni boshqarish",
+            "Rasmni tahrirlash"
+        ],
+        "correct_answer": "Elektron ta’limni boshqarish"
+    },
+    {
+        "question": "LMS qisqartmasining to‘liq shakli nima?",
+        "options": [
+            "Learning Management System",
+            "Local Machine Setup",
+            "Logical Management Server",
+            "Large Media System"
+        ],
+        "correct_answer": "Learning Management System"
+    },
+    {
+        "question": "Masofaviy ta’limda qaysi vosita darslarni onlayn o‘tkazish uchun qo‘llaniladi?",
+        "options": [
+            "Paint",
+            "Google Meet",
+            "WordPad",
+            "WinRAR"
+        ],
+        "correct_answer": "Google Meet"
+    },
+    {
+        "question": "Masofaviy ta’lim kimlar uchun qulay hisoblanadi?",
+        "options": [
+            "Faqat maktab o‘quvchilari uchun",
+            "Faqat universitet talabalariga",
+            "Jismoniy imkoniyati cheklanganlar va uzoqdagi o‘quvchilar uchun",
+            "Faqat xodimlar uchun"
+        ],
+        "correct_answer": "Jismoniy imkoniyati cheklanganlar va uzoqdagi o‘quvchilar uchun"
+    },
+    {
+        "question": "Quyidagilardan qaysi biri elektron ta’lim platformasi hisoblanadi?",
+        "options": [
+            "MS Paint",
+            "Adobe Reader",
+            "Coursera",
+            "VLC Player"
+        ],
+        "correct_answer": "Coursera"
+    },
+    {
+        "question": "Masofaviy ta’limda qanday teskari aloqa vositasi mavjud?",
+        "options": [
+            "Forumlar va testlar",
+            "Faks va printer",
+            "Kameralar",
+            "Mikrofonlar"
+        ],
+        "correct_answer": "Forumlar va testlar"
+    },
+    {
+        "question": "Moodle tizimida fanlar qanday joylashtiriladi?",
+        "options": [
+            "PDF fayllar ko‘rinishida",
+            "Fanlar ro‘yxati tarzida",
+            "Rasmlar ketma-ketligida",
+            "Audio treklar sifatida"
+        ],
+        "correct_answer": "Fanlar ro‘yxati tarzida"
+    },
+    {
+        "question": "Masofaviy ta’limda talabalar o‘qituvchi bilan qanday muloqot qiladi?",
+        "options": [
+            "Faqat e-mail orqali",
+            "Sinfda uchrashib",
+            "Forumlar va video qo‘ng‘iroqlar orqali",
+            "Gazeta orqali"
+        ],
+        "correct_answer": "Forumlar va video qo‘ng‘iroqlar orqali"
+    },
+    {
+        "question": "Quyidagilardan qaysi biri masofaviy ta’lim shakli emas?",
+        "options": [
+            "Onlayn kurslar",
+            "Video darsliklar",
+            "Yuzma-yuz darslar",
+            "Webinarlar"
+        ],
+        "correct_answer": "Yuzma-yuz darslar"
+    },
+    {
+        "question": "Elektron qo‘llanmalar yaratishda eng ko‘p qo‘llaniladigan dastur qaysi?",
+        "options": [
+            "MS Word",
+            "PowerPoint",
+            "Photoshop",
+            "Excel"
+        ],
+        "correct_answer": "PowerPoint"
+    },
+    {
+        "question": "iSpring Suite dasturi qanday vazifani bajaradi?",
+        "options": [
+            "Matematik hisob-kitob",
+            "Prezentatsiyani interaktiv darsga aylantirish",
+            "Audio fayllarni tahrirlash",
+            "Rasmlarni siqish"
+        ],
+        "correct_answer": "Prezentatsiyani interaktiv darsga aylantirish"
+    },
+    {
+        "question": "Elektron darsliklar yaratishda qaysi vosita multimedia imkoniyatlarini kengaytiradi?",
+        "options": [
+            "iSpring",
+            "Notepad",
+            "Paint",
+            "Excel"
+        ],
+        "correct_answer": "iSpring"
+    },
+    {
+        "question": "iSpring dasturida testlar qanday turda yaratiladi?",
+        "options": [
+            "Yagona variantli va ko‘p variantli",
+            "Faqat matnli",
+            "Faqat rasmli",
+            "Faqat audio savollar"
+        ],
+        "correct_answer": "Yagona variantli va ko‘p variantli"
+    },
+    {
+        "question": "PowerPoint dasturi qanday maqsadda qo‘llaniladi?",
+        "options": [
+            "Jadvallar chizish",
+            "Interaktiv slaydlar yaratish",
+            "Kod yozish",
+            "Internet sahifa tuzish"
+        ],
+        "correct_answer": "Interaktiv slaydlar yaratish"
+    },
+    {
+        "question": "iSpring dasturining afzalligi nimada?",
+        "options": [
+            "Rasm tahrirlash imkoniyati",
+            "Prezentatsiyaga test, audio, video qo‘shish imkoniyati",
+            "Matnli fayllarni siqish",
+            "Kodlarni avtomatik tahlil qilish"
+        ],
+        "correct_answer": "Prezentatsiyaga test, audio, video qo‘shish imkoniyati"
+    },
+    {
+        "question": "Elektron qo‘llanmalar odatda qanday shaklda taqdim etiladi?",
+        "options": [
+            "PDF, HTML, EXE",
+            "TXT, MP3",
+            "DOCX, PNG",
+            "MP4, AVI"
+        ],
+        "correct_answer": "PDF, HTML, EXE"
+    },
+    {
+        "question": "iSpring dasturida qanday multimedia elementlarini qo‘shish mumkin?",
+        "options": [
+            "Faqat rasm",
+            "Matn, rasm, audio va video",
+            "Faqat matn",
+            "Faqat audio"
+        ],
+        "correct_answer": "Matn, rasm, audio va video"
+    },
+    {
+        "question": "Elektron darslik yaratishda asosiy talab nima?",
+        "options": [
+            "Yorqin ranglar ko‘p bo‘lishi",
+            "Tashqi ko‘rinish",
+            "Foydalanuvchiga qulaylik va interaktivlik",
+            "Matn uzunligi"
+        ],
+        "correct_answer": "Foydalanuvchiga qulaylik va interaktivlik"
+    },
+    {
+        "question": "Quyidagilardan qaysi biri iSpring tarkibidagi vosita emas?",
+        "options": [
+            "QuizMaker",
+            "Visual Studio",
+            "CamPro",
+            "Flip"
+        ],
+        "correct_answer": "Visual Studio"
+    }
+]

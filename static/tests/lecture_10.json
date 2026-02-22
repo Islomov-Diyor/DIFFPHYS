@@ -1,0 +1,143 @@
+{
+  "quiz": {
+    "topic_id": 10,
+    "title": "Havo qarshiligi ta'sirida erkin tushayotgan jism harakati (og'irlik + qarshilik)",
+    "language": "uz",
+    "total_questions": 10,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Erkin tushuvchi jismga havo qarshiligi yo'q bo'lsa, tezlanish qanday bo'ladi?",
+        "options": {
+          "A": "0",
+          "B": "g ga teng",
+          "C": "O'zgaruvchan",
+          "D": "Maxsus formula bilan"
+        },
+        "correct_answer": "B",
+        "explanation": "Agar havo qarshiligi yo'q bo'lsa (vakuum), jism erkin tushadi va tezlanish doimo g (erkin tushish tezlanishi, ~9.81 m/s²) ga teng bo'ladi."
+      },
+      {
+        "id": 2,
+        "question": "Havo qarshiligi kuchi odatda qanday bog'lanadi?",
+        "options": {
+          "A": "Tezlik bilan proporsional",
+          "B": "Tezlik kvadrati bilan proporsional",
+          "C": "Tezlik kvadrat ildizi bilan proporsional",
+          "D": "Massaga bog'liq"
+        },
+        "correct_answer": "B",
+        "explanation": "Havo qarshiligi kuchi odatda tezlikning kvadratiga proporsional bo'ladi (F = kv²), ayniqsa yuqori tezliklarda. Pastki tezliklarda esa tezlikka proporsional (F = kv) deb qaralishi mumkin."
+      },
+      {
+        "id": 3,
+        "question": "Havo qarshiligi va og'irlikni hisobga olgan tenglama qanday yoziladi?",
+        "options": {
+          "A": "m(dv/dt) = mg",
+          "B": "m(dv/dt) = mg - kv",
+          "C": "m(dv/dt) + kv = 0",
+          "D": "m(dv/dt) = kv"
+        },
+        "correct_answer": "B",
+        "explanation": "Nyutonning ikkinchi qonuniga ko'ra: m(dv/dt) = mg - kv, bu yerda mg - og'irlik kuchi (pastga), kv - havo qarshiligi kuchi (yuqoriga qarama-qarshi)."
+      },
+      {
+        "id": 4,
+        "question": "Havo qarshiligi faqat tezlik bilan proporsional bo'lsa, differensial tenglama qanday ko'rinishda bo'ladi?",
+        "options": {
+          "A": "m(dv/dt) = mg - kv",
+          "B": "m(dv/dt) = mg - kv²",
+          "C": "m(dv/dt) = kv",
+          "D": "m(dv/dt) = mg"
+        },
+        "correct_answer": "A",
+        "explanation": "Agar qarshilik kuchi F = kv (tezlikka proporsional) bo'lsa, tenglama m(dv/dt) = mg - kv ko'rinishida bo'ladi. Bu chiziqli differensial tenglama."
+      },
+      {
+        "id": 5,
+        "question": "Agar havo qarshiligi kvadratga proporsional bo'lsa, tenglama qanday ko'rinishda yoziladi?",
+        "options": {
+          "A": "m(dv/dt) = mg - kv",
+          "B": "m(dv/dt) = mg - kv²",
+          "C": "m(dv/dt) = kv²",
+          "D": "m(dv/dt) = mg"
+        },
+        "correct_answer": "B",
+        "explanation": "Qarshilik kvadratga proporsional bo'lganda (F = kv²), tenglama m(dv/dt) = mg - kv² ko'rinishiga ega bo'ladi. Bu Bernulli turidagi chiziqsiz tenglama."
+      },
+      {
+        "id": 6,
+        "question": "Tezlikning vaqtga bog'lanishi (kvadratga proporsional qarshilik) qaysi tenglama yechimi orqali olinadi?",
+        "options": {
+          "A": "Ajraluvchi tenglama",
+          "B": "Chiziqli tenglama",
+          "C": "To'la differensial tenglama",
+          "D": "Integral tenglama"
+        },
+        "correct_answer": "A",
+        "explanation": "Agar qarshilik kvadratga proporsional bo'lsa (dv/dt = g - (k/m)v²), bu ajraluvchi o'zgaruvchili tenglama bo'lib, ajratish va integrallash orqali yechiladi."
+      },
+      {
+        "id": 7,
+        "question": "Havo qarshiligi bilan erkin tushishda maksimal tezlik nima deb ataladi?",
+        "options": {
+          "A": "Tezlanish",
+          "B": "Terminal tezlik (yakuniy tezlik)",
+          "C": "Boshlang'ich tezlik",
+          "D": "Siljish"
+        },
+        "correct_answer": "B",
+        "explanation": "Havo qarshiligi tufayli jism ma'lum vaqtdan keyin tezlanmaydi, balki doimiy tezlik bilan tushadi. Bu tezlik 'terminal tezlik' yoki 'yakuniy tezlik' (limiting velocity) deb ataladi."
+      },
+      {
+        "id": 8,
+        "question": "Agar m(dv/dt) = mg - kv bo'lsa, terminal tezlik v_t qanday hisoblanadi?",
+        "options": {
+          "A": "v_t = mg",
+          "B": "v_t = k/m",
+          "C": "v_t = mg/k",
+          "D": "v_t = √(mg/k)"
+        },
+        "correct_answer": "C",
+        "explanation": "Terminal tezlikda dv/dt = 0 (tezlanish nol), shuning uchun mg - kv_t = 0 dan v_t = mg/k kelib chiqadi. Agar kvadratli qarshilik bo'lsa, v_t = √(mg/k) bo'lardi."
+      },
+      {
+        "id": 9,
+        "question": "Havo qarshiligi tezlik bilan proporsional bo'lsa, tezlikning vaqtga bog'lanishi qanday funktsiyada ifodalanadi?",
+        "options": {
+          "A": "Eksponensial funktsiyada",
+          "B": "Trigonometrik funktsiyada",
+          "C": "Kvadrat funktsiyada",
+          "D": "Logarifmik funktsiyada"
+        },
+        "correct_answer": "A",
+        "explanation": "Chiziqli qarshilik holatida (F = kv) tenglamaning yechimi v(t) = v_t(1 - e^(-kt/m)) ko'rinishida bo'ladi, bu eksponensial funktsiya. Vaqt o'tishi bilan tezlik terminal tezlikka yaqinlashadi."
+      },
+      {
+        "id": 10,
+        "question": "Havo qarshiligi ta'sirida erkin tushish masalasi qaysi fizik qonunlar asosida tahlil qilinadi?",
+        "options": {
+          "A": "Nyutunning birinchi qonuni",
+          "B": "Nyutunning ikkinchi qonuni",
+          "C": "Hooke qonuni",
+          "D": "Fourier qonuni"
+        },
+        "correct_answer": "B",
+        "explanation": "Erkin tushishda havo qarshiligi ta'sirini tahlil qilish uchun Nyutunning ikkinchi qonuni (F = ma) qo'llaniladi, bunda kuchlar vektor yig'indisi (og'irlik minus qarshilik) massa va tezlanish ko'paytmasiga teng."
+      }
+    ],
+    "metadata": {
+      "subject": "Matematika (Matematik fizika)",
+      "topic": "Havo qarshiligi ta'sirida erkin tushish",
+      "difficulty": "O'rta",
+      "category": "Mexanika",
+      "keywords": [
+        "havo qarshiligi",
+        "terminal tezlik",
+        "erkin tushish",
+        "Nyuton qonunlari",
+        "differensial tenglamalar"
+      ]
+    }
+  }
+}

@@ -1,0 +1,251 @@
+/* ===============================
+   GLOBAL SETTINGS
+   =============================== */
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* ===============================
+   NAVBAR
+   =============================== */
+
+.navbar-nav .nav-link {
+    color: #212529 !important;
+    font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #0d6efd !important;
+}
+
+/* Dropdown (agar boshqa joylarda bo‘lsa) */
+.dropdown-menu .dropdown-item {
+    color: #212529 !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    color: #0d6efd !important;
+    background-color: #f8f9fa !important;
+}
+
+/* ===============================
+   HERO SECTION
+   =============================== */
+
+.hero-section {
+    background: url("../images/diffphys_hero.jpg") center/cover no-repeat;
+    height: 85vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-title span {
+    color: #00d4ff;
+}
+
+.hero-subtitle {
+    color: #e0e0e0;
+    font-size: 1.25rem;
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+.hero-buttons .btn {
+    margin: 10px;
+}
+/* ===============================
+   CARD ELEMENTS
+   =============================== */
+
+.card {
+    min-height: 360px;
+    border-radius: 8px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+
+.site-footer{
+  border-top: 1px solid rgba(0,0,0,.08);
+  font-size: 15px;
+}
+
+/* Umumiy matnlar – biroz jirniyroq */
+.footer-text,
+.footer-left,
+.footer-right{
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* EDUFOREIGN.UZ – ko‘rgazmali */
+.footer-brand{
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 16px;
+  background: linear-gradient(45deg, #0d6efd, #6610f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtitr – ixcham va ilmiy */
+.footer-subtitle{
+  margin-left: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: .8;
+}
+
+/* Muallif ismi – underline YO‘Q */
+.footer-author{
+  font-weight: 800;
+  color: #0d6efd;
+}
+/* ===============================
+   DOWNLOAD INFO
+   =============================== */
+
+.downloads-count {
+    background-color: rgba(13, 202, 240, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* ===== LOGO MARQUEE (LENTA) ===== */
+.logo-marquee{
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 8px 0;
+}
+
+/* Track doim gorizontal bo‘lsin */
+.logo-track{
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  gap: 18px;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+  will-change: transform;
+}
+
+.logo-item{
+  display: inline-flex !important;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+  min-width: 110px;
+  padding: 6px 10px;
+}
+
+.logo-item img{
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.logo-item span{
+  display: block;
+  font-size: 12px;
+  margin-top: 4px;
+  color: #333;
+}
+
+@keyframes marquee{
+  0%{ transform: translateX(0); }
+  100%{ transform: translateX(-50%); }
+}
+
+.logo-marquee:hover .logo-track{
+  animation-play-state: paused;
+}
+
+@media (max-width: 576px){
+  .logo-track{ gap: 14px; animation-duration: 18s; }
+  .logo-item{ min-width: 95px; }
+  .logo-item img{ height: 34px; }
+  .logo-item span{ font-size: 13px; }
+}
+/* ===============================
+   MOBILE OPTIMIZATION
+   =============================== */
+
+@media (max-width: 576px) {
+    .logo-track {
+        gap: 14px;
+        animation-duration: 18s;
+    }
+
+    .logo-item img {
+        height: 34px;
+    }
+
+    .logo-item span {
+        font-size: 13px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+}
+/* TOP BANNER ONLY IMAGE */
+.top-banner {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.top-banner-img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}

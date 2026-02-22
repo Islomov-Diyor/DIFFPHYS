@@ -1,0 +1,140 @@
+{
+  "quiz": {
+    "title": "4-mavzu: To'la differensial tenglamalar va unga keladigan tenglamalar",
+    "language": "uz",
+    "questions": [
+      {
+        "id": 1,
+        "question": "To'la differensial tenglama qanday ko'rinishga ega bo'ladi?",
+        "options": {
+          "A": "y'=f(x)g(y)",
+          "B": "M(x,y)dx+N(x,y)dy=0",
+          "C": "y'+p(x)y=q(x)",
+          "D": "y''+y=0"
+        },
+        "correct_answer": "B",
+        "explanation": "To'la differensial tenglama M(x,y)dx + N(x,y)dy = 0 ko'rinishida bo'ladi, bu yerda chap tomon biror F(x,y) funksiyaning to'la differensiali dF bo'lishi mumkin."
+      },
+      {
+        "id": 2,
+        "question": "M(x,y)dx+N(x,y)dy=0 tenglama qachon to'la bo'ladi?",
+        "options": {
+          "A": "∂M/∂y = ∂N/∂x bo'lsa",
+          "B": "M = N bo'lsa",
+          "C": "M va N faqat x ga bog'liq bo'lsa",
+          "D": "Har doim"
+        },
+        "correct_answer": "A",
+        "explanation": "Tenglama to'la differensial tenglama bo'lishi uchun ∂M/∂y = ∂N/∂x sharti bajarilishi kerak (yoki Mdx+N dy biror funksiyaning to'la differensiali bo'lishi kerak)."
+      },
+      {
+        "id": 3,
+        "question": "To'la differensial tenglamaning yechimi qanday ko'rinishda yoziladi?",
+        "options": {
+          "A": "y=f(x)",
+          "B": "F(x,y)=C",
+          "C": "y=Ceˣ",
+          "D": "y=x+C"
+        },
+        "correct_answer": "B",
+        "explanation": "To'la differensial tenglamaning umumiy yechimi F(x,y) = C ko'rinishida bo'ladi, bu yerda C - erkin konstanta, F esa M va N funksiyalaridan topilgan potensial funksiya."
+      },
+      {
+        "id": 4,
+        "question": "Quyidagi tenglamalardan qaysi biri to'la differensial tenglama?",
+        "options": {
+          "A": "(2x+y)dx+xdy=0",
+          "B": "y'=xy",
+          "C": "y'+y=x",
+          "D": "y''+y=0"
+        },
+        "correct_answer": "A",
+        "explanation": "(2x+y)dx+xdy=0 tenglamasida M=2x+y va N=x. ∂M/∂y=1 va ∂N/∂x=1, demak ∂M/∂y=∂N/∂x shart bajariladi."
+      },
+      {
+        "id": 5,
+        "question": "Agar tenglama to'la bo'lmasa, uni to'la qilish uchun nima qo'llaniladi?",
+        "options": {
+          "A": "Almashtirish",
+          "B": "Integrallash",
+          "C": "Integrallovchi ko'paytuvchi",
+          "D": "Grafik usul"
+        },
+        "correct_answer": "C",
+        "explanation": "Agar tenglama to'la differensial tenglama bo'lmasa, uni to'la differensial tenglamaga keltirish uchun integrallovchi ko'paytuvchi (μ) ishlatiladi: μMdx + μNdy = 0."
+      },
+      {
+        "id": 6,
+        "question": "Integrallovchi ko'paytuvchi nimaga xizmat qiladi?",
+        "options": {
+          "A": "Tenglamani chiziqli qilishga",
+          "B": "Tenglamani ajraluvchi qilishga",
+          "C": "Tenglamani to'la differensial tenglamaga keltirishga",
+          "D": "Tenglamani kvadratlashga"
+        },
+        "correct_answer": "C",
+        "explanation": "Integrallovchi ko'paytuvchi tenglamani to'la differensial tenglamaga keltirish uchun ishlatiladi, shunda uni yechish osonlashadi."
+      },
+      {
+        "id": 7,
+        "question": "Integrallovchi ko'paytuvchi faqat qaysi holatda mavjud bo'lishi mumkin?",
+        "options": {
+          "A": "Har doim",
+          "B": "Faqat M(x) ga bog'liq bo'lsa",
+          "C": "Faqat N(y) ga bog'liq bo'lsa",
+          "D": "Ba'zi maxsus hollarda"
+        },
+        "correct_answer": "D",
+        "explanation": "Integrallovchi ko'paytuvchi har doim mavjud bo'lmaydi, faqat ba'zi maxsus hollarda (masalan, (∂M/∂y-∂N/∂x)/N faqat x ga bog'liq bo'lganda yoki (∂N/∂x-∂M/∂y)/M faqat y ga bog'liq bo'lganda) topilishi mumkin."
+      },
+      {
+        "id": 8,
+        "question": "Agar integrallovchi ko'paytuvchi faqat x ga bog'liq bo'lsa, u qanday topiladi?",
+        "options": {
+          "A": "μ(x)=exp(∫(∂M/∂y-∂N/∂x)/N dx)",
+          "B": "μ(x)=exp(∫M dx)",
+          "C": "μ(x)=∫N dx",
+          "D": "μ(x)=M+N"
+        },
+        "correct_answer": "A",
+        "explanation": "Agar (∂M/∂y-∂N/∂x)/N ifoda faqat x ga bog'liq bo'lsa, integrallovchi ko'paytuvchi μ(x)=exp(∫[(∂M/∂y-∂N/∂x)/N]dx) formulasida topiladi."
+      },
+      {
+        "id": 9,
+        "question": "To'la differensial tenglamalar qaysi fizika bo'limlarida uchradi?",
+        "options": {
+          "A": "Mexanika",
+          "B": "Termodinamika",
+          "C": "Elektrodinamika",
+          "D": "Barchasida"
+        },
+        "correct_answer": "D",
+        "explanation": "To'la differensial tenglamalar mexanika (potensial kuch maydoni), termodinamika (issiqlik, entropiya) va elektrodinamika (elektrostats potensial) kabi fizikaning turli bo'limlarida keng qo'llaniladi."
+      },
+      {
+        "id": 10,
+        "question": "To'la differensial tenglamaning asosiy xossasi nimadan iborat?",
+        "options": {
+          "A": "Yechimi yagona bo'ladi",
+          "B": "O'zgaruvchilari ajraladi",
+          "C": "Funksiya to'liq differensiali mavjud bo'ladi",
+          "D": "Faqat chiziqli bo'ladi"
+        },
+        "correct_answer": "C",
+        "explanation": "To'la differensial tenglamaning eng asosiy xossasi - Mdx+Ndy ifoda biror F(x,y) funksiyaning to'liq differensiali dF bo'lishi, ya'ni M=∂F/∂x va N=∂F/∂y shartlari bajariladi."
+      }
+    ],
+    "metadata": {
+      "total_questions": 10,
+      "subject": "Matematika",
+      "topic": "To'la differensial tenglamalar",
+      "subtopics": [
+        "To'la differensial tenglamaning ta'rifi",
+        "To'lalik sharti",
+        "Integrallovchi ko'paytuvchi",
+        "Yechim ko'rinishi"
+      ],
+      "difficulty": "O'rta-yuqori"
+    }
+  }
+}

@@ -1,0 +1,263 @@
+{% load static %}
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RL zanjiri | DiffPhys</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Plotly -->
+  <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+
+  <style>
+    body{background:#ffffff;color:#212529;}
+    .wrap{max-width:1150px;margin:0 auto;}
+
+    /* HEADER */
+    .hero{
+      background: linear-gradient(135deg, #6610f2 0%, #0dcaf0 100%);
+      color:#fff;
+      border-radius:16px;
+    }
+    .badge-soft{
+      background: rgba(255,255,255,.18);
+      border:1px solid rgba(255,255,255,.30);
+    }
+
+    /* BLOCKS */
+    .block{
+      border:1px solid #dee2e6;
+      border-radius:10px;
+      background:#fff;
+    }
+    .section-title{
+      font-size:1.05rem;
+      font-weight:600;
+      border-bottom:2px solid #0d6efd;
+      padding-bottom:4px;
+      margin-bottom:10px;
+    }
+    .img-frame{
+      border:1px solid #ced4da;
+      border-radius:8px;
+      padding:6px;
+      background:#fff;
+    }
+    .stat{
+      background:#f8f9fa;
+      border:1px solid #dee2e6;
+      border-radius:8px;
+      padding:8px;
+    }
+    .stat .k{font-size:.8rem;color:#6c757d}
+    .stat .v{font-weight:600}
+    .conclusion{
+      background:#f8f9fa;
+      border-left:4px solid #0d6efd;
+      padding:12px;
+      border-radius:8px;
+    }
+    .plotly-wrap{min-height:520px;width:100%;}
+    .foot{font-size:.85rem;color:#6c757d;text-align:center;margin-top:18px;}
+
+    .form-control,.form-select{border-radius:10px;}
+    .btn{border-radius:10px;}
+  </style>
+</head>
+
+<body>
+<div class="wrap py-4">
+
+  <!-- HERO -->
+  <div class="hero p-4 mb-4">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3">
+      <div>
+        <h2 class="mb-1">
+          <i class="bi bi-lightning-charge-fill me-2"></i>
+          RL zanjiri — interaktiv modul
+        </h2>
+        <div style="opacity:.9">
+          <i class="bi bi-graph-up-arrow me-1"></i>
+          di/dt + (R/L)i = V(t)/L differensial tenglama asosida modellashtirish
+        </div>
+      </div>
+
+      <div class="d-flex gap-2">
+        <span class="badge badge-soft rounded-pill px-3 py-2">
+          <i class="bi bi-cpu me-1"></i> SciPy solve_ivp
+        </span>
+
+        <a href="/" class="btn btn-light">
+          <i class="bi bi-house-door-fill me-1"></i>
+          Interaktiv xizmatlarga qaytish
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- PARAMETRLAR -->
+    <div class="col-12 col-lg-4">
+      <div class="block p-3">
+        <div class="section-title">
+          <i class="bi bi-sliders me-1"></i>
+          Kirish parametrlari
+        </div>
+
+        <!-- GET FORM -->
+        <form method="get" class="vstack gap-2">
+
+          <label class="fw-semibold">R (Ohm)</label>
+          <input class="form-control" name="R" value="{{ params.R }}">
+
+          <label class="fw-semibold">L (H)</label>
+          <input class="form-control" name="L" value="{{ params.L }}">
+
+          <label class="fw-semibold">Boshlang‘ich i0 (A)</label>
+          <input class="form-control" name="i0" value="{{ params.i0 }}">
+
+          <hr class="my-2">
+
+          <label class="fw-semibold">tmax (s)</label>
+          <input class="form-control" name="tmax" value="{{ params.tmax }}">
+
+          <label class="fw-semibold">nt (nuqtalar soni)</label>
+          <input class="form-control" name="nt" value="{{ params.nt }}">
+
+          <hr class="my-2">
+
+          <label class="fw-semibold">V(t) turi</label>
+          <select class="form-select" name="v_type">
+            <option value="step" {% if params.v_type == "step" %}selected{% endif %}>step</option>
+            <option value="sinus" {% if params.v_type == "sinus" %}selected{% endif %}>sinus</option>
+          </select>
+
+          <label class="fw-semibold">V0 (V)</label>
+          <input class="form-control" name="V0" value="{{ params.V0 }}">
+
+          <label class="fw-semibold">freq (Hz) (sinus uchun)</label>
+          <input class="form-control" name="freq" value="{{ params.freq }}">
+
+          <button class="btn btn-primary mt-2 w-100" type="submit">
+            <i class="bi bi-play-fill me-1"></i>
+            Hisoblash
+          </button>
+        </form>
+
+        <hr class="my-3">
+
+        <a class="btn btn-outline-primary w-100"
+           href="{% url 'ai_module:rl_circuit_pdf' %}?R={{ params.R }}&L={{ params.L }}&i0={{ params.i0 }}&tmax={{ params.tmax }}&nt={{ params.nt }}&v_type={{ params.v_type }}&V0={{ params.V0 }}&freq={{ params.freq }}">
+          <i class="bi bi-file-earmark-pdf me-1"></i>
+          PDF yuklab olish
+        </a>
+
+      </div>
+    </div>
+
+    <!-- NATIJALAR -->
+    <div class="col-12 col-lg-8">
+      <div class="block p-3">
+
+        <div class="section-title">
+          <i class="bi bi-bar-chart-line me-1"></i>
+          Grafik natijalar
+        </div>
+
+        {% if i_png %}
+          <ul class="nav nav-tabs mb-3">
+            <li class="nav-item">
+              <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#i" type="button">
+                <i class="bi bi-activity me-1"></i> i(t)
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#didt" type="button">
+                <i class="bi bi-arrow-repeat me-1"></i> di/dt
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#vl" type="button">
+                <i class="bi bi-lightning me-1"></i> V<sub>L</sub>(t)
+              </button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link" id="tab-3d" data-bs-toggle="tab" data-bs-target="#surf3d" type="button">
+                <i class="bi bi-box me-1"></i> 3D Sirt
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="i">
+              <div class="img-frame">
+                <img class="img-fluid" src="data:image/png;base64,{{ i_png }}" alt="i(t)">
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="didt">
+              <div class="img-frame">
+                <img class="img-fluid" src="data:image/png;base64,{{ didt_png }}" alt="di/dt">
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="vl">
+              <div class="img-frame">
+                <img class="img-fluid" src="data:image/png;base64,{{ vl_png }}" alt="VL(t)">
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="surf3d">
+              <div class="img-frame">
+                <div class="plotly-wrap">
+                  {{ plot3d_div|safe }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {% if conclusion %}
+            <div class="conclusion mt-3">
+              <strong><i class="bi bi-check2-circle me-1"></i> Xulosa.</strong>
+              {{ conclusion }}
+            </div>
+          {% endif %}
+
+        {% else %}
+          <div class="text-muted">
+            Parametrlarni kiriting va <b>Hisoblash</b> tugmasini bosing.
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="foot">
+    DiffPhys • RL interaktiv modul • Screenshot uchun mos
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- 3D tab ochilganda Plotly resize -->
+<script>
+  const tab3dBtn = document.getElementById('tab-3d');
+  if (tab3dBtn) {
+    tab3dBtn.addEventListener('shown.bs.tab', function () {
+      document.querySelectorAll('#surf3d .js-plotly-plot').forEach(gd => {
+        try { Plotly.Plots.resize(gd); } catch(e) {}
+      });
+    });
+  }
+</script>
+
+</body>
+</html>

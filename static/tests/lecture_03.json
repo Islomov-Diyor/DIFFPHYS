@@ -1,0 +1,138 @@
+{
+  "quiz": {
+    "title": "3-mavzu: Chiziqli differensial tenglamalar va unga keladigan tenglamalar. Bernulli tenglamasi",
+    "language": "uz",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Birnchi tartibli chiziqli differensial tenglamaning umumiy ko'rinishi qaysi?",
+        "options": {
+          "A": "y'=f(x)g(y)",
+          "B": "y'+p(x)y=q(x)",
+          "C": "y''+py=0",
+          "D": "y'=F(y/x)"
+        },
+        "correct_answer": "B",
+        "explanation": "Birinchi tartibli chiziqli differensial tenglama y'+p(x)y=q(x) ko'rinishida bo'ladi, bu yerda p(x) va q(x) berilgan funksiyalar."
+      },
+      {
+        "id": 2,
+        "question": "Chiziqli differensial tenglamada p(x) va q(x) qanday bo'lishi kerak?",
+        "options": {
+          "A": "Doimiy sonlar",
+          "B": "Uzluksiz funksiyalar",
+          "C": "Differensiallanuvchi funksiyalar",
+          "D": "Faqat musbat funksiyalar"
+        },
+        "correct_answer": "B",
+        "explanation": "Chiziqli differensial tenglamada p(x) va q(x) uzluksiz funksiyalar bo'lishi kerak. Bu Yechimning mavjudligi va yagonaligi uchun zaruriy shart."
+      },
+      {
+        "id": 3,
+        "question": "Quyidagi tenglamalardan qaysi biri chiziqli differensial tenglama hisoblanadi?",
+        "options": {
+          "A": "y'=y²+x",
+          "B": "y'+2y=x",
+          "C": "yy'=x",
+          "D": "y'=xy²"
+        },
+        "correct_answer": "B",
+        "explanation": "y'+2y=x tenglamasi y'+p(x)y=q(x) ko'rinishida (p(x)=2, q(x)=x), shuning uchun chiziqli differensial tenglama hisoblanadi."
+      },
+      {
+        "id": 4,
+        "question": "Chiziqli bir jinsli differensial tenglama qaysi?",
+        "options": {
+          "A": "y'+y=x",
+          "B": "y'=x+y²",
+          "C": "y'+p(x)y=0",
+          "D": "y'=xy"
+        },
+        "correct_answer": "C",
+        "explanation": "Chiziqli bir jinsli (yoki birrodli) differensial tenglama q(x)=0 bo'lganda hosil bo'ladi: y'+p(x)y=0. Bu tenglamaning o'ng tomoni nolga teng."
+      },
+      {
+        "id": 5,
+        "question": "Chiziqli bir jinsli tenglamaning umumiy yechimi qanday ko'rinishda bo'ladi?",
+        "options": {
+          "A": "y=C+x",
+          "B": "y=Ce^(-∫p(x)dx)",
+          "C": "y=∫q(x)dx",
+          "D": "y=x²+C"
+        },
+        "correct_answer": "B",
+        "explanation": "Chiziqli bir jinsli tenglama y'+p(x)y=0 ning umumiy yechimi y=Ce^(-∫p(x)dx) ko'rinishida bo'ladi, bu yerda C - erkin konstanta."
+      },
+      {
+        "id": 6,
+        "question": "Bernulli tenglamasining umumiy ko'rinishi qaysi?",
+        "options": {
+          "A": "y'+p(x)y=q(x)",
+          "B": "y'=f(x)g(y)",
+          "C": "y'+p(x)y=q(x)yⁿ",
+          "D": "y''+py=0"
+        },
+        "correct_answer": "C",
+        "explanation": "Bernulli tenglamasi y'+p(x)y=q(x)yⁿ ko'rinishida bo'ladi, bu yerda n - haqiqiy son (n≠0, n≠1)."
+      },
+      {
+        "id": 7,
+        "question": "Bernulli tenglamasida n=0 yoki n=1 bo'lsa, tenglama qanday turga kiradi?",
+        "options": {
+          "A": "Ajraluvchi tenglama",
+          "B": "Bir jinsli tenglama",
+          "C": "Chiziqli differensial tenglama",
+          "D": "Ikkinchi tartibli tenglama"
+        },
+        "correct_answer": "C",
+        "explanation": "Agar n=0 bo'lsa, y'+p(x)y=q(x) (chiziqli tenglama) va agar n=1 bo'lsa, y'+[p(x)-q(x)]y=0 (chiziqli bir jinsli tenglama) hosil bo'ladi."
+      },
+      {
+        "id": 8,
+        "question": "Bernulli tenglamasini chiziqli tenglamaga keltirish uchun qanday almashtirish qo'llaniladi?",
+        "options": {
+          "A": "v=y/x",
+          "B": "z=y^(1-n)",
+          "C": "z=ln y",
+          "D": "u=y'"
+        },
+        "correct_answer": "B",
+        "explanation": "Bernulli tenglamasini chiziqli tenglama ko'rinishiga keltirish uchun z=y^(1-n) almashtirishi ishlatiladi. Bu almashtirish n-darajali hadni yo'qotadi."
+      },
+      {
+        "id": 9,
+        "question": "Quyidagi tenglama Bernulli tenglamasiga misol bo'la oladimi? y'+y=y²",
+        "options": {
+          "A": "Ha",
+          "B": "Yo'q"
+        },
+        "correct_answer": "A",
+        "explanation": "Berilgan tenglama Bernulli tenglamasi hisoblanadi, chunki u y'+p(x)y=q(x)yⁿ ko'rinishida (p(x)=1, q(x)=1, n=2)."
+      },
+      {
+        "id": 10,
+        "question": "Chiziqli differensial tenglamani yechishda asosiy usul qaysi?",
+        "options": {
+          "A": "O'zgaruvchilarni ajratish",
+          "B": "Integrallovchi ko'paytuvchi usuli",
+          "C": "O'zgartirishlar usuli",
+          "D": "Grafik usul"
+        },
+        "correct_answer": "B",
+        "explanation": "Chiziqli differensial tenglamani yechishda eng asosiy va keng tarqalgan usul - integrallovchi ko'paytuvchi (integrating factor) usuli. μ(x)=e^(∫p(x)dx) ko'paytuvchi yordamida tenglama to'la differensial ko'rinishiga keltiriladi."
+      }
+    ],
+    "metadata": {
+      "total_questions": 10,
+      "subject": "Matematika",
+      "topic": "Chiziqli va Bernulli differensial tenglamalari",
+      "subtopics": [
+        "Chiziqli differensial tenglamalar",
+        "Chiziqli bir jinsli tenglamalar",
+        "Bernulli tenglamalari",
+        "Integrallovchi ko'paytuvchi usuli"
+      ],
+      "difficulty": "O'rta"
+    }
+  }
+}

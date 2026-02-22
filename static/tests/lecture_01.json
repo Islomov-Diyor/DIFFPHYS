@@ -1,0 +1,134 @@
+{
+  "quiz": {
+    "title": "1-mavzu: Oddiy differensial tenglamalar nazariyasining asosiy tushunchalari",
+    "language": "uz",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Oddiy differensial tenglama (ODT) deb nimaga aytiladi?",
+        "options": {
+          "A": "Bir nechta mustaqil o'zgaruvchilarga bog'liq tenglama",
+          "B": "Faqat algebraik hadlardan iborat tenglama",
+          "C": "Bitta mustaqil o'zgaruvchi bo'yicha hosilani o'z ichiga olgan tenglama",
+          "D": "Integral tenglama"
+        },
+        "correct_answer": "C",
+        "explanation": "Oddiy differensial tenglama bitta mustaqil o'zgaruvchining noma'lum funksiyasi va uning hosilalarini bog'laydigan tenglama dir."
+      },
+      {
+        "id": 2,
+        "question": "Differensial tenglamaning tartibi nimani bildiradi?",
+        "options": {
+          "A": "Tenglamadagi noma'lumlar sonini",
+          "B": "Eng yuqori hosilaning tartibini",
+          "C": "Tenglamaning yechish usulini",
+          "D": "Integrallash sonini"
+        },
+        "correct_answer": "B",
+        "explanation": "Tenglamaning tartibi undagi eng yuqori tartibli hosilaning tartibiga teng."
+      },
+      {
+        "id": 3,
+        "question": "Quyidagi tenglamalardan qaysi biri birinchi tartibli ODT?",
+        "options": {
+          "A": "y'' + y = 0",
+          "B": "y' = x + y",
+          "C": "y''' = x",
+          "D": "y^(4) + y = 0"
+        },
+        "correct_answer": "B",
+        "explanation": "Birinchi tartibli ODT da faqat birinchi tartibli hosila (y') qatnashadi."
+      },
+      {
+        "id": 4,
+        "question": "Oddiy differensial tenglamaning umumiy yechimi qanday bo'ladi?",
+        "options": {
+          "A": "Faqat bitta aniq yechim",
+          "B": "Erkin konstantalarni o'z ichiga olgan yechim",
+          "C": "Faqat sonli yechim",
+          "D": "Jadval ko'rinishidagi yechim"
+        },
+        "correct_answer": "B",
+        "explanation": "Umumiy yechim differensial tenglamaning barcha yechimlarini ifodalovchi, erkin konstantalar (C) ni o'z ichiga olgan funksiya."
+      },
+      {
+        "id": 5,
+        "question": "Xususiy yechim nima?",
+        "options": {
+          "A": "Umumiy yechim",
+          "B": "Erkin konstantasiz yechim",
+          "C": "Dastlabki shartlar yordamida aniqlangan yechim",
+          "D": "Grafik ko'rinishidagi yechim"
+        },
+        "correct_answer": "C",
+        "explanation": "Xususiy yechim - dastlabki shartlar (boshlang'ich shartlar) qo'llab, erkin konstantalar aniq qiymatga ega bo'lgandagi yechim."
+      },
+      {
+        "id": 6,
+        "question": "Koshi masalasi nimadan iborat?",
+        "options": {
+          "A": "Faqat differensial tenglamadan",
+          "B": "Tenglama va uning umumiy yechimidan",
+          "C": "Differensial tenglama va dastlabki shartlardan",
+          "D": "Integral va hosiladan"
+        },
+        "correct_answer": "C",
+        "explanation": "Koshi masalasi (boshlang'ich qiymatlar masalasi) differensial tenglama va boshlang'ich shartlardan iborat."
+      },
+      {
+        "id": 7,
+        "question": "Quyidagi tenglamalardan qaysi biri ikkinchi tartibli ODT?",
+        "options": {
+          "A": "y' = xy",
+          "B": "y'' + 3y = 0",
+          "C": "y''' = x^2",
+          "D": "y^(4) + y = 0"
+        },
+        "correct_answer": "B",
+        "explanation": "Ikkinchi tartibli ODT da ikkinchi tartibli hosila (y'') eng yuqori tartibli hosila hisoblanadi."
+      },
+      {
+        "id": 8,
+        "question": "Oddiy differensial tenglamani yechish nimani anglatadi?",
+        "options": {
+          "A": "Hosilani topishni",
+          "B": "Integrallashni",
+          "C": "Tenglamani qanoatlantiruvchi funksiyani topishni",
+          "D": "Grafik chizishni"
+        },
+        "correct_answer": "C",
+        "explanation": "Differensial tenglamani yechish - uni qanoatlantiruvchi (o'rniga qo'yilganda tenglamani to'g'ri qiluvchi) funksiyani topish."
+      },
+      {
+        "id": 9,
+        "question": "Integrallash jarayonida hosil bo'ladigan doimiy sonlar qanday ataladi?",
+        "options": {
+          "A": "Fizik konstantalar",
+          "B": "Algebraik konstantalar",
+          "C": "Erkin konstantalar",
+          "D": "Maxsus sonlar"
+        },
+        "correct_answer": "C",
+        "explanation": "Integrallash natijasida paydo bo'ladigan C, C1, C2 kabi doimiy sonlar erkin konstantalar (arbitrary constants) deyiladi."
+      },
+      {
+        "id": 10,
+        "question": "Quyidagilardan qaysi biri umumiy yechim hisoblanadi?",
+        "options": {
+          "A": "y = 2e^x",
+          "B": "y = Ce^x",
+          "C": "y = e^x",
+          "D": "y = x^2"
+        },
+        "correct_answer": "B",
+        "explanation": "Umumiy yechim erkin konstanta (C) ni o'z ichiga oladi va differensial tenglamaning barcha yechimlarini ifodalaydi."
+      }
+    ],
+    "metadata": {
+      "total_questions": 10,
+      "subject": "Matematika",
+      "topic": "Differensial tenglamalar",
+      "difficulty": "Boshlang'ich"
+    }
+  }
+}

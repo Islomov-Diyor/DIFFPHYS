@@ -1,0 +1,389 @@
+{% load static %}
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Erkin tushish + qarshilik | DiffPhys</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Plotly (3D sirt uchun) -->
+  <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+
+  <style>
+    /* MUHIM: body foniga tegmaymiz — saytning global foni o'zgarmaydi */
+
+    /* Kartalar umumiy (sizdagi avvalgi uslubga mos) */
+    .soft-card{
+      border:0;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(10, 20, 40, .08);
+      background: #fff;
+    }
+
+    .btn-pill{ border-radius: 999px; padding: .65rem 1.1rem; }
+    .img-frame{
+      border-radius: 14px;
+      border: 1px solid #eef0f6;
+      background: #fff;
+      overflow:hidden;
+    }
+    .muted{ color:#6c757d; }
+
+    /* ====== HERO: faqat shu sahifada farqli dizayn (fon o'zgarmaydi) ====== */
+    .hero{
+      border-radius: 22px;
+      color:#fff;
+      position: relative;
+      overflow:hidden;
+      border: 1px solid rgba(0,0,0,.08);
+
+      /* boshqalardan farqli, lekin body foniga tegmaydigan hero */
+      background:
+        linear-gradient(135deg, #0ea5e9 0%, #7c3aed 55%, #f43f5e 110%);
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-50px;
+      background-image:
+        radial-gradient(circle at 25% 25%, rgba(255,255,255,.22) 0 2px, transparent 3px),
+        radial-gradient(circle at 75% 35%, rgba(255,255,255,.16) 0 2px, transparent 3px),
+        linear-gradient(45deg, rgba(255,255,255,.10) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.10) 50%, rgba(255,255,255,.10) 75%, transparent 75%, transparent);
+      background-size: 56px 56px, 64px 64px, 42px 42px;
+      transform: rotate(8deg);
+      opacity: .55;
+      pointer-events:none;
+    }
+    .hero-inner{ position:relative; z-index:1; }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:.55rem .9rem;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.28);
+      background: rgba(255,255,255,.16);
+      font-size:.92rem;
+      white-space:nowrap;
+    }
+    .pill .dot{
+      width:10px; height:10px; border-radius:50%;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 0 0 4px rgba(255,255,255,.18);
+    }
+
+    .btn-ghost{
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.28);
+      background: rgba(255,255,255,.16);
+      color:#fff;
+      padding:.6rem 1rem;
+      text-decoration:none;
+      transition: .15s ease;
+    }
+    .btn-ghost:hover{
+      background: rgba(255,255,255,.22);
+      color:#fff;
+    }
+
+    /* Nav pillsni biroz o'zgacha qilamiz (faqat shu sahifada) */
+    .nav-pills .nav-link{
+      border-radius:999px;
+      background:#f3f5fb;
+      border:1px solid #e7ebf6;
+      color:#3b3b3b;
+    }
+    .nav-pills .nav-link.active{
+      background:#111827;
+      border-color:#111827;
+      color:#fff;
+    }
+
+    /* Form elementlari (Bootstrap bilan chiroyli) */
+    .form-control, .form-select{
+      border-radius: 12px;
+      padding: .6rem .8rem;
+    }
+
+    .hero-compact{
+      padding: 22px 28px;
+    }
+
+    .hero-compact h2{
+      font-size: 26px;
+      margin-bottom: 6px;
+    }
+
+    .hero-compact .pill{
+      font-size: 13px;
+      padding: .35rem .7rem;
+    }
+
+    .hero-compact .btn-ghost{
+      padding: .45rem .8rem;
+      font-size: 14px;
+    }
+
+    /* 3D konteyner: sahifada joy ajratish */
+    .plotly-wrap{
+      min-height: 520px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+<div class="container py-4">
+
+  <!-- HERO (farqli dizayn, lekin sayt foni o'zgarmaydi) -->
+  <div class="hero mb-4 hero-compact">
+    <div class="hero-inner">
+      <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
+        <div>
+          <div class="d-flex flex-wrap gap-2 mb-2">
+            <span class="pill"><span class="dot"></span> DiffPhys • ODE moduli</span>
+            <span class="pill">Erkin tushish + havo qarshiligi</span>
+          </div>
+          <h2 class="mb-2">Erkin tushish + havo qarshiligi — interaktiv modul</h2>
+          <div style="opacity:.92;">
+            Og‘irlik + qarshilik kuchi: chiziqli (k·v) yoki kvadratik (k·v²)
+          </div>
+        </div>
+
+        <div class="d-flex gap-2 flex-wrap align-items-center">
+          <span class="pill">
+            Yechish usuli: {% if scipy_ok %}<b>SciPy solve_ivp</b>{% else %}<b>RK4 (fallback)</b>{% endif %}
+          </span>
+          <a href="/" class="btn-ghost">Interaktiv xizmatlarga qaytish</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <!-- FORM -->
+    <div class="col-12 col-lg-4">
+      <div class="card soft-card">
+        <div class="card-body p-4">
+          <h5 class="mb-3">Parametrlar</h5>
+
+          <form method="post" class="vstack gap-3">
+            {% csrf_token %}
+
+            <div>
+              <label class="form-label">m (kg)</label>
+              {{ form.m }}
+            </div>
+
+            <div>
+              <label class="form-label">g (m/s²)</label>
+              {{ form.g }}
+            </div>
+
+            <div>
+              <label class="form-label">Qarshilik turi</label>
+              {{ form.drag_type }}
+            </div>
+
+            <div>
+              <label class="form-label">k (qarshilik koeff.)</label>
+              {{ form.k }}
+            </div>
+
+            <hr class="my-2">
+
+            <div>
+              <label class="form-label">y0 (m) — boshlang‘ich balandlik</label>
+              {{ form.y0 }}
+            </div>
+
+            <div>
+              <label class="form-label">v0 (m/s) — boshlang‘ich tezlik</label>
+              {{ form.v0 }}
+            </div>
+
+            <hr class="my-2">
+
+            <div>
+              <label class="form-label">T (s) — vaqt oxiri</label>
+              {{ form.t_end }}
+            </div>
+
+            <div>
+              <label class="form-label">dt (s) — qadam</label>
+              {{ form.dt }}
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-pill w-100">Hisoblash</button>
+          </form>
+
+          {% if stats %}
+          <div class="mt-4">
+            <h6 class="mb-2">Qisqa natijalar</h6>
+            <div class="row g-2">
+              <div class="col-6">
+                <div class="p-3 bg-light rounded-3">
+                  <div class="muted">v_max</div>
+                  <div class="fw-semibold">{{ stats.v_max }}</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="p-3 bg-light rounded-3">
+                  <div class="muted">a_min</div>
+                  <div class="fw-semibold">{{ stats.a_min }}</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="p-3 bg-light rounded-3">
+                  <div class="muted">Hisoblangan oxirgi vaqt</div>
+                  <div class="fw-semibold">t ≈ {{ stats.t_end_real }} s</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <!-- CHARTS -->
+    <div class="col-12 col-lg-8">
+      <div class="card soft-card">
+        <div class="card-body p-4">
+          <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+            <h5 class="mb-0">Grafiklar</h5>
+            <div class="muted small">Natijalar hisoblangandan keyin PDF yuklab olish mumkin</div>
+          </div>
+
+          {% if img_h %}
+            <ul class="nav nav-pills mb-3" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pane-h" type="button" role="tab">h(t)</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pane-v" type="button" role="tab">v(t)</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pane-a" type="button" role="tab">a(t)</button>
+              </li>
+
+              <!-- ✅ NEW: 3D Surface tab -->
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="tab-3d" data-bs-toggle="pill" data-bs-target="#pane-3d"
+                        type="button" role="tab">3D Sirt</button>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="pane-h" role="tabpanel">
+                <div class="img-frame p-2">
+                  <img class="img-fluid" src="data:image/png;base64,{{ img_h }}" alt="h(t)">
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pane-v" role="tabpanel">
+                <div class="img-frame p-2">
+                  <img class="img-fluid" src="data:image/png;base64,{{ img_v }}" alt="v(t)">
+                </div>
+              </div>
+              <div class="tab-pane fade" id="pane-a" role="tabpanel">
+                <div class="img-frame p-2">
+                  <img class="img-fluid" src="data:image/png;base64,{{ img_a }}" alt="a(t)">
+                </div>
+              </div>
+
+              <!-- ✅ NEW: 3D Surface panel -->
+              <div class="tab-pane fade" id="pane-3d" role="tabpanel">
+                <div class="img-frame p-2">
+                  <div class="muted small px-2 pt-1">
+                    Interaktiv: rotate/zoom (Plotly). Agar bo‘sh chiqsa — view’dan <code>surface_div</code> kelmayapti.
+                  </div>
+                  <div class="plotly-wrap">
+                    {{ surface_div|safe }}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {% if conclusion %}
+              <div class="card soft-card mt-3">
+                <div class="card-body">
+                  <h5 class="mb-2">Xulosa</h5>
+                  <p class="mb-0">{{ conclusion }}</p>
+                </div>
+              </div>
+            {% endif %}
+
+            <!-- PDF (POST) -->
+            <div class="d-flex gap-2 mt-3 flex-wrap">
+              <form method="post" action="{% url 'ai_module:free_fall_pdf' %}">
+                {% csrf_token %}
+
+                <!-- Parametrlar -->
+                <input type="hidden" name="m" value="{{ form.m.value }}">
+                <input type="hidden" name="g" value="{{ form.g.value }}">
+                <input type="hidden" name="drag_type" value="{{ form.drag_type.value }}">
+                <input type="hidden" name="k" value="{{ form.k.value }}">
+                <input type="hidden" name="y0" value="{{ form.y0.value }}">
+                <input type="hidden" name="v0" value="{{ form.v0.value }}">
+                <input type="hidden" name="t_end" value="{{ form.t_end.value }}">
+                <input type="hidden" name="dt" value="{{ form.dt.value }}">
+
+                <!-- Grafiklar -->
+                <input type="hidden" name="img_h" value="{{ img_h }}">
+                <input type="hidden" name="img_v" value="{{ img_v }}">
+                <input type="hidden" name="img_a" value="{{ img_a }}">
+
+                <!-- Xulosa -->
+                <input type="hidden" name="conclusion" value="{{ conclusion }}">
+
+                <button type="submit" class="btn btn-outline-dark btn-pill">PDF yuklab olish</button>
+              </form>
+            </div>
+
+          {% else %}
+            <div class="p-4 bg-light rounded-4 text-center">
+              <div class="fs-5 fw-semibold mb-2">Grafiklar hali yo‘q</div>
+              <div class="muted">Parametrlarni kiriting va <b>Hisoblash</b> tugmasini bosing.</div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-4 muted small">
+    © DiffPhys • Django + Matplotlib • ODE modellashtirish
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.querySelectorAll('input, select, textarea').forEach(el=>{
+    if(!el.classList.contains('form-control') && el.type !== 'checkbox' && el.type !== 'radio'){
+      el.classList.add('form-control');
+    }
+    if(el.tagName === 'SELECT' && !el.classList.contains('form-select')){
+      el.classList.remove('form-control');
+      el.classList.add('form-select');
+    }
+  });
+</script>
+
+<!-- ✅ NEW: 3D tab ochilganda Plotly resize -->
+<script>
+  const tab3dBtn = document.getElementById('tab-3d');
+  if (tab3dBtn) {
+    tab3dBtn.addEventListener('shown.bs.tab', function () {
+      document.querySelectorAll('#pane-3d .js-plotly-plot').forEach(gd => {
+        try { Plotly.Plots.resize(gd); } catch(e) {}
+      });
+    });
+  }
+</script>
+
+</body>
+</html>

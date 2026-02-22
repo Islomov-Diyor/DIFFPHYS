@@ -1,0 +1,142 @@
+{
+  "quiz": {
+    "topic_id": 14,
+    "title": "Turg'unlikni radioaktiv parchalanish yoki elektr rezonans asosida modellashtirish",
+    "language": "uz",
+    "total_questions": 10,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Radioaktiv parchalanish jarayoni qaysi turdagi differensial tenglama bilan tavsiflanadi?",
+        "options": {
+          "A": "dN/dt = -λN",
+          "B": "dN/dt = λN",
+          "C": "d²N/dt² + λ²N = 0",
+          "D": "N = N₀e^(λt)"
+        },
+        "correct_answer": "A",
+        "explanation": "Radioaktiv parchalanish birinchi tartibli differensial tenglama bilan tavsiflanadi: dN/dt = -λN. Bu yerda N - radioaktiv yadrolar soni, λ - parchalanish konstantasi, minus ishorasi modda miqdorining kamayishini ko'rsatadi."
+      },
+      {
+        "id": 2,
+        "question": "Radioaktiv parchalanish tenglamasidagi λ nimani ifodalaydi?",
+        "options": {
+          "A": "Boshlang'ich modda miqdori",
+          "B": "Parchalanish konstantasi",
+          "C": "Vaqt",
+          "D": "Energiya"
+        },
+        "correct_answer": "B",
+        "explanation": "λ (lambda) parchalanish konstantasi bo'lib, radioaktiv moddaning parchalanish tezligini tavsiflaydi. Bu kattalik moddaning xususiyatiga bog'liq va vaqtdan o'zgarmaydi."
+      },
+      {
+        "id": 3,
+        "question": "Radioaktiv moddaning yarmi parchalanish vaqti T₁/₂ bilan λ orasidagi bog'lanish qanday ifodalanadi?",
+        "options": {
+          "A": "T₁/₂ = λ",
+          "B": "T₁/₂ = (ln 2)/λ",
+          "C": "T₁/₂ = 2λ",
+          "D": "T₁/₂ = √λ"
+        },
+        "correct_answer": "B",
+        "explanation": "Yarmi parchalanish vaqti (half-life) T₁/₂ = (ln 2)/λ ≈ 0.693/λ formuli bilan aniqlanadi. Bu moddaning yarmi parchalanish uchun ketgan vaqtni ko'rsatadi."
+      },
+      {
+        "id": 4,
+        "question": "Elektr rezonans zanjirida seriyali RLC uchun rezonans chastotasi ω₀ qanday aniqlanadi?",
+        "options": {
+          "A": "ω₀ = √(L/C)",
+          "B": "ω₀ = 1/√(LC)",
+          "C": "ω₀ = LC",
+          "D": "ω₀ = 1/LC"
+        },
+        "correct_answer": "B",
+        "explanation": "Rezonans chastotasi ω₀ = 1/√(LC) formula bilan aniqlanadi, bu yerda L - induktivlik, C - kondensator sig'imi. Bu chastotada zanjirning reaktiv qarshiligi nolga teng bo'ladi."
+      },
+      {
+        "id": 5,
+        "question": "RLC zanjirida turg'un tokning amplitudasi rezonansda qanday bo'ladi?",
+        "options": {
+          "A": "Minimal",
+          "B": "Maksimal",
+          "C": "Nolga teng",
+          "D": "Doimiy emas"
+        },
+        "correct_answer": "B",
+        "explanation": "Rezonans chastotasida (ω = ω₀) induktiv va kapasitiv reaktanslar bir-birini bekor qiladi, natijada zanjirning umumiy qarshiligi minimal (faqat aktiv R) bo'ladi va tok amplitudasi maksimal bo'ladi."
+      },
+      {
+        "id": 6,
+        "question": "Radioaktiv parchalanish modelida moddaning miqdori vaqt bo'yicha qanday o'zgaradi?",
+        "options": {
+          "A": "Chiziqli kamayadi",
+          "B": "Eksponensial kamayadi",
+          "C": "Sinusoidal o'zgaradi",
+          "D": "Doimiy bo'lib qoladi"
+        },
+        "correct_answer": "B",
+        "explanation": "Radioaktiv parchalanish modelida modda miqdori eksponensial kamayadi: N(t) = N₀e^(-λt). Bu chiziqli emas, balki vaqt o'tishi bilan kamayish tezligi ham kamayib boruvchi jarayondir."
+      },
+      {
+        "id": 7,
+        "question": "Seriyali RLC zanjirida kritik so'nimlanish sharoiti qachon sodir bo'ladi?",
+        "options": {
+          "A": "R² < 4L/C",
+          "B": "R² = 4L/C",
+          "C": "R² > 4L/C",
+          "D": "Har doim"
+        },
+        "correct_answer": "B",
+        "explanation": "Kritik so'nimlanish (critical damping) R² = 4L/C shartida yuzaga keladi. Bu holatda zanjir eng tez orada muvozanat holatiga yetadi, lekin tebranishsiz."
+      },
+      {
+        "id": 8,
+        "question": "Turg'unlikni modellashtirishda radioaktiv parchalanish va seriyali RLC rezonans o'rtasidagi umumiy o'xshashlik nima?",
+        "options": {
+          "A": "Ikkalasi ham chiziqli o'sish bilan tavsiflanadi",
+          "B": "Ikkalasi ham eksponensial o'zgarish bilan tavsiflanadi",
+          "C": "Ikkalasi ham sinusoidal o'zgarish bilan tavsiflanadi",
+          "D": "Hech qanday o'xshashlik yo'q"
+        },
+        "correct_answer": "B",
+        "explanation": "Ikkala jarayon ham eksponensial o'zgarishlar bilan tavsiflanadi: radioaktiv parchalanishda eksponensial kamayish, RLC zanjirida so'nimlanishli tebranishlarda eksponensial amplituda kamayishi kuzatiladi."
+      },
+      {
+        "id": 9,
+        "question": "Elektr rezonans zanjirida induktor va kondensatorning qarshiligi bir-birini qanday to'ldiradi?",
+        "options": {
+          "A": "Qo'shib oshadi",
+          "B": "Bir-birini bekor qiladi",
+          "C": "Faqat induktor qarshiligi ortadi",
+          "D": "Faqat kondensator qarshiligi ortadi"
+        },
+        "correct_answer": "B",
+        "explanation": "Rezonansda induktiv reaktans (X_L = ωL) va kapasitiv reaktans (X_C = 1/ωC) teng va qarama-qarshi ishorali bo'ladi: X_L = X_C. Natijada ular bir-birini bekor qiladi va zanjir faqat aktiv qarshilik R ga ega bo'ladi."
+      },
+      {
+        "id": 10,
+        "question": "Radioaktiv parchalanish tenglamasining yechimi qanday ko'rinishda bo'ladi?",
+        "options": {
+          "A": "N(t) = N₀ - λt",
+          "B": "N(t) = N₀e^(-λt)",
+          "C": "N(t) = N₀sin(λt)",
+          "D": "N(t) = λt"
+        },
+        "correct_answer": "B",
+        "explanation": "Radioaktiv parchalanish tenglamasining yechimi N(t) = N₀e^(-λt) ko'rinishida bo'ladi, bu yerda N₀ - boshlang'ich vaqtdagi modda miqdori, t - vaqt, λ - parchalanish konstantasi."
+      }
+    ],
+    "metadata": {
+      "subject": "Matematika (Matematik fizika)",
+      "topic": "Radioaktiv parchalanish va elektr rezonans modellari",
+      "difficulty": "O'rta-yuqori",
+      "keywords": [
+        "radioaktiv parchalanish",
+        "rezonans",
+        "RLC zanjir",
+        "eksponensial o'zgarish",
+        "yarmi parchalanish vaqti"
+      ]
+    }
+  }
+}

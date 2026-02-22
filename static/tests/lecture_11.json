@@ -1,0 +1,143 @@
+{
+  "quiz": {
+    "topic_id": 11,
+    "title": "O'zgarmas koeffitsientli chiziqli differensial tenglamalar",
+    "language": "uz",
+    "total_questions": 10,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Quyidagi tenglamalardan qaysi biri 2-tartibli o'zgarmas koeffitsientli chiziqli differensial tenglama hisoblanadi?",
+        "options": {
+          "A": "y'' + 3xy' + 2y = 0",
+          "B": "y'' + 5y' + 6y = 0",
+          "C": "xy'' + y = 0",
+          "D": "y'' + sin(x)y = 0"
+        },
+        "correct_answer": "B",
+        "explanation": "O'zgarmas koeffitsientli chiziqli tenglamada y va uning hosilalari koeffitsientlari doimiy sonlar (konstantalar) bo'lishi kerak. B variantida 5 va 6 koeffitsientlar o'zgarmas, A va D da o'zgaruvchiga bog'liq, C da esa x o'zgaruvchisi koeffitsient sifatida."
+      },
+      {
+        "id": 2,
+        "question": "Ikkinchi tartibli o'zgarmas koeffitsientli chiziqli tenglamaning umumiy ko'rinishi qaysi?",
+        "options": {
+          "A": "y'' + p(x)y' + q(x)y = f(x)",
+          "B": "y'' + py' + qy = f(x)",
+          "C": "y' + py = f(x)",
+          "D": "y'' + xy' + y = 0"
+        },
+        "correct_answer": "B",
+        "explanation": "Ikkinchi tartibli o'zgarmas koeffitsientli chiziqli tenglama y'' + py' + qy = f(x) ko'rinishida bo'ladi, bu yerda p va q o'zgarmas sonlar (koeffitsientlar), f(x) esa o'ng tomondagi funksiya."
+      },
+      {
+        "id": 3,
+        "question": "Tenglama y'' - 3y' + 2y = 0 bo'lsa, uning harakteristik tenglamasi qanday bo'ladi?",
+        "options": {
+          "A": "r² - 3r + 2 = 0",
+          "B": "r² + 3r + 2 = 0",
+          "C": "r² - 2r + 3 = 0",
+          "D": "r² + 2r - 3 = 0"
+        },
+        "correct_answer": "A",
+        "explanation": "Harakteristik (xarakteristik) tenglama y = e^(rx) almashtirishidan hosil bo'ladi: y' = re^(rx), y'' = r²e^(rx). tenglamaga qo'yilganda e^(rx) ga bo'linadi va r² - 3r + 2 = 0 hosil bo'ladi."
+      },
+      {
+        "id": 4,
+        "question": "Characteristic tenglamasi r² - 4r + 4 = 0 bo'lgan tenglamaning umumiy yechimi qaysi?",
+        "options": {
+          "A": "y = C₁e^(2x) + C₂e^(-2x)",
+          "B": "y = C₁e^(2x) + C₂xe^(2x)",
+          "C": "y = C₁e^(-2x) + C₂xe^(-2x)",
+          "D": "y = C₁e^(4x) + C₂e^(-x)"
+        },
+        "correct_answer": "B",
+        "explanation": "Diskriminant D = 16 - 16 = 0, takroriy ildiz r = 2. Takroriy ildiz bo'lganda yechim y = C₁e^(2x) + C₂xe^(2x) ko'rinishida bo'ladi."
+      },
+      {
+        "id": 5,
+        "question": "Quyidagi tenglamalardan qaysi biri Homogen tenglama hisoblanadi?",
+        "options": {
+          "A": "y'' + 2y' + y = e^x",
+          "B": "y'' + 3y' + 2y = 0",
+          "C": "y'' + y = sin x",
+          "D": "y'' - y' = x²"
+        },
+        "correct_answer": "B",
+        "explanation": "Homogen (bir jinsli) tenglama o'ng tomoni nolga teng bo'lgan tenglamadir. B variantida f(x) = 0, qolganlarida o'ng tomonda noldan farqli funksiya bor."
+      },
+      {
+        "id": 6,
+        "question": "Tenglama y'' + 4y = 0 bo'lsa, uning yechimi qanday?",
+        "options": {
+          "A": "y = C₁e^(2x) + C₂e^(-2x)",
+          "B": "y = C₁cos 2x + C₂sin 2x",
+          "C": "y = C₁cos 4x + C₂sin 4x",
+          "D": "y = C₁e^(4x) + C₂e^(-x)"
+        },
+        "correct_answer": "B",
+        "explanation": "Harakteristik tenglama r² + 4 = 0 dan r₁,₂ = ±2i (kompleks ildizlar). Kompleks ildizlar bo'lganda yechim y = e^(αx)(C₁cos βx + C₂sin βx), bu yerda α = 0, β = 2."
+      },
+      {
+        "id": 7,
+        "question": "Agar characteristic tenglama r² + r + 1 = 0 bo'lsa, undagi yechim qanday turga kiradi?",
+        "options": {
+          "A": "Real va turli ildizli",
+          "B": "Takroriy real ildizli",
+          "C": "Kompleks ildizli",
+          "D": "Hech biriga mos emas"
+        },
+        "correct_answer": "C",
+        "explanation": "Diskriminant D = 1 - 4 = -3 < 0, shuning uchun kompleks ildizlar hosil bo'ladi: r = (-1 ± i√3)/2."
+      },
+      {
+        "id": 8,
+        "question": "Quyidagi tenglamaning characteristic tenglamasi r² - 2r + 5 = 0 Uning umumiy yechimi qaysi?",
+        "options": {
+          "A": "y = C₁e^x + C₂e^(5x)",
+          "B": "y = e^x(C₁cos 2x + C₂sin 2x)",
+          "C": "y = C₁cos 5x + C₂sin 5x",
+          "D": "y = C₁e^(-x) + C₂e^(-5x)"
+        },
+        "correct_answer": "B",
+        "explanation": "Ildizlar r = (2 ± √(4-20))/2 = (2 ± 4i)/2 = 1 ± 2i. Kompleks ildizlar bo'lganda α = 1, β = 2, shuning uchun y = e^x(C₁cos 2x + C₂sin 2x)."
+      },
+      {
+        "id": 9,
+        "question": "Tenglama y'' - 6y' + 9y = 0 bo'lsa, uning yechimida qaysi ko'paytuvchi mavjud bo'ladi?",
+        "options": {
+          "A": "x",
+          "B": "x²",
+          "C": "e^x",
+          "D": "sin x"
+        },
+        "correct_answer": "A",
+        "explanation": "Harakteristik tenglama r² - 6r + 9 = 0 dan (r-3)² = 0, r = 3 (takroriy ildiz). Takroriy ildiz bo'lganda ikkinchi yechim C₂xe^(3x) ko'rinishida, ya'ni x ko'paytuvchi mavjud."
+      },
+      {
+        "id": 10,
+        "question": "Ikkinchi tartibli o'zgarmas koeffitsientli chiziqli tenglamalar qaysi sohalarda keng qo'llaniladi?",
+        "options": {
+          "A": "Mexanika va fizikada",
+          "B": "Biologiyada va tarixida",
+          "C": "Iqtisodiyot va adabiyotda",
+          "D": "Tilshunoslik va san'atda"
+        },
+        "correct_answer": "A",
+        "explanation": "Ikkinchi tartibli o'zgarmas koeffitsientli chiziqli tenglamalar mexanik tebranishlar (garmonik ossilyator), elektr zanjirlari (LC, RC zanjirlari), va fizikaning boshqa sohalarida keng qo'llaniladi."
+      }
+    ],
+    "metadata": {
+      "subject": "Matematika",
+      "topic": "O'zgarmas koeffitsientli chiziqli differensial tenglamalar",
+      "difficulty": "O'rta-yuqori",
+      "category": "Chiziqli algebra",
+      "keywords": [
+        "o'zgarmas koeffitsient",
+        "characteristic tenglama",
+        "homogen tenglama",
+        "kompleks ildizlar",
+        "takroriy ildizlar"
+      ]
+    }
+  }
+}

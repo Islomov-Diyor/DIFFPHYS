@@ -1,0 +1,256 @@
+{% load static %}
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radioaktiv parchalanish | DiffPhys</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .soft-card{ border:0; border-radius:16px; box-shadow:0 10px 30px rgba(10,20,40,.08); background:#fff; }
+    .btn-pill{ border-radius:999px; padding:.65rem 1.1rem; }
+    .img-frame{ border-radius:14px; border:1px solid #eef0f6; background:#fff; overflow:hidden; }
+    .muted{ color:#6c757d; }
+
+    .hero{
+      border-radius:22px;
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(0,0,0,.08);
+      background: linear-gradient(135deg, #0f172a 0%, #334155 45%, #0ea5e9 110%);
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-40px;
+      background-image: linear-gradient(45deg, rgba(255,255,255,.10) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.10) 50%, rgba(255,255,255,.10) 75%, transparent 75%, transparent);
+      background-size: 44px 44px;
+      transform: rotate(10deg);
+      opacity:.35;
+    }
+    .hero-inner{ position:relative; z-index:1; }
+    .pill{ display:inline-flex; align-items:center; gap:8px; padding:.45rem .8rem; border-radius:999px; border:1px solid rgba(255,255,255,.28); background: rgba(255,255,255,.16); font-size:.92rem; }
+    .btn-ghost{ border-radius:999px; border:1px solid rgba(255,255,255,.28); background: rgba(255,255,255,.16); color:#fff; padding:.55rem 1rem; text-decoration:none; }
+    .btn-ghost:hover{ background: rgba(255,255,255,.22); color:#fff; }
+
+    .nav-pills .nav-link{ border-radius:999px; background:#f3f5fb; border:1px solid #e7ebf6; color:#3b3b3b; }
+    .nav-pills .nav-link.active{ background:#111827; border-color:#111827; color:#fff; }
+
+    .form-control, .form-select{ border-radius:12px; padding:.6rem .8rem; }
+  </style>
+</head>
+
+<body>
+<div class="container py-4">
+
+  <div class="hero mb-4" style="padding:22px 28px;">
+    <div class="hero-inner">
+      <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
+        <div>
+          <div class="d-flex flex-wrap gap-2 mb-2">
+            <span class="pill">DiffPhys • ODE moduli</span>
+            <span class="pill">Radioaktiv parchalanish</span>
+          </div>
+          <h2 class="mb-1">Radioaktiv parchalanish — interaktiv modul</h2>
+          <div style="opacity:.92;">dN/dt = −λN (eksponensial so‘nish), A(t)=λN(t)</div>
+        </div>
+        <div class="d-flex gap-2 flex-wrap align-items-center">
+          <span class="pill">Yechish usuli: {% if scipy_ok %}<b>SciPy solve_ivp</b>{% else %}<b>RK4 fallback</b>{% endif %}</span>
+          <a href="/" class="btn-ghost">Interaktiv xizmatlarga qaytish</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <!-- LEFT: INPUTS -->
+    <div class="col-12 col-lg-4">
+      <div class="card soft-card">
+        <div class="card-body p-4">
+          <h5 class="mb-3">Parametrlar</h5>
+
+          <!-- Hisoblash formi: faqat shu sahifaga POST -->
+          <form id="mainForm" method="post" action="{% url 'ai_module:decay' %}" class="vstack gap-3">
+            {% csrf_token %}
+
+            <div><label class="form-label">N0</label>{{ form.N0 }}</div>
+            <div><label class="form-label">λ (1/s)</label>{{ form.lam }}</div>
+            <div><label class="form-label">T (s)</label>{{ form.t_end }}</div>
+            <div><label class="form-label">dt (s)</label>{{ form.dt }}</div>
+
+            <div class="pt-2">
+              <div class="muted small mb-2">3D Surface parametrlari (ixtiyoriy)</div>
+              <div class="row g-2">
+                <div class="col-4">
+                  <label class="form-label">λ_min</label>
+                  <input class="form-control" name="lam_min" value="{{ request.POST.lam_min|default:'0.1' }}">
+                </div>
+                <div class="col-4">
+                  <label class="form-label">λ_max</label>
+                  <input class="form-control" name="lam_max" value="{{ request.POST.lam_max|default:'2.0' }}">
+                </div>
+                <div class="col-4">
+                  <label class="form-label">λ_steps</label>
+                  <input class="form-control" name="lam_steps" value="{{ request.POST.lam_steps|default:'25' }}">
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Z (N yoki A)</label>
+                  <select class="form-select" name="z_mode">
+                    <option value="N" {% if request.POST.z_mode == "N" or not request.POST.z_mode %}selected{% endif %}>N(t)</option>
+                    <option value="A" {% if request.POST.z_mode == "A" %}selected{% endif %}>A(t)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-pill w-100">Hisoblash</button>
+          </form>
+
+          {% if stats %}
+          <div class="mt-4">
+            <h6 class="mb-2">Qisqa natijalar</h6>
+            <div class="p-3 bg-light rounded-3">
+              <div class="muted">T₁/₂ (s)</div>
+              <div class="fw-semibold">{{ stats.T12 }}</div>
+            </div>
+            <div class="p-3 bg-light rounded-3 mt-2">
+              <div class="muted">N(T)</div>
+              <div class="fw-semibold">{{ stats.N_end }}</div>
+            </div>
+            <div class="p-3 bg-light rounded-3 mt-2">
+              <div class="muted">A(T)</div>
+              <div class="fw-semibold">{{ stats.A_end }}</div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: OUTPUTS -->
+    <div class="col-12 col-lg-8">
+      <div class="card soft-card">
+        <div class="card-body p-4">
+          <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+            <h5 class="mb-0">Grafiklar</h5>
+            <div class="muted small">Natijadan so‘ng PDF yuklab olish mumkin</div>
+          </div>
+
+          {% if img_N %}
+            <ul class="nav nav-pills mb-3" role="tablist">
+              <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pN" type="button">N(t)</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#pA" type="button">A(t)</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#pL" type="button">ln(N)</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#p3D" type="button">3D Sirt</button></li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="pN">
+                <div class="img-frame p-2"><img class="img-fluid" src="data:image/png;base64,{{ img_N }}" alt="N(t)"></div>
+              </div>
+              <div class="tab-pane fade" id="pA">
+                <div class="img-frame p-2"><img class="img-fluid" src="data:image/png;base64,{{ img_A }}" alt="A(t)"></div>
+              </div>
+              <div class="tab-pane fade" id="pL">
+                <div class="img-frame p-2"><img class="img-fluid" src="data:image/png;base64,{{ img_lnN }}" alt="ln(N)"></div>
+              </div>
+
+              <div class="tab-pane fade" id="p3D">
+                {% if surface_div %}
+                  <div class="muted small mb-2">X: t (s), Y: λ (1/s), Z: N(t) yoki A(t).</div>
+                  <div class="img-frame p-2">
+                    {{ surface_div|safe }}
+                    <style>
+                      #p3D .plotly-graph-div { min-height: 520px; }
+                    </style>
+                  </div>
+                {% else %}
+                  <div class="p-4 bg-light rounded-4 text-center">
+                    <div class="fs-6 fw-semibold mb-2">3D grafik hali yo‘q</div>
+                    <div class="muted">Parametrlarni kiriting va <b>Hisoblash</b> tugmasini bosing.</div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+
+            {% if conclusion %}
+              <div class="card soft-card mt-3">
+                <div class="card-body">
+                  <h5 class="mb-2">Xulosa</h5>
+                  <p class="mb-0">{{ conclusion }}</p>
+                </div>
+              </div>
+            {% endif %}
+
+            <!-- PDF FORM: faqat POST + CSRF -->
+            <div class="d-flex gap-2 mt-3 flex-wrap">
+              <form id="pdfForm" method="post" action="{% url 'ai_module:decay_pdf' %}">
+                {% csrf_token %}
+
+                <!-- Parametrlar -->
+                <input type="hidden" name="N0" value="{{ form.N0.value }}">
+                <input type="hidden" name="lam" value="{{ form.lam.value }}">
+                <input type="hidden" name="t_end" value="{{ form.t_end.value }}">
+                <input type="hidden" name="dt" value="{{ form.dt.value }}">
+
+                <!-- Tayyor natijalar (PDFga uzatamiz) -->
+                <input type="hidden" name="img_N" value="{{ img_N }}">
+                <input type="hidden" name="img_A" value="{{ img_A }}">
+                <input type="hidden" name="img_lnN" value="{{ img_lnN }}">
+                <input type="hidden" name="conclusion" value="{{ conclusion }}">
+
+                <button type="submit" class="btn btn-outline-dark btn-pill">
+                  PDF yuklab olish
+                </button>
+              </form>
+            </div>
+
+          {% else %}
+            <div class="p-4 bg-light rounded-4 text-center">
+              <div class="fs-5 fw-semibold mb-2">Grafiklar hali yo‘q</div>
+              <div class="muted">Parametrlarni kiriting va <b>Hisoblash</b> tugmasini bosing.</div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-4 muted small">© DiffPhys • Django + Matplotlib • ODE modellashtirish</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Form control styling
+  document.querySelectorAll('input, select, textarea').forEach(el=>{
+    if(!el.classList.contains('form-control') && el.type !== 'checkbox' && el.type !== 'radio'){
+      el.classList.add('form-control');
+    }
+    if(el.tagName === 'SELECT' && !el.classList.contains('form-select')){
+      el.classList.remove('form-control');
+      el.classList.add('form-select');
+    }
+  });
+</script>
+
+<script>
+  // 3D tab ochilganda Plotly resize
+  document.querySelectorAll('button[data-bs-toggle="pill"]').forEach(btn => {
+    btn.addEventListener('shown.bs.tab', function (event) {
+      const target = event.target.getAttribute('data-bs-target');
+      if (target === '#p3D') {
+        setTimeout(() => {
+          document.querySelectorAll('#p3D .plotly-graph-div').forEach(gd => {
+            if (window.Plotly) { Plotly.Plots.resize(gd); }
+          });
+        }, 120);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

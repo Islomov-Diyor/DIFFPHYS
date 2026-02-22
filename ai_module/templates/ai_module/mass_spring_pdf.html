@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <title>DiffPhys — Prujina–massa hisobot</title>
+
+  <style>
+    @page { size: A4; margin: 14mm 14mm 16mm 14mm; }
+
+    body { font-family: DejaVu Sans, Arial, sans-serif; font-size: 11.5px; color: #111; }
+    h1 { font-size: 18px; margin: 0 0 6px 0; }
+    h2 { font-size: 13px; margin: 14px 0 6px 0; }
+    .muted { color: #666; font-size: 10.5px; }
+    .hr { height: 1px; background: #e6e6e6; margin: 10px 0; }
+
+    .topbar { display: flex; justify-content: space-between; align-items: flex-start; }
+    .brand { font-weight: 700; }
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #f2f4ff;
+      border: 1px solid #dfe4ff;
+      font-size: 10.5px;
+      color: #27307a;
+      margin-left: 6px;
+    }
+
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #e6e6e6; padding: 6px 7px; }
+    th { background: #fafafa; text-align: left; }
+
+    .grid2 { display: flex; gap: 10px; }
+    .col { flex: 1; }
+    .card {
+      border: 1px solid #eaeaea;
+      border-radius: 10px;
+      padding: 10px;
+      background: #fff;
+    }
+
+    .img { width: 100%; border: 1px solid #ededed; border-radius: 10px; padding: 6px; }
+    .small { font-size: 10.5px; }
+    .footer { position: fixed; left: 0; right: 0; bottom: 8mm; text-align: center; color: #777; font-size: 10px; }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div>
+      <div class="brand">DiffPhys</div>
+      <div class="muted">Fizik jarayonlarni differensial tenglamalar yordamida o‘qitish</div>
+    </div>
+    <div class="muted" style="text-align:right;">
+      Sana/vaqt: <b>{{ generated_at|date:"d.m.Y H:i" }}</b><br>
+      <span class="badge">Modul: Prujina–massa</span>
+      {% if method %}<span class="badge">Usul: {{ method }}</span>{% endif %}
+    </div>
+  </div>
+
+  <div class="hr"></div>
+
+  <h1>Prujina–massa (so‘nuvchi tebranish) — natijalar hisoboti</h1>
+  <div class="muted">
+    Model: m·x'' + c·x' + k·x = 0  (Hooke qonuni + demfer)
+  </div>
+
+  <h2>1) Kiritilgan parametrlar</h2>
+  <table>
+    <tr>
+      <th>m (kg)</th><td>{{ m }}</td>
+      <th>k (N/m)</th><td>{{ k }}</td>
+    </tr>
+    <tr>
+      <th>c (N·s/m)</th><td>{{ c }}</td>
+      <th>x0 (m)</th><td>{{ x0 }}</td>
+    </tr>
+    <tr>
+      <th>v0 (m/s)</th><td>{{ v0 }}</td>
+      <th>T (s)</th><td>{{ t_end }}</td>
+    </tr>
+    <tr>
+      <th>dt (s)</th><td>{{ dt }}</td>
+      <th>Holat</th><td>{{ damping_label }}</td>
+    </tr>
+  </table>
+
+  {% if stats %}
+    <h2>2) Qisqa statistik ko‘rsatkichlar</h2>
+    <div class="grid2">
+      <div class="col card">
+        <div><b>x(t)</b> diapazoni</div>
+        <div class="small muted">x_min: <b>{{ stats.x_min }}</b> • x_max: <b>{{ stats.x_max }}</b></div>
+      </div>
+      <div class="col card">
+        <div><b>v(t)</b> diapazoni</div>
+        <div class="small muted">v_min: <b>{{ stats.v_min }}</b> • v_max: <b>{{ stats.v_max }}</b></div>
+      </div>
+    </div>
+  {% endif %}
+
+  <h2>3) Grafiklar</h2>
+  {% if img_x %}
+    <div class="card">
+      <div class="small muted">Siljish grafigi: x(t)</div>
+      <img class="img" src="data:image/png;base64,{{ img_x }}" alt="x(t)">
+    </div>
+  {% endif %}
+
+  {% if img_v %}
+    <div class="card" style="margin-top:10px;">
+      <div class="small muted">Tezlik grafigi: v(t)</div>
+      <img class="img" src="data:image/png;base64,{{ img_v }}" alt="v(t)">
+    </div>
+  {% endif %}
+
+  {% if img_E %}
+    <div class="card" style="margin-top:10px;">
+      <div class="small muted">Energiya grafigi: E(t)</div>
+      <img class="img" src="data:image/png;base64,{{ img_E }}" alt="E(t)">
+    </div>
+  {% endif %}
+
+  {% if conclusion %}
+    <h2>4) Xulosa</h2>
+    <div class="card">
+      <p style="margin:0;">{{ conclusion }}</p>
+    </div>
+  {% endif %}
+
+  <div class="footer">© DiffPhys • Django + SciPy/Matplotlib • PDF hisobot avtomatik generatsiya</div>
+</body>
+</html>

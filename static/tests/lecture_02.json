@@ -1,0 +1,137 @@
+{
+  "quiz": {
+    "title": "2-mavzu: O'zgaruvchilari ajralgan va unga keltiriladigan differensial tenglamalar",
+    "language": "uz",
+    "questions": [
+      {
+        "id": 1,
+        "question": "O'zgaruvchilari ajralgan differensial tenglama qanday ko'rinishga ega bo'ladi?",
+        "options": {
+          "A": "y'=f(x)+g(y)",
+          "B": "y'=f(x)g(y)",
+          "C": "y'+p(x)y=q(x)",
+          "D": "y''+y=0"
+        },
+        "correct_answer": "B",
+        "explanation": "O'zgaruvchilari ajralgan tenglama y' = f(x)g(y) ko'rinishida bo'ladi, bu yerda o'ng tomon x va y ning alohida funksiyalari ko'paytmasi shaklida ifodalangan."
+      },
+      {
+        "id": 2,
+        "question": "Ajraluvchi tenglamani yechishning birinchi bosqichi qaysi?",
+        "options": {
+          "A": "Integrallash",
+          "B": "Almashirish kiritish",
+          "C": "O'zgaruvchilarni ajratish",
+          "D": "Tenglamani chiziqliqlash"
+        },
+        "correct_answer": "C",
+        "explanation": "Ajraluvchi tenglamani yechishda avvalo o'zgaruvchilarni ajratish kerak: dy/g(y) = f(x)dx ko'rinishiga keltirish."
+      },
+      {
+        "id": 3,
+        "question": "Quyidagi tenglamalardan qaysi biri o'zgaruvchilari ajralgan tenglama?",
+        "options": {
+          "A": "y'=x+y",
+          "B": "y'=x²y",
+          "C": "y'+y=x",
+          "D": "y'=(x+y)/xy"
+        },
+        "correct_answer": "B",
+        "explanation": "y'=x²y tenglamasi y'=f(x)g(y) ko'rinishida (f(x)=x², g(y)=y), shuning uchun o'zgaruvchilari ajralgan tenglama hisoblanadi."
+      },
+      {
+        "id": 4,
+        "question": "Quyidagi tenglama o'zgaruvchilari ajraladimi? y'=x/y",
+        "options": {
+          "A": "Ha",
+          "B": "Yo'q",
+          "C": "Faqat x>0 da",
+          "D": "Faqat y>0 da"
+        },
+        "correct_answer": "A",
+        "explanation": "y'=x/y tenglamasi y'=f(x)g(y) ko'rinishida bo'lib, f(x)=x va g(y)=1/y deb olish mumkin, shuning uchun o'zgaruvchilari ajraladi."
+      },
+      {
+        "id": 5,
+        "question": "Bir jinsli tenglama qanday ko'rinishda bo'ladi?",
+        "options": {
+          "A": "y'=F(x+y)",
+          "B": "y'=F(xy)",
+          "C": "y'=F(y/x)",
+          "D": "y'=f(x)g(y)"
+        },
+        "correct_answer": "C",
+        "explanation": "Bir jinsli (homogeneous) differensial tenglama y'=F(y/x) ko'rinishida bo'ladi, bu yerda funksiya F faqat y/x nisbatiga bog'liq."
+      },
+      {
+        "id": 6,
+        "question": "Bir jinsli tenglamani ajraluvchi ko'rinishga keltirish uchun qanday almashtirish ishlatiladi?",
+        "options": {
+          "A": "y=x+v",
+          "B": "y=vx",
+          "C": "y=eˣ",
+          "D": "y=ln x"
+        },
+        "correct_answer": "B",
+        "explanation": "Bir jinsli tenglamada y=vx almashtirishi (v=y/x) qo'llaniladi, bunda dy = vdx + xdv bo'ladi va tenglama ajraluvchi ko'rinishga keladi."
+      },
+      {
+        "id": 7,
+        "question": "Bernulli tenglamasining umumiy ko'rinishi qaysi?",
+        "options": {
+          "A": "y'=f(x)g(y)",
+          "B": "y''+py=0",
+          "C": "y'+p(x)y=q(x)yⁿ",
+          "D": "y'+y=x"
+        },
+        "correct_answer": "C",
+        "explanation": "Bernulli tenglamasi y'+p(x)y=q(x)yⁿ ko'rinishida bo'ladi, bu yerda n - har qanday haqiqiy son (n≠0, n≠1)."
+      },
+      {
+        "id": 8,
+        "question": "Bernulli tenglamasini yechishda qaysi almashtirish kiritiladi?",
+        "options": {
+          "A": "v=y/x",
+          "B": "z=y¹⁻ⁿ",
+          "C": "z=ln y",
+          "D": "u=y'"
+        },
+        "correct_answer": "B",
+        "explanation": "Bernulli tenglamasini chiziqli tenglama ko'rinishiga keltirish uchun z=y¹⁻ⁿ almashtirishi qo'llaniladi."
+      },
+      {
+        "id": 9,
+        "question": "Quyidagi tenglama o'zgaruvchilari ajralgan tenglama hisoblanadimi? y'=(x-1)(y+2)",
+        "options": {
+          "A": "Ha",
+          "B": "Yo'q"
+        },
+        "correct_answer": "A",
+        "explanation": "Berilgan tenglama y' = f(x)g(y) ko'rinishida, bu yerda f(x)=(x-1) va g(y)=(y+2) alohida ko'paytuvchilar sifatida ajratilgan."
+      },
+      {
+        "id": 10,
+        "question": "Ajraluvchi tenglama integrallangandan so'ng yechim odatda qanday ko'rinishda bo'ladi?",
+        "options": {
+          "A": "y=Ceˣ",
+          "B": "y=Cx²",
+          "C": "H(y)=F(x)+C",
+          "D": "y=x+C"
+        },
+        "correct_answer": "C",
+        "explanation": "Ajraluvchi tenglamani ikki tomondan integrallaganda ∫(1/g(y))dy = ∫f(x)dx dan H(y)=F(x)+C ko'rinishidagi umumiy yechim hosil bo'ladi."
+      }
+    ],
+    "metadata": {
+      "total_questions": 10,
+      "subject": "Matematika",
+      "topic": "O'zgaruvchilari ajralgan va bir jinsli differensial tenglamalar",
+      "subtopics": [
+        "O'zgaruvchilari ajralgan tenglamalar",
+        "Bir jinsli tenglamalar",
+        "Bernulli tenglamalari"
+      ],
+      "difficulty": "O'rta"
+    }
+  }
+}

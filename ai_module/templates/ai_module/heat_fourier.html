@@ -1,0 +1,264 @@
+{% load static %}
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fourier issiqlik | DiffPhys</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .soft-card{ border:0; border-radius:16px; box-shadow:0 10px 30px rgba(10,20,40,.08); background:#fff; }
+    .btn-pill{ border-radius:999px; padding:.65rem 1.1rem; }
+    .img-frame{ border-radius:14px; border:1px solid #eef0f6; background:#fff; overflow:hidden; }
+    .muted{ color:#6c757d; }
+
+    .hero{
+      border-radius:22px;
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(0,0,0,.08);
+      background: linear-gradient(135deg, #0f172a 0%, #334155 45%, #0ea5e9 110%);
+    }
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-40px;
+      background-image: linear-gradient(45deg, rgba(255,255,255,.10) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.10) 50%, rgba(255,255,255,.10) 75%, transparent 75%, transparent);
+      background-size: 44px 44px;
+      transform: rotate(10deg);
+      opacity:.35;
+    }
+    .hero-inner{ position:relative; z-index:1; }
+    .pill{ display:inline-flex; align-items:center; gap:8px; padding:.45rem .8rem; border-radius:999px; border:1px solid rgba(255,255,255,.28); background: rgba(255,255,255,.16); font-size:.92rem; }
+    .btn-ghost{ border-radius:999px; border:1px solid rgba(255,255,255,.28); background: rgba(255,255,255,.16); color:#fff; padding:.55rem 1rem; text-decoration:none; }
+    .btn-ghost:hover{ background: rgba(255,255,255,.22); color:#fff; }
+
+    .nav-pills .nav-link{ border-radius:999px; background:#f3f5fb; border:1px solid #e7ebf6; color:#3b3b3b; }
+    .nav-pills .nav-link.active{ background:#111827; border-color:#111827; color:#fff; }
+
+    .form-control, .form-select{ border-radius:12px; padding:.6rem .8rem; }
+
+    /* 3D konteyner balandligi */
+    #surface3d{ height: 520px; width: 100%; }
+  </style>
+</head>
+
+<body>
+<div class="container py-4">
+
+  <!-- HERO -->
+  <div class="hero mb-4" style="padding:22px 28px;">
+    <div class="hero-inner">
+      <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
+        <div>
+          <div class="d-flex flex-wrap gap-2 mb-2">
+            <span class="pill">DiffPhys • PDE moduli</span>
+            <span class="pill">Fourier issiqlik tenglamasi</span>
+          </div>
+          <h2 class="mb-1">1D issiqlik tenglamasi — interaktiv modul</h2>
+          <div style="opacity:.92;">∂T/∂t = α ∂²T/∂x²</div>
+        </div>
+        <div class="d-flex gap-2 flex-wrap align-items-center">
+          <span class="pill">Yechish usuli: {% if scipy_ok %}<b>SciPy solve_ivp</b>{% else %}<b>RK4 fallback</b>{% endif %}</span>
+          <a href="/" class="btn-ghost">Interaktiv xizmatlarga qaytish</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <!-- LEFT: INPUTS -->
+    <div class="col-12 col-lg-4">
+      <div class="card soft-card">
+        <div class="card-body p-4">
+          <h5 class="mb-3">Parametrlar</h5>
+
+          <form id="mainForm" method="get" action="{% url 'ai_module:heat_fourier' %}" class="vstack gap-3">
+            {% csrf_token %}
+
+            <div><label class="form-label">L (m)</label><input class="form-control" name="L" value="{{ form.L }}"></div>
+            <div><label class="form-label">α (m²/s)</label><input class="form-control" name="alpha" value="{{ form.alpha }}"></div>
+            <div><label class="form-label">nx</label><input class="form-control" name="nx" value="{{ form.nx }}"></div>
+            <div><label class="form-label">tmax (s)</label><input class="form-control" name="tmax" value="{{ form.tmax }}"></div>
+            <div><label class="form-label">nt</label><input class="form-control" name="nt" value="{{ form.nt }}"></div>
+
+            <div><label class="form-label">Chegara T(0,t)</label><input class="form-control" name="T_left" value="{{ form.T_left }}"></div>
+            <div><label class="form-label">Chegara T(L,t)</label><input class="form-control" name="T_right" value="{{ form.T_right }}"></div>
+
+            <div>
+              <label class="form-label">Boshlang‘ich shart</label>
+              <select class="form-select" name="ic_type">
+                <option value="sine" {% if form.ic_type == "sine" %}selected{% endif %}>Sine</option>
+                <option value="gaussian" {% if form.ic_type == "gaussian" %}selected{% endif %}>Gaussian</option>
+                <option value="step" {% if form.ic_type == "step" %}selected{% endif %}>Step</option>
+              </select>
+            </div>
+
+            <div><label class="form-label">Amplitude</label><input class="form-control" name="amp" value="{{ form.amp }}"></div>
+            <div><label class="form-label">x₀ / markaz</label><input class="form-control" name="x0" value="{{ form.x0 }}"></div>
+            <div><label class="form-label">σ (gaussian)</label><input class="form-control" name="sigma" value="{{ form.sigma }}"></div>
+
+            <button type="submit" class="btn btn-primary btn-pill w-100">Hisoblash</button>
+          </form>
+
+          {% if stats %}
+          <div class="mt-4">
+            <h6 class="mb-2">Qisqa natijalar</h6>
+            <div class="p-3 bg-light rounded-3">
+              <div class="muted">T_max</div>
+              <div class="fw-semibold">{{ stats.T_max }}</div>
+            </div>
+            <div class="p-3 bg-light rounded-3 mt-2">
+              <div class="muted">T_min</div>
+              <div class="fw-semibold">{{ stats.T_min }}</div>
+            </div>
+            <div class="p-3 bg-light rounded-3 mt-2">
+              <div class="muted">T_avg</div>
+              <div class="fw-semibold">{{ stats.T_avg }}</div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: OUTPUTS -->
+    <div class="col-12 col-lg-8">
+      <div class="card soft-card">
+        <div class="card-body p-4">
+          <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap gap-2">
+            <h5 class="mb-0">Grafiklar</h5>
+            <div class="muted small">Natijadan so‘ng PDF yuklab olish mumkin</div>
+          </div>
+
+          {% if plot_tx_base64 %}
+            <ul class="nav nav-pills mb-3" role="tablist">
+              <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#pTx" type="button">T(x,t)</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pTt" type="button">T(t)</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#p3D" type="button">3D Sirt</button>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="pTx">
+                <div class="img-frame p-2">
+                  <img class="img-fluid" src="data:image/png;base64,{{ plot_tx_base64 }}" alt="T(x,t)">
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="pTt">
+                <div class="img-frame p-2">
+                  <img class="img-fluid" src="data:image/png;base64,{{ plot_tmid_base64 }}" alt="T(t)">
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="p3D">
+                {% if plotly_payload %}
+                  <div class="muted small mb-2">X: x (m), Y: t (s), Z: T (°C)</div>
+                  <div class="img-frame p-2">
+                    <div id="surface3d"></div>
+                  </div>
+                {% else %}
+                  <div class="p-4 bg-light rounded-4 text-center">
+                    <div class="fs-6 fw-semibold mb-2">3D grafik hali yo‘q</div>
+                    <div class="muted">Parametrlarni kiriting va <b>Hisoblash</b> tugmasini bosing.</div>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+
+            {% if conclusion %}
+              <div class="card soft-card mt-3">
+                <div class="card-body">
+                  <h5 class="mb-2">Xulosa</h5>
+                  <p class="mb-0">{{ conclusion }}</p>
+                </div>
+              </div>
+            {% endif %}
+
+            <!-- PDF FORM -->
+            <div class="d-flex gap-2 mt-3 flex-wrap">
+              <form id="pdfForm" method="post" action="{% url 'ai_module:heat_fourier_pdf' %}">
+                {% csrf_token %}
+                <input type="hidden" name="L" value="{{ form.L }}">
+                <input type="hidden" name="alpha" value="{{ form.alpha }}">
+                <input type="hidden" name="nx" value="{{ form.nx }}">
+                <input type="hidden" name="tmax" value="{{ form.tmax }}">
+                <input type="hidden" name="nt" value="{{ form.nt }}">
+                <input type="hidden" name="T_left" value="{{ form.T_left }}">
+                <input type="hidden" name="T_right" value="{{ form.T_right }}">
+                <input type="hidden" name="ic_type" value="{{ form.ic_type }}">
+                <input type="hidden" name="amp" value="{{ form.amp }}">
+                <input type="hidden" name="x0" value="{{ form.x0 }}">
+                <input type="hidden" name="sigma" value="{{ form.sigma }}">
+                <input type="hidden" name="plot_tx_base64" value="{{ plot_tx_base64 }}">
+                <input type="hidden" name="plot_tmid_base64" value="{{ plot_tmid_base64 }}">
+                <input type="hidden" name="conclusion" value="{{ conclusion }}">
+                <button type="submit" class="btn btn-outline-dark btn-pill">PDF yuklab olish</button>
+              </form>
+            </div>
+
+          {% else %}
+            <div class="p-4 bg-light rounded-4 text-center">
+              <div class="fs-5 fw-semibold mb-2">Grafiklar hali yo‘q</div>
+              <div class="muted">Parametrlarni kiriting va <b>Hisoblash</b> tugmasini bosing.</div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-4 muted small">© DiffPhys • Django + Matplotlib • PDE modellashtirish</div>
+</div>
+
+<!-- Bootstrap bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ✅ Plotly (3D uchun shart) -->
+<script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+
+<!-- ✅ Plotly render -->
+{% if plotly_payload %}
+<script>
+  // Backend’dan kelgan payload (JSON ko‘rinishda bo‘lishi kerak)
+  const payload = {{ plotly_payload|safe }};
+
+  function renderSurface(){
+    if (!window.Plotly) return;
+    Plotly.newPlot('surface3d', payload.data, payload.layout, {
+      responsive: true,
+      displaylogo: false
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    renderSurface();
+  });
+
+  // 3D tab ochilganda Plotly resize (konteyner ochilgandan keyin)
+  document.querySelectorAll('button[data-bs-toggle="pill"]').forEach(btn => {
+    btn.addEventListener('shown.bs.tab', function (event) {
+      const target = event.target.getAttribute('data-bs-target');
+      if (target === '#p3D') {
+        setTimeout(() => {
+          const gd = document.querySelector('#surface3d .plotly-graph-div');
+          if (gd && window.Plotly) Plotly.Plots.resize(gd);
+        }, 140);
+      }
+    });
+  });
+</script>
+{% endif %}
+
+</body>
+</html>

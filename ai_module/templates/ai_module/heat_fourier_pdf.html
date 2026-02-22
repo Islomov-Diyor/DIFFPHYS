@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <title>DiffPhys — Fourier issiqlik (hisobot)</title>
+  <style>
+    @page { size: A4; margin: 14mm; }
+    body { font-family: DejaVu Sans, Arial, sans-serif; font-size: 11.5px; color:#111; }
+    h1 { font-size: 18px; margin: 0 0 6px 0; }
+    h2 { font-size: 13px; margin: 14px 0 6px 0; }
+    .muted { color:#666; font-size: 10.5px; }
+    table { width:100%; border-collapse: collapse; margin-top:6px; }
+    th, td { border:1px solid #e6e6e6; padding:6px 7px; }
+    th { background:#fafafa; text-align:left; }
+    .imgbox{ border:1px solid #ededed; border-radius:10px; padding:6px; margin-top:8px; }
+    .imgbox img{ width:100%; height:auto; max-height:240px; }
+    .pagebreak{ page-break-before: always; }
+    .card { border:1px solid #eaeaea; border-radius:10px; padding:10px; margin-top:10px; }
+  </style>
+</head>
+<body>
+
+  <h1>Fourier 1D issiqlik tenglamasi — natijalar hisoboti</h1>
+  <div class="muted">DiffPhys • PDE modellashtirish • PDF avtomatik generatsiya</div>
+
+  <h2>1) Parametrlar</h2>
+  <table>
+    <tr><th>L (m)</th><td>{{ L }}</td><th>α (m²/s)</th><td>{{ alpha }}</td></tr>
+    <tr><th>nx</th><td>{{ nx }}</td><th>nt</th><td>{{ nt }}</td></tr>
+    <tr><th>tmax (s)</th><td>{{ tmax }}</td><th>Chegara T(0)</th><td>{{ T_left }}</td></tr>
+    <tr><th>Chegara T(L)</th><td>{{ T_right }}</td><th>IC turi</th><td>{{ ic_type }}</td></tr>
+    <tr><th>amp</th><td>{{ amp }}</td><th>x₀</th><td>{{ x0 }}</td></tr>
+    <tr><th>σ</th><td>{{ sigma }}</td></tr>
+  </table>
+
+  <h2>2) Grafiklar</h2>
+  <div class="imgbox">
+    <div class="muted"><b>2.1)</b> T(x,t) – tanlangan vaqtlar bo‘yicha</div>
+    <img src="data:image/png;base64,{{ plot_tx_base64 }}" alt="T(x,t)">
+  </div>
+
+  <div class="pagebreak"></div>
+
+  <div class="imgbox">
+    <div class="muted"><b>2.2)</b> T(t) at mid x</div>
+    <img src="data:image/png;base64,{{ plot_tmid_base64 }}" alt="T(t)">
+  </div>
+
+  <div class="pagebreak"></div>
+
+  <h2>3) Xulosa</h2>
+  <div class="card">{{ conclusion }}</div>
+
+</body>
+</html>

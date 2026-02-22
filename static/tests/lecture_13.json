@@ -1,0 +1,142 @@
+{
+  "quiz": {
+    "topic_id": 13,
+    "title": "O'zgarmas koeffitsientli bir jinsli bo'lmagan differensial tenglamalar sistemasi",
+    "language": "uz",
+    "total_questions": 10,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Quyidagi tenglamalardan qaysi biri bir jinsli bo'lmagan o'zgarmas koeffitsientli differensial tenglama hisoblanadi?",
+        "options": {
+          "A": "y'' + 3y' + 2y = 0",
+          "B": "y'' - 4y' + 5y = e^(2x)",
+          "C": "y' + y = 0",
+          "D": "y'' + y = 0"
+        },
+        "correct_answer": "B",
+        "explanation": "Bir jinsli bo'lmagan (non-homogeneous) tenglama o'ng tomoni nolga teng bo'lmagan tenglamadir. B variantida o'ng tomon e^(2x) ga teng, qolganlarida esa 0 ga teng."
+      },
+      {
+        "id": 2,
+        "question": "Ikkinchi tartibli bir jinsli bo'lmagan o'zgarmas koeffitsientli differensial tenglama umumiy ko'rinishi qanday?",
+        "options": {
+          "A": "y'' + py' + qy = 0",
+          "B": "y'' + py' + qy = f(x)",
+          "C": "y' + py = 0",
+          "D": "y'' + xy' + y = 0"
+        },
+        "correct_answer": "B",
+        "explanation": "Ikkinchi tartibli o'zgarmas koeffitsientli bir jinsli bo'lmagan tenglama y'' + py' + qy = f(x) ko'rinishida bo'ladi, bu yerda p va q o'zgarmas sonlar, f(x) ≠ 0."
+      },
+      {
+        "id": 3,
+        "question": "Tenglama y'' + 3y' + 2y = e^x bo'lsa, uning homojen qismi qanday?",
+        "options": {
+          "A": "y'' + 3y' + 2y = 0",
+          "B": "y'' + 3y' + 2y = e^x",
+          "C": "y'' + y = 0",
+          "D": "y'' + 2y = 0"
+        },
+        "correct_answer": "A",
+        "explanation": "Homojen (bir jinsli) qism - o'ng tomonni 0 ga tenglab olingan tenglama. Bu yerda y'' + 3y' + 2y = 0."
+      },
+      {
+        "id": 4,
+        "question": "Quyidagi usullardan qaysi biri bir jinsli bo'lmagan tenglamalarni yechishda ishlatiladi?",
+        "options": {
+          "A": "Ko'paytuvchi faktorlar usuli",
+          "B": "Harakteristik tenglama usuli",
+          "C": "Ajrash usuli",
+          "D": "Hammasi"
+        },
+        "correct_answer": "D",
+        "explanation": "Bir jinsli bo'lmagan tenglamalarni yechishda ko'paytuvchi faktorlar (o'zgarmas koeffitsientli), harakteristik tenglama (homojen qism uchun) va ajrash (variatsiya parametrli usul) usullaridan foydalaniladi."
+      },
+      {
+        "id": 5,
+        "question": "Tenglama y'' - 5y' + 6y = x bo'lsa, uning yechimi qaysi ko'rinishga ega?",
+        "options": {
+          "A": "y = C₁e^(2x) + C₂e^(3x)",
+          "B": "y = C₁e^(2x) + C₂e^(3x) + y_p",
+          "C": "y = C₁cos x + C₂sin x",
+          "D": "y = y_p"
+        },
+        "correct_answer": "B",
+        "explanation": "Bir jinsli bo'lmagan tenglamaning umumiy yechimi y = y_h + y_p ko'rinishida bo'ladi, bu yerda y_h - homojen yechim, y_p - maxsus (partikulyar) yechim."
+      },
+      {
+        "id": 6,
+        "question": "Tenglama y'' + 4y = sin(2x) bo'lsa, uning homojen yechimi qaysi?",
+        "options": {
+          "A": "y_h = C₁e^(2x) + C₂e^(-2x)",
+          "B": "y_h = C₁cos(2x) + C₂sin(2x)",
+          "C": "y_h = C₁cos(4x) + C₂sin(4x)",
+          "D": "y_h = C₁e^(4x) + C₂e^(-x)"
+        },
+        "correct_answer": "B",
+        "explanation": "Harakteristik tenglama r² + 4 = 0 dan r = ±2i (kompleks ildizlar). Shuning uchun homojen yechim y_h = C₁cos(2x) + C₂sin(2x)."
+      },
+      {
+        "id": 7,
+        "question": "Bir jinsli bo'lmagan tenglamaning particular yechimi (maxsus yechimi) qanday topiladi?",
+        "options": {
+          "A": "Homojen tenglama yechimi bilan bir xil",
+          "B": "Turli metodlar orqali, masalan, o'zgarmas koeffitsientli metod yoki ko'paytuvchi faktor orqali",
+          "C": "Faqat integral orqali",
+          "D": "Faqat derivativ orqali"
+        },
+        "correct_answer": "B",
+        "explanation": "Particular (maxsus) yechimni topish uchun o'zgarmas koeffitsientlar metodi (f(x) shakliga qarab), variation of parameters yoki Lagrange metodlari ishlatiladi."
+      },
+      {
+        "id": 8,
+        "question": "Tenglama y'' - y' - 2y = e^x bo'lsa, uning harakteristik tenglamasi qanday?",
+        "options": {
+          "A": "r² - r - 2 = 0",
+          "B": "r² + r - 2 = 0",
+          "C": "r² - 2r - 1 = 0",
+          "D": "r² + 2r + 1 = 0"
+        },
+        "correct_answer": "A",
+        "explanation": "Harakteristik tenglama homojen qisim y'' - y' - 2y = 0 dan olinadi va r² - r - 2 = 0 ko'rinishida bo'ladi."
+      },
+      {
+        "id": 9,
+        "question": "Bir jinsli bo'lmagan tenglamaning umumiy yechimi qanday hosil qilinadi?",
+        "options": {
+          "A": "Faqat homojen yechimdan",
+          "B": "Faqat particular yechimdan",
+          "C": "Homojen va particular yechimlarning yig'indisidan",
+          "D": "Faqat integraldan"
+        },
+        "correct_answer": "C",
+        "explanation": "Superpozitsiya prinsipiga ko'ra, umumiy yechim y = y_h + y_p ko'rinishida bo'ladi, bu yerda y_h - homojen tenglamaning umumiy yechimi, y_p - particular yechim."
+      },
+      {
+        "id": 10,
+        "question": "Quyidagi tenglamalardan qaysi biri bir jinsli bo'lmagan 1-tartibli o'zgarmas koeffitsientli tenglama hisoblanadi?",
+        "options": {
+          "A": "y' + 2y = e^x",
+          "B": "y'' + 3y' + 2y = 0",
+          "C": "y'' + 5y = sin x",
+          "D": "y'' - y' = 0"
+        },
+        "correct_answer": "A",
+        "explanation": "A variantida birinchi tartibli (y' mavjud) va o'ng tomon nolga teng emas (e^x), shuning uchun bir jinsli bo'lmagan birinchi tartibli o'zgarmas koeffitsientli tenglama. Qolganlari ikkinchi tartibli tenglamalar."
+      }
+    ],
+    "metadata": {
+      "subject": "Matematika",
+      "topic": "O'zgarmas koeffitsientli bir jinsli bo'lmagan differensial tenglamalar",
+      "difficulty": "Yuqori",
+      "keywords": [
+        "bir jinsli bo'lmagan",
+        "non-homogeneous",
+        "particular yechim",
+        "homojen yechim",
+        "superpozitsiya"
+      ]
+    }
+  }
+}

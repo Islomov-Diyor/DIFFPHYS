@@ -1,0 +1,141 @@
+{
+  "quiz": {
+    "title": "6-ma'ruza: Issiqlik o'tkazuvchanlik jarayonining differensial modeli (Fourier qonuni asosida)",
+    "language": "uz",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Fourier qonuni nimani ifodalaydi?",
+        "options": {
+          "A": "Issiqlik energiyasining saqlanishini",
+          "B": "Issiqlik oqimi va harorat gradienti orasidagi bog'liqlikni",
+          "C": "Issiqlik sig'imini",
+          "D": "Moddaning zichligini"
+        },
+        "correct_answer": "B",
+        "explanation": "Fourier qonuni issiqlik oqimi zichligining harorat gradientiga proporsionalligini ifodalaydi: q = -λ∇T, bu yerda q - issiqlik oqimi, λ - issiqlik o'tkazuvchanlik koeffitsienti."
+      },
+      {
+        "id": 2,
+        "question": "Bir o'lchamli holatda Fourier qonuni qanday yoziladi?",
+        "options": {
+          "A": "q = -λ(∂T/∂t)",
+          "B": "q = -λ(dT/dx)",
+          "C": "q = cρT",
+          "D": "q = λT"
+        },
+        "correct_answer": "B",
+        "explanation": "Bir o'lchamli holda Fourier qonuni q = -λ(dT/dx) ko'rinishida yoziladi, bu yerda dT/dx - haroratning x bo'yicha gradienti."
+      },
+      {
+        "id": 3,
+        "question": "Fourier qonunidagi manfiy ishora nimani bildiradi?",
+        "options": {
+          "A": "Issiqlik yutilishini",
+          "B": "Issiqlik chiqishini",
+          "C": "Issiqlik yuqori haroratdan past haroratga oqishini",
+          "D": "Issiqlik manbai mavjudligini"
+        },
+        "correct_answer": "C",
+        "explanation": "Manfiy ishora (-) issiqlik oqimining yuqori harorat (gradient pastki ishorasi) dan past haroratga (gradient musbat ishorasi) yo'nalishini ko'rsatadi, ya'ni harorat pasayish yo'nalishida oqadi."
+      },
+      {
+        "id": 4,
+        "question": "Issiqlik o'tkazuvchanlik tenglamasi qanday differensial tenglama turiga kiradi?",
+        "options": {
+          "A": "Oddiy differensial tenglama",
+          "B": "Algebraik tenglama",
+          "C": "Xususiy hosilali differensial tenglama",
+          "D": "Integral tenglama"
+        },
+        "correct_answer": "C",
+        "explanation": "Issiqlik o'tkazuvchanlik tenglamasi (Heat equation) vaqt (t) va fazoviy o'zgaruvchilar (x, y, z) bo'yicha xususiy hosilalarni o'z ichiga oladi, shuning uchun XHT (PDE) turiga kiradi."
+      },
+      {
+        "id": 5,
+        "question": "Bir o'lchamli issiqlik o'tkazuvchanlik tenglamasi (manbasiz) qaysi ko'rinishda yoziladi?",
+        "options": {
+          "A": "∂T/∂x = a(∂²T/∂x²)",
+          "B": "∂T/∂t = a(∂²T/∂x²)",
+          "C": "∂²T/∂t² = a(∂T/∂x)",
+          "D": "∂T/∂t = aT"
+        },
+        "correct_answer": "B",
+        "explanation": "Manbasiz bir o'lchamli issiqlik o'tkazuvchanlik tenglamasi ∂T/∂t = a(∂²T/∂x²) ko'rinishida bo'ladi, bu yerda a - issiqlik tarqalish koeffitsienti (thermal diffusivity)."
+      },
+      {
+        "id": 6,
+        "question": "Issiqlik o'tkazuvchanlik koeffitsienti λ (lambda) nimani tavsiflaydi?",
+        "options": {
+          "A": "Moddaning zichligini",
+          "B": "Moddaning issiqlikni o'tkazish qobiliyatini",
+          "C": "Moddaning haroratini",
+          "D": "Moddaning issiqlik sig'imini"
+        },
+        "correct_answer": "B",
+        "explanation": "λ - issiqlik o'tkazuvchanlik koeffitsienti (W/(m·K)) moddaning issiqlikni o'tkazish qobiliyatini, ya'ni harorat gradienti birligiga nisbatan issiqlik oqimi zichligini tavsiflaydi."
+      },
+      {
+        "id": 7,
+        "question": "Issiqlik tarqalish koeffitsienti a qanday ifoda bilan aniqlanadi?",
+        "options": {
+          "A": "a = λc",
+          "B": "a = λ/(ρc)",
+          "C": "a = ρc",
+          "D": "a = c/λ"
+        },
+        "correct_answer": "B",
+        "explanation": "Issiqlik tarqalish koeffitsienti (thermal diffusivity) a = λ/(ρc) formulasida aniqlanadi, bu yerda λ - issiqlik o'tkazuvchanlik, ρ - zichlik, c - issiqlik sig'im."
+      },
+      {
+        "id": 8,
+        "question": "Issiqlik o'tkazuvchanlik tenglamasini yechish uchun qaysi shartlar zarur?",
+        "options": {
+          "A": "Faqat boshlang'ich shart",
+          "B": "Faqat chegaraviy shart",
+          "C": "Boshlang'ich va chegaraviy shartlar",
+          "D": "Faqat fizik konstantalar"
+        },
+        "correct_answer": "C",
+        "explanation": "XHT (Parabolic PDE) yechish uchun fizik shartlar majmuasi kerak: t=0 dagi boshlang'ich harorat taqsimoti (boshlang'ich shart) va chegara yuzalaridagi harorat yoki issiqlik oqimi (chegaraviy shartlar)."
+      },
+      {
+        "id": 9,
+        "question": "Issiqlik o'tkazuvchanlik tenglamasi qaysi fizik jarayonlarni modellashtiradi?",
+        "options": {
+          "A": "Mexanik tebranishlarni",
+          "B": "Elektr tokini",
+          "C": "Haroratning vaqt va makonda tarqalishini",
+          "D": "Gaz bosimini"
+        },
+        "correct_answer": "C",
+        "explanation": "Issiqlik o'tkazuvchanlik tenglamasi (Heat equation) jismda haroratning vaqt va fazoviy koordinatalar bo'yicha o'zgarishini, ya'ni issiqlik tarqalish jarayonini modellashtiradi."
+      },
+      {
+        "id": 10,
+        "question": "Quyidagilardan qaysi biri issiqlik o'tkazuvchanlik jarayoniga misol bo'la oladi?",
+        "options": {
+          "A": "Jismning erkin tushishi",
+          "B": "Elektr zanjiridagi tok",
+          "C": "Metall steryenning bir uchi qizdirilganda haroratning tarqalishi",
+          "D": "Magnit maydon hosil bo'lishi"
+        },
+        "correct_answer": "C",
+        "explanation": "Metall sterjenning bir uchi qizdirilganda qizdirilgan uchdan boshlab harorat sterjen bo'ylab tarqaladi - bu aniq issiqlik o'tkazuvchanlik jarayonidir va issiqlik o'tkazuvchanlik tenglamasi bilan tavsiflanadi."
+      }
+    ],
+    "metadata": {
+      "total_questions": 10,
+      "subject": "Matematika (Amaliy matematika)",
+      "topic": "Issiqlik o'tkazuvchanlik jarayonining differensial modeli",
+      "subtopics": [
+        "Fourier qonuni",
+        "Issiqlik o'tkazuvchanlik tenglamasi",
+        "Xususiy hosilali differensial tenglamalar",
+        "Fizik shartlar"
+      ],
+      "difficulty": "Yuqori",
+      "category": "Matematik fizika"
+    }
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "quiz": {
+    "topic_id": 8,
+    "title": "Elastik element (prujina)ga ulangan massaning harakati (Hooke qonuni asosida 2-tartibli tenglama bilan)",
+    "language": "uz",
+    "total_questions": 10,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Hooke qonuni qanday ifoda bilan yoziladi?",
+        "options": {
+          "A": "F = ma",
+          "B": "F = mg",
+          "C": "F = -kx",
+          "D": "F = qE"
+        },
+        "correct_answer": "C",
+        "explanation": "Hooke qonuni bo'yicha prujinaning qaytaruvchi kuchi uning uzayishi (yoki qisqarishi) x ga proporsional va qarama-qarshi yo'nalishda: F = -kx, bu yerda k - prujina qattiqligi."
+      },
+      {
+        "id": 2,
+        "question": "Prujanaga ulangan massaning erkin tebranishi qanday differensial tenglama bilan ifodalanadi?",
+        "options": {
+          "A": "mẋ = -kx",
+          "B": "mẍ + kx = 0",
+          "C": "ẋ + kx = 0",
+          "D": "ẍ = kx"
+        },
+        "correct_answer": "B",
+        "explanation": "Nyutonning ikkinchi qonuniga ko'ra ma = -kx, ya'ni m(d²x/dt²) = -kx. Bundan mẍ + kx = 0 ko'rinishidagi ikkinchi tartibli differensial tenglama kelib chiqadi."
+      },
+      {
+        "id": 3,
+        "question": "mẍ + kx = 0 tenglama qanday turdagi differensial tenglama?",
+        "options": {
+          "A": "Birinchi tartibli, chiziqli",
+          "B": "Ikkinchi tartibli, chiziqli",
+          "C": "Birinchi tartibli, chiziqsiz",
+          "D": "Ikkinchi tartibli, chiziqsiz"
+        },
+        "correct_answer": "B",
+        "explanation": "Tenglada ikkinchi tartibli hosila (ẍ) bor va x noma'lum funksiyasi va uning hosilalari chiziqli tarzda kiradi (darajasi 1). Shuning uchun bu ikkinchi tartibli chiziqli differensial tenglama."
+      },
+      {
+        "id": 4,
+        "question": "Prujinali sistemaning burchak tezligi (tsiklik chastotasi) qanday aniqlanadi?",
+        "options": {
+          "A": "ω = k/m",
+          "B": "ω = √(k/m)",
+          "C": "ω = √(km)",
+          "D": "ω = m/k"
+        },
+        "correct_answer": "B",
+        "explanation": "Tebranishlar tenglamasidan ω² = k/m, shuning uchun burchak tezlik ω = √(k/m) bo'ladi. Bu miqdor sistemaning o'z xususiyatlariga bog'liq va boshlang'ich shartlarga bog'liq emas."
+      },
+      {
+        "id": 5,
+        "question": "Prujanaga ulangan massaning umumiy yechimi qaysi ko'rinishda bo'ladi?",
+        "options": {
+          "A": "x = Ce^(ωt)",
+          "B": "x = C₁cos(ωt) + C₂sin(ωt)",
+          "C": "x = kt + C",
+          "D": "x = C₁e^t + C₂e^(-t)"
+        },
+        "correct_answer": "B",
+        "explanation": "Garmonik tebranishlar tenglamasining umumiy yechimi x(t) = C₁cos(ωt) + C₂sin(ωt) ko'rinishida bo'ladi, bu yoki x(t) = Acos(ωt + φ) ko'rinishida yozilishi mumkin."
+      },
+      {
+        "id": 6,
+        "question": "Prujanaga ulangan massaning tebranish davri qanday formula bilan aniqlanadi?",
+        "options": {
+          "A": "T = 2π/ω",
+          "B": "T = πω",
+          "C": "T = √(km)",
+          "D": "T = k/m"
+        },
+        "correct_answer": "A",
+        "explanation": "Tebranish davri (period) T = 2π/ω formula bilan aniqlanadi, bu yerda ω burchak tezlik. Buni T = 2π√(m/k) ko'rinishida ham yozish mumkin."
+      },
+      {
+        "id": 7,
+        "question": "Prujinali tebranishlarda energiya qanday taqsimlanadi?",
+        "options": {
+          "A": "Faqat kinetik energiya mavjud",
+          "B": "Faqat potensial energiya mavjud",
+          "C": "Kinetik va potensial energiya o'zaro almashadi",
+          "D": "Energiya doim nolga teng"
+        },
+        "correct_answer": "C",
+        "explanation": "Erkin tebranishda umumiy energiya saqlanadi (tinishuvchan sistema). Kinetik energiya (mv²/2) va potensial energiya (kx²/2) bir-biriga o'zaro almashib turadi: maksimal tezlikda potensial energiya nolga teng, maksimal siljishda kinetik energiya nolga teng."
+      },
+      {
+        "id": 8,
+        "question": "Prujanaga ulangan massaning maksimal tezligi qachon bo'ladi?",
+        "options": {
+          "A": "Siljish maksimal bo'lganda",
+          "B": "Siljish nolga teng bo'lganda",
+          "C": "Tezlanish maksimal bo'lganda",
+          "D": "Har doim bir xil"
+        },
+        "correct_answer": "B",
+        "explanation": "Maksimal tezlik x=0 (teng muvozanat holati) da yuzaga keladi, chunki bu nuqtada potensial energiya minimum (nol) ga teng, buning natijasida kinetik energiya va tezlik maksimal bo'ladi."
+      },
+      {
+        "id": 9,
+        "question": "Prujanaga ulangan massaning tezlanishi qaysi kattalikka proporsional?",
+        "options": {
+          "A": "Tezlikka",
+          "B": "Vaqtga",
+          "C": "Siljishga",
+          "D": "Massaga"
+        },
+        "correct_answer": "C",
+        "explanation": "Tenglamadan a = ẍ = -(k/m)x, ya'ni tezlanish siljish x ga proporsional va qarama-qarshi ishorali. Bu Garmonik tebranishlarning asosiy hususiyati."
+      },
+      {
+        "id": 10,
+        "question": "Quyidagilardan qaysi biri prujinali tebranishga misol bo'la oladi?",
+        "options": {
+          "A": "Jismning erkin tushishi",
+          "B": "Elektr zanjiridagi tok",
+          "C": "Avtomobil amortizatorining tebranishi",
+          "D": "Yorug'likning sinishi"
+        },
+        "correct_answer": "C",
+        "explanation": "Avtomobil amortizatori prujina va dempferdan tashkil topgan bo'lib, yo'ldan urilish natijasida garmonik tebranishlarga ega bo'ladi. Bu erkin tebranishlarning amaliy misolidir."
+      }
+    ],
+    "metadata": {
+      "subject": "Matematika (Matematik fizika)",
+      "topic": "Garmonik tebranishlar va Hooke qonuni",
+      "difficulty": "O'rta",
+      "category": "Mexanika"
+    }
+  }
+}

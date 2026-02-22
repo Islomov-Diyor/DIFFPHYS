@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- TOP BANNER IMAGE -->
+<div class="top-banner">
+ <img src="{% static 'images/diffphys_hero.jpg' %}"
+     alt="DiffPhys banner"
+     class="top-banner-img"
+     style="height: 750px; object-fit: cover; width: 100%; display:block;">
+</div>
+
+<div class="container py-5">
+    <div class="row">
+
+        <!-- Chap tomondagi matn -->
+        <div class="col-md-6 mb-4">
+            <h2 class="fw-bold text-dark">Bizning platformamizda quyidagi bo'limlar mavjud.</h2>
+            <p class="text-secondary">
+                Bu bo‘limlar orqali siz o‘qish va o‘rganishda tezroq va samaraliroq bo‘lasiz.
+            </p>
+            <a href="{% url 'is_tech' %}" class="btn btn-dark">
+                Barcha yo'nalishlar <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <!-- O'ng tomondagi bloklar -->
+        <div class="col-md-6">
+
+            <!-- Video darslar -->
+            <a href="{% url 'videos' %}" class="text-decoration-none text-dark d-block">
+                <div class="mb-3 p-3 rounded bg-light border border-1">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-video fa-2x text-primary me-3"></i>
+                        <div>
+                            <h5 class="mb-0">Video darslar</h5>
+                            <small class="text-muted">Interaktiv video darslar bilan tanishing.</small>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Ma'ruza mashg'ulotlari -->
+            <a href="{% url 'lecture_list' %}" class="text-decoration-none text-dark d-block">
+                <div class="mb-3 p-3 rounded bg-light border border-1">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-search fa-2x text-primary me-3"></i>
+                        <div>
+                            <h5 class="mb-0">Ma'ruza mashg'ulotlari</h5>
+                            <small class="text-muted">Darslar uchun ma'ruza mashg'ulotlarini kuzatib boring.</small>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Amaliy mashg'ulotlar -->
+            <a href="{% url 'practicals' %}" class="text-decoration-none text-dark d-block">
+                <div class="mb-3 p-3 rounded bg-light border border-1">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-puzzle-piece fa-2x text-primary me-3"></i>
+                        <div>
+                            <h5 class="mb-0">Amaliy mashg'ulotlar</h5>
+                            <small class="text-muted">Amaliy mashg'ulotlar uchun namunalar.</small>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Testlar -->
+            <a href="{% url 'nazorat' %}" class="text-decoration-none text-dark d-block">
+                <div class="mb-3 p-3 rounded bg-light border border-1">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-vials fa-2x text-primary me-3"></i>
+                        <div>
+                            <h5 class="mb-0">Testlar</h5>
+                            <small class="text-muted">Oraliq va yakuniy nazorat uchun interaktiv testlar.</small>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Taqdimotlar -->
+            <a href="{% url 'presentation_list' %}" class="text-decoration-none text-dark d-block">
+                <div class="mb-3 p-3 rounded bg-light border border-1">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-chalkboard-teacher fa-2x text-primary me-3"></i>
+                        <div>
+                            <h5 class="mb-0">Taqdimotlar</h5>
+                            <small class="text-muted">Taqdimotlar uchun lifehacklarni o‘rganib boring.</small>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+  <div class="logo-marquee">
+    <div class="logo-track">
+
+      {% for logo, fullname, site, url in links %}
+        <a class="logo-item" href="{{ url }}" target="_blank">
+          <img src="{% static logo %}" alt="{{ fullname }}">
+          <span>{{ fullname }}</span>
+        </a>
+      {% endfor %}
+
+      {% for logo, fullname, site, url in links %}
+        <a class="logo-item" href="{{ url }}" target="_blank">
+          <img src="{% static logo %}" alt="{{ fullname }}">
+          <span>{{ fullname }}</span>
+        </a>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+{% endblock %}

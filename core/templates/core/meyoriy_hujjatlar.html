@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="hero-section text-center text-white d-flex align-items-start justify-content-center"
+     style="
+        background-image: url('{% static 'images/norm_docs.jpeg' %}');
+        height: 400px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-top: 20px;">
+    <div>
+        <h2 class="fw-bold display-4">Me'yoriy hujjatlar</h2>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row justify-content-right">
+        {% for tur, hujjatlar in turkumlar.items %}
+            {% if hujjatlar %}
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card shadow interactive-block" style="min-height: 200px;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">
+                                {{ hujjatlar.0.get_tur_display }}
+                            </h5>
+                            <a href="{% url 'download_hujjat' hujjatlar.0.id %}"
+                               class="btn btn-outline-success d-flex justify-content-center align-items-center">
+                                Yuklab olish
+                                <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                        <div class="card-footer bg-info bg-opacity-25 text-center">
+                            <p class="mb-0 fw-bold text-primary">
+                                Yuklashlar soni: {{ hujjatlar.0.yuklashlar_soni }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% empty %}
+            <p>Hali hujjatlar yuklanmagan.</p>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

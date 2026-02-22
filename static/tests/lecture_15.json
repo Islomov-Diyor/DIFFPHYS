@@ -1,0 +1,143 @@
+{
+  "quiz": {
+    "topic_id": 15,
+    "title": "Elastik element (prujina) va og'irlik sistemasi orqali umumiy yechimlarni tahlil qilish",
+    "language": "uz",
+    "total_questions": 10,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Massaga ulangan prujina uchun Hooke qonuni qanday ifodalanadi?",
+        "options": {
+          "A": "F = ma",
+          "B": "F = kx",
+          "C": "F = -kx",
+          "D": "F = mg"
+        },
+        "correct_answer": "C",
+        "explanation": "Hooke qonuni bo'yicha prujinaning qaytaruvchi kuchi uning deformatsiyasiga (x) proporsional va qarama-qarshi yo'nalishda: F = -kx, bu yerda k - prujina qattiqligi."
+      },
+      {
+        "id": 2,
+        "question": "Elastik element va massa tizimining differensial tenglamasi qanday bo'ladi (so'nishsiz)?",
+        "options": {
+          "A": "m(d²x/dt²) + kx = 0",
+          "B": "m(d²x/dt²) - kx = 0",
+          "C": "m(d²x/dt²) + b(dx/dt) + kx = 0",
+          "D": "m(d²x/dt²) = mg"
+        },
+        "correct_answer": "A",
+        "explanation": "So'nishsiz (damping) ozod tebranishlar uchun differensial tenglama mẍ + kx = 0 ko'rinishida bo'ladi, bu yerda m - massa, k - qattiqlik, x - siljish."
+      },
+      {
+        "id": 3,
+        "question": "Tartibsiz so'nishsiz massa-prujina tizimida massaning tebranishi qanday bo'ladi?",
+        "options": {
+          "A": "Eksponensial kamayadi",
+          "B": "Sinusoidal (harmonik) tebranish",
+          "C": "Chiziqli o'sadi",
+          "D": "Doimiy"
+        },
+        "correct_answer": "B",
+        "explanation": "So'nishsiz tizimda (b = 0) erkin tebranishlar sinusoidal (garmonik) xususiyatga ega bo'ladi: x(t) = A cos(ω₀t + φ)."
+      },
+      {
+        "id": 4,
+        "question": "Tartibsiz so'ngan tizimda differensial tenglama qanday yoziladi?",
+        "options": {
+          "A": "m(d²x/dt²) + kx = 0",
+          "B": "m(d²x/dt²) + b(dx/dt) + kx = 0",
+          "C": "m(d²x/dt²) = 0",
+          "D": "kx + b(dx/dt) = 0"
+        },
+        "correct_answer": "B",
+        "explanation": "So'nish (damping) mavjud bo'lganda tenglama mẍ + bẋ + kx = 0 ko'rinishida bo'ladi, bu yerda b - so'nish koeffitsienti, ዋ - tezlik."
+      },
+      {
+        "id": 5,
+        "question": "Tizimning natural chastotasi (ω₀) qanday ifodalanadi?",
+        "options": {
+          "A": "ω₀ = √(k/m)",
+          "B": "ω₀ = k/m",
+          "C": "ω₀ = m/k",
+          "D": "ω₀ = k²/m"
+        },
+        "correct_answer": "A",
+        "explanation": "Natural (o'z) chastota ω₀ = √(k/m) formula bilan aniqlanadi, bu tizimning o'z xususiyatlariga (massa va qattiqlik) bog'liq."
+      },
+      {
+        "id": 6,
+        "question": "So'nish koeffitsienti γ qanday aniqlanadi?",
+        "options": {
+          "A": "γ = b/m",
+          "B": "γ = k/m",
+          "C": "γ = m/b",
+          "D": "γ = √(k/m)"
+        },
+        "correct_answer": "A",
+        "explanation": "So'nish koeffitsienti (damping coefficient) γ = b/m ko'rinishida aniqlanadi, bu yerda b - so'nish kuchining koeffitsienti, m - massa."
+      },
+      {
+        "id": 7,
+        "question": "Ostso'nimlangan tizimda umumiy yechim qanday shaklda bo'ladi?",
+        "options": {
+          "A": "x(t) = C₁e^(-γt)cos(ωt) + C₂e^(-γt)sin(ωt)",
+          "B": "x(t) = C₁cos(ω₀t) + C₂sin(ω₀t)",
+          "C": "x(t) = C₁e^(γt) + C₂e^(-γt)",
+          "D": "x(t) = C₁e^(-ωt) + C₂e^(ωt)"
+        },
+        "correct_answer": "A",
+        "explanation": "Ostso'nimlangan (underdamped) holatda (γ < ω₀) yechim eksponensial so'nuvchi sinusoidal funksiya ko'rinishida: x(t) = e^(-γt)[C₁cos(ωt) + C₂sin(ωt)], bu yerda ω = √(ω₀² - γ²)."
+      },
+      {
+        "id": 8,
+        "question": "Kritik so'nimlash sharoitida tizimning yechimi qanday?",
+        "options": {
+          "A": "Eksponensial o'sish",
+          "B": "Tezlik bilan nolga yaqinlashuvchi yechim",
+          "C": "Sinusoidal tebranish",
+          "D": "Doimiy yechim"
+        },
+        "correct_answer": "B",
+        "explanation": "Kritik so'nimlashda (γ = ω₀) tizim eng tez orada muvozanat holatiga yetadi, tebranishsiz va tezlik bilan nolga yaqinlashadi: x(t) = (C₁ + C₂t)e^(-γt)."
+      },
+      {
+        "id": 9,
+        "question": "Tizimga tashqi sinusoidal kuch ta'sir qilinsa, eng yuqori amplituda qachon sodir bo'ladi?",
+        "options": {
+          "A": "ω = 0",
+          "B": "ω = ω₀",
+          "C": "ω → ∞",
+          "D": "Har doim bir xil"
+        },
+        "correct_answer": "B",
+        "explanation": "Rezonans holatida (ω = ω₀) majburiy tebranishlarning amplitudasi maksimal bo'ladi. Bu tizimning natural chastotasi tashqi kuch chastotasiga teng bo'lganda yuzaga keladi."
+      },
+      {
+        "id": 10,
+        "question": "Massaga ulangan prujina va damper tizimida energiya qanday o'zgaradi?",
+        "options": {
+          "A": "Doimiy",
+          "B": "Sekin-asta kamayadi (so'nish tufayli)",
+          "C": "Tez o'sadi",
+          "D": "Sinusoidal o'zgaradi"
+        },
+        "correct_answer": "B",
+        "explanation": "Damper (so'ngich) mavjud bo'lganda, tizimda ishqalanish kuchi ish qiladi va energiya sekin-asta issiqlik shaklida sochilib, sistemadan yo'qotiladi. Natijada tebranishlar amplitudasi kamayib boradi."
+      }
+    ],
+    "metadata": {
+      "subject": "Matematika (Mexanika)",
+      "topic": "Massa-prujina-damper tizimlari va tebranishlar",
+      "difficulty": "Yuqori",
+      "keywords": [
+        "prujina",
+        "damper",
+        "so'nish",
+        "natural chastota",
+        "ostso'nimlash",
+        "kritik so'nimlash"
+      ]
+    }
+  }
+}

@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Ma’ruzalar{% endblock %}
+{% block content %}
+
+<style>
+.container{max-width:1240px}
+
+/* HERO */
+.hero-section{
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 18px;
+  margin: 12px 0 26px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.18);
+}
+.hero-image{ width:100%; height:100%; object-fit:cover; }
+.hero-text{
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center;
+  color:#fff;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight:900;
+  text-shadow:0 6px 18px rgba(0,0,0,.65);
+}
+
+/* GRID */
+.lecture-grid{ display:grid; gap:1.35rem; grid-template-columns:1fr; }
+@media (min-width:768px){ .lecture-grid{ grid-template-columns:repeat(2,1fr);} }
+@media (min-width:992px){ .lecture-grid{ grid-template-columns:repeat(3,1fr);} }
+
+/* CARD */
+.lecture-card{
+  border-radius:18px;
+  overflow:hidden;
+  background:#fff;
+  border:1.5px solid #e2e8f0;
+  box-shadow: 0 10px 25px rgba(15,23,42,.08), 0 25px 60px rgba(15,23,42,.10);
+  transition: transform .25s ease, box-shadow .25s ease, border .25s ease;
+}
+.lecture-card:hover{
+  transform: translateY(-10px);
+  border:1.5px solid #cbd5e1;
+  box-shadow: 0 18px 45px rgba(15,23,42,.12), 0 35px 80px rgba(15,23,42,.18);
+}
+
+/* PDF */
+.pdf-wrap{ position:relative; height:260px; background:#f1f5f9; overflow:hidden; }
+.pdf-iframe{ width:100%; height:100%; border:0; }
+.pdf-top-mask{
+  position:absolute; top:0; left:0; right:0;
+  height:46px; background:rgba(255,255,255,.92);
+  z-index:5;
+}
+.pdf-title{
+  position:absolute; left:12px; right:12px; bottom:10px;
+  color:#0b5cff; background:rgba(255,255,255,.92);
+  padding:6px 10px; border-radius:10px;
+  font-weight:900; font-size:14px;
+  box-shadow:0 4px 14px rgba(0,0,0,.15);
+  z-index:6;
+}
+
+.card-body{ padding:14px 16px 16px; }
+.download-info{ color:#15803d; font-weight:900; margin:10px 0 14px; }
+.btn{ border-radius:12px !important; font-weight:900; padding:10px 12px; }
+.btn-secondary{ background:#64748b !important; border:0 !important; }
+.btn-secondary:hover{ background:#475569 !important; }
+</style>
+
+<div class="container">
+
+  <div class="hero-section">
+    <img src="{% static 'images/book_lightbulb.jpeg' %}" class="hero-image" alt="hero">
+    <div class="hero-text">Ma’ruza mashg‘ulotlari</div>
+  </div>
+
+  <div class="lecture-grid">
+    {% for doc in documents %}
+      <div class="lecture-card">
+
+       <div class="pdf-wrap">
+          {% if doc.has_pdf %}
+            <div class="pdf-top-mask"></div>
+
+            <object data="{{ doc.pdf_file.url }}#toolbar=0&navpanes=0"
+                    type="application/pdf"
+                    width="100%" height="260">
+              <div style="height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;">
+                <div style="font-weight:900;opacity:.8;">PDF preview ko‘rinmadi</div>
+                <a class="btn btn-outline-primary btn-sm" target="_blank" href="{{ doc.pdf_file.url }}">
+                  PDFni ochish
+                </a>
+              </div>
+            </object>
+
+            {% else %}
+            <div style="height:100%;display:flex;align-items:center;justify-content:center;font-weight:900;opacity:.75;">
+              PDF yo‘q
+            </div>
+          {% endif %}
+        </div>
+        <div class="card-body">
+          <div style="font-weight:900;">{{ doc.title|default:"Ma’ruza" }}</div>
+          <div style="opacity:.85; font-weight:800;">
+            <span>Fan:</span> {{ doc.subject|default:"—" }}
+          </div>
+          <div style="margin-top:4px;">
+            {{ doc.lecture_number }}-Ma’ruza mashg‘uloti
+          </div>
+
+          <div class="download-info">
+            Yuklab olindi: {{ doc.download_count|default:0 }} marta
+          </div>
+
+          <div class="d-grid gap-2">
+            <a href="{% url 'download_document' doc.pk %}" class="btn btn-secondary">Yuklab olish</a>
+            <a href="{% url 'lecture_test' doc.pk %}" class="btn btn-outline-primary">Testni ishlash</a>
+          </div>
+        </div>
+
+      </div>
+    {% empty %}
+      <div class="alert alert-warning">
+        Hozircha ma’ruzalar yo‘q (admin paneldan Lecture qo‘shing).
+      </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+{% endblock %}

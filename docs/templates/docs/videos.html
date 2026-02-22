@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    .hero-section {
+        position: relative;
+        width: 100%;
+        max-height: 320px;
+        overflow: hidden;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        filter: brightness(70%);
+    }
+
+    .hero-text {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 3.2rem;
+        font-weight: 800;
+        text-align: center;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .interactive-block {
+        transition: transform 0.2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 360px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        background-color: #fff;
+    }
+
+    .interactive-block:hover {
+        transform: scale(1.02);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .ratio iframe {
+        width: 100%;
+        height: 230px;
+        border: none;
+    }
+
+    .card-body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 16px 20px;
+    }
+
+    .card-title {
+        font-weight: 600;
+        font-size: 17px;
+        color: #333;
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+
+    .btn-outline-primary {
+        align-self: flex-start;
+        font-size: 14px;
+        padding: 6px 14px;
+        border-radius: 8px;
+    }
+</style>
+
+<!-- Hero Banner -->
+<div class="hero-section">
+    <img src="{% static 'images/videos.jpeg' %}" class="hero-image" alt="Video darslar">
+    <div class="hero-text">Video Darslar</div>
+</div>
+
+<!-- Video Cards -->
+<div class="container mt-5">
+    <div class="row">
+        {% for video in videos %}
+        <div class="col-md-6 col-lg-4 mb-4 d-flex">
+            <div class="interactive-block w-100">
+                <div class="ratio ratio-16x9">
+  {% with u=video.youtube_url %}
+    {% if "watch?v=" in u %}
+      {# watch?v=ID&t=... bo‘lsa ID ni ajratamiz #}
+      {% with vid=u|cut:"https://www.youtube.com/watch?v="|cut:"http://www.youtube.com/watch?v="|cut:"https://youtube.com/watch?v="|cut:"http://youtube.com/watch?v=" %}
+        {% with vid=vid|cut:"&t=5s"|cut:"&t=5"|cut:"&t=10s"|cut:"&t=10"|cut:"&si=" %}
+          <iframe
+            src="https://www.youtube.com/embed/{{ vid }}"
+            title="{{ video.title }}"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        {% endwith %}
+      {% endwith %}
+    {% else %}
+      {# youtu.be/ID bo‘lsa ID ni ajratamiz #}
+      {% with vid=u|cut:"https://youtu.be/"|cut:"http://youtu.be/"|cut:"https://www.youtube.com/embed/"|cut:"http://www.youtube.com/embed/"|cut:"?t=5s"|cut:"&t=5s"|cut:"?t=5"|cut:"&t=5"|cut:"?si="|cut:"&si=" %}
+        <iframe
+          src="https://www.youtube.com/embed/{{ vid }}"
+          title="{{ video.title }}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      {% endwith %}
+    {% endif %}
+  {% endwith %}
+</div>
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ video.lesson_number }}-dars: {{ video.title }}</h5>
+                    <a href="{{ video.youtube_url }}" target="_blank" class="btn btn-sm btn-outline-primary">
+                        YouTube’da ko‘rish
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

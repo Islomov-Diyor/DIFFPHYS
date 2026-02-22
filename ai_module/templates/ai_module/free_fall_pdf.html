@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <title>DiffPhys — Erkin tushish + qarshilik (hisobot)</title>
+  <style>
+    @page { size: A4; margin: 14mm; }
+    body { font-family: DejaVu Sans, Arial, sans-serif; font-size: 11.5px; color:#111; }
+    h1 { font-size: 18px; margin: 0 0 6px 0; }
+    h2 { font-size: 13px; margin: 14px 0 6px 0; }
+    .muted { color:#666; font-size: 10.5px; }
+    table { width:100%; border-collapse: collapse; margin-top:6px; }
+    th, td { border:1px solid #e6e6e6; padding:6px 7px; }
+    th { background:#fafafa; text-align:left; }
+
+    /* MUHIM: rasmlar PDFda katta bo'lib ketmasin */
+    .imgbox{
+      border:1px solid #ededed;
+      border-radius:10px;
+      padding:6px;
+      margin-top:8px;
+    }
+    .imgbox img{
+      width:100%;
+      height:auto;
+      max-height: 240px;   /* shu yer balandlikni boshqaradi */
+    }
+
+    .card { border:1px solid #eaeaea; border-radius:10px; padding:10px; margin-top:10px; }
+
+    /* Xhtml2pdf page-break */
+    .pagebreak { page-break-before: always; }
+  </style>
+</head>
+<body>
+
+  <h1>Erkin tushish + havo qarshiligi — natijalar hisoboti</h1>
+  <div class="muted">DiffPhys • Sonli modellashtirish (ODE) • PDF avtomatik generatsiya</div>
+
+  <h2>1) Kiritilgan parametrlar</h2>
+  <table>
+    <tr>
+      <th>m (kg)</th><td>{{ m }}</td>
+      <th>g (m/s²)</th><td>{{ g }}</td>
+    </tr>
+    <tr>
+      <th>Qarshilik turi</th><td>{{ drag_type }}</td>
+      <th>k</th><td>{{ k }}</td>
+    </tr>
+    <tr>
+      <th>y0 (m)</th><td>{{ y0 }}</td>
+      <th>v0 (m/s)</th><td>{{ v0 }}</td>
+    </tr>
+    <tr>
+      <th>T (s)</th><td>{{ t_end }}</td>
+      <th>dt (s)</th><td>{{ dt }}</td>
+    </tr>
+  </table>
+
+  <h2>2) Grafiklar</h2>
+
+  <!-- 1) Balandlik -->
+  {% if img_h %}
+    <div class="imgbox">
+      <div class="muted"><b>2.1)</b> Balandlik h(t)</div>
+      <img src="data:image/png;base64,{{ img_h }}" alt="h(t)">
+    </div>
+  {% endif %}
+
+  <div class="pagebreak"></div>
+
+  <!-- 2) Tezlik -->
+  {% if img_v %}
+    <div class="imgbox">
+      <div class="muted"><b>2.2)</b> Tezlik v(t)</div>
+      <img src="data:image/png;base64,{{ img_v }}" alt="v(t)">
+    </div>
+  {% endif %}
+
+  <div class="pagebreak"></div>
+
+  <!-- 3) Tezlanish -->
+  {% if img_a %}
+    <div class="imgbox">
+      <div class="muted"><b>2.3)</b> Tezlanish a(t)</div>
+      <img src="data:image/png;base64,{{ img_a }}" alt="a(t)">
+    </div>
+  {% endif %}
+
+  <div class="pagebreak"></div>
+
+  <h2>3) Xulosa</h2>
+  <div class="card">
+    {{ conclusion }}
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+{
+  "quiz": {
+    "topic_id": 9,
+    "title": "Tartibini pasaytirish mumkin bo'lgan tenglamalar: Tenglamada noma'lum funksiya va uning hosilalari oshkor ko'rinishda qatnashmagan hol",
+    "language": "uz",
+    "total_questions": 10,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Qaysi holatda differensial tenglamaning tartibini pasaytirish mumkin bo'ladi?",
+        "options": {
+          "A": "Tenglama chiziqli bo'lsa",
+          "B": "Tenglamada noma'lum funksiya oshkor ko'rinishda qatnashmasa",
+          "C": "Tenglama ajraluvchi bo'lsa",
+          "D": "Tenglama to'la differensial bo'lsa"
+        },
+        "correct_answer": "B",
+        "explanation": "Agar tenglamada noma'lum funksiya y (yoki x) oshkor ko'rinishda qatnashmasa, ya'ni faqat uning hosilalari qatnashsa, tenglamaning tartibini pasaytirish mumkin."
+      },
+      {
+        "id": 2,
+        "question": "Agar tenglama F(x, y', y'') = 0 ko'rinishida bo'lsa, qaysi almashtirish qo'llaniladi?",
+        "options": {
+          "A": "y = vx",
+          "B": "y' = p",
+          "C": "x = y",
+          "D": "y = eˣ"
+        },
+        "correct_answer": "B",
+        "explanation": "Tartibini pasaytirish uchun yangi o'zgaruvchi kiritiladi: y' = p, bunda y'' = p' bo'ladi va tenglama birinchi tartibliga aylanadi."
+      },
+      {
+        "id": 3,
+        "question": "Almashtirish y' = p kiritilganda y'' qanday ifodalanadi?",
+        "options": {
+          "A": "y'' = p",
+          "B": "y'' = dp/dx",
+          "C": "y'' = dp/dy",
+          "D": "y'' = p²"
+        },
+        "correct_answer": "B",
+        "explanation": "Agar y' = p deb olingan bo'lsa, u holda y'' = p' = dp/dx bo'ladi, chunki p funksiyasi x ga bog'liq."
+      },
+      {
+        "id": 4,
+        "question": "Agar tenglama F(y, y', y'') = 0 ko'rinishida bo'lsa, qaysi almashtirish maqsadga muvofiq?",
+        "options": {
+          "A": "y' = p(y)",
+          "B": "y = vx",
+          "C": "y = p",
+          "D": "x = y"
+        },
+        "correct_answer": "A",
+        "explanation": "Agar tenglada mustaqil o'zgaruvchi x oshkor ko'rinishda qatnashmasa, y' = p(y) deb olinadi va y'' = p(dp/dy) orqali ifodalanadi."
+      },
+      {
+        "id": 5,
+        "question": "Agar y' = p(y) bo'lsa, ikkinchi hosila qanday yoziladi?",
+        "options": {
+          "A": "y'' = p'(y)",
+          "B": "y'' = p(dp/dy)",
+          "C": "y'' = dp/dx",
+          "D": "y'' = p²"
+        },
+        "correct_answer": "B",
+        "explanation": "y' = p(y) bo'lganda, y'' = dp/dx = (dp/dy)(dy/dx) = p(dp/dy) bo'ladi (zanjir qoidasi bo'yicha)."
+      },
+      {
+        "id": 6,
+        "question": "Tartibini pasaytirish natijasida qanday tenglama hosil bo'ladi?",
+        "options": {
+          "A": "Tartibi oshgan tenglama",
+          "B": "Algebraik tenglama",
+          "C": "Pastroq tartibli differensial tenglama",
+          "D": "Integral tenglama"
+        },
+        "correct_answer": "C",
+        "explanation": "Tartibini pasaytirish natijasida ikkinchi tartibli tenglama birinchi tartibli, uchinchi tartibli esa ikkinchi tartibli va hokazo ko'rinishga keladi."
+      },
+      {
+        "id": 7,
+        "question": "Quyidagi tenglamalardan qaysi biri noma'lum funksiya oshkor qatnashmagan tenglama hisoblanadi?",
+        "options": {
+          "A": "y'' + y = 0",
+          "B": "y'' = f(x)",
+          "C": "y'' + y' = 0",
+          "D": "y'' = f(y')"
+        },
+        "correct_answer": "D",
+        "explanation": "y'' = f(y') tenglamasida noma'lum funksiya y oshkor ko'rinishda qatnashmaydi, faqat uning hosilalari (y' va y'') qatnashadi."
+      },
+      {
+        "id": 8,
+        "question": "Agar tenglama y'' = f(y') ko'rinishida bo'lsa, uni yechishning birinchi bosqichi qaysi?",
+        "options": {
+          "A": "Integrallash",
+          "B": "y' = p deb olish",
+          "C": "y = p deb olish",
+          "D": "Grafik usul"
+        },
+        "correct_answer": "B",
+        "explanation": "Birinchi bosqich - yangi o'zgaruvchi kiritish: y' = p, bunda y'' = p' = dp/dx va tenglama p' = f(p) ko'rinishiga keladi."
+      },
+      {
+        "id": 9,
+        "question": "Tartibini pasaytirish usuli qaysi turdagi tenglamalar uchun qulay?",
+        "options": {
+          "A": "Noma'lum funksiya yoki mustaqil o'zgaruvchi qatnashmagan hollarda",
+          "B": "Faqat birinchi tartibli tenglamalarda",
+          "C": "Faqat chiziqli tenglamalarda",
+          "D": "Faqat ajraluvchi tenglamalarda"
+        },
+        "correct_answer": "A",
+        "explanation": "Tartibini pasaytirish usuli ikki asosiy holatda qo'llaniladi: 1) noma'lum funksiya oshkor qatnashmaganda; 2) mustaqil o'zgaruvchi oshkor qatnashmaganda."
+      },
+      {
+        "id": 10,
+        "question": "Tartibini pasaytirish usuli necha marta qo'llanilishi mumkin?",
+        "options": {
+          "A": "Faqat bir marta",
+          "B": "Ikki marta",
+          "C": "Tenglama ko'rinishiga bog'liq",
+          "D": "Hech qachon"
+        },
+        "correct_answer": "C",
+        "explanation": "Qo'llanishlar soni tenglamaning dastlabki tartibiga va hosil bo'lgan yangi tenglamalar ko'rinishiga bog'liq. Masalan, n-tartibli tenglamani n marta qo'llab birinchi tartibli ko'rinishga keltirish mumkin."
+      }
+    ],
+    "metadata": {
+      "subject": "Matematika",
+      "topic": "Tartibini pasaytirish mumkin bo'lgan differensial tenglamalar",
+      "difficulty": "Yuqori",
+      "keywords": [
+        "tartibni pasaytirish",
+        "noma'lum funksiya",
+        "almashtirish",
+        "ikkinchi tartibli tenglamalar"
+      ]
+    }
+  }
+}

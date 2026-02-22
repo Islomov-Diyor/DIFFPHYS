@@ -1,0 +1,144 @@
+{
+  "quiz": {
+    "topic_id": 12,
+    "title": "Kirxgof (Kirchhoff) qonunlari asosida RLC elektr zanjirlari modellari (tok va kuchlanishning sistemasi)",
+    "language": "uz",
+    "total_questions": 10,
+    "questions": [
+      {
+        "id": 1,
+        "question": "Quyidagi qaysi qonun Kirxgofning birinchi qonuni sifatida tanilgan?",
+        "options": {
+          "A": "Zanjirdagi toklarning yig'indisi nolga teng",
+          "B": "Zanjirdagi kuchlanishlarning yig'indisi nolga teng",
+          "C": "Tok va kuchlanish o'rtasidagi bog'lanish",
+          "D": "Induktivlik va kapasitivlik tenglamasi"
+        },
+        "correct_answer": "A",
+        "explanation": "Kirxgofning birinchi qonuni (toklar qonuni) bo'yicha, elektr zanjiridagi tugunlarga kiruvchi va chiquvchi toklar yig'indisi nolga teng (I_kiruvchi = I_chiquvchi)."
+      },
+      {
+        "id": 2,
+        "question": "Kirxgofning ikkinchi qonuni nima ifodalaydi?",
+        "options": {
+          "A": "Toklarning tugunlarda yig'indisi nolga teng",
+          "B": "Zanjirdagi kuchlanishlarning yopiq yo'lidagi yig'indisi nolga teng",
+          "C": "Induktivlik kuchlanishi faqat tokka bog'liq",
+          "D": "Rezistor kuchlanishi faqat R bilan bog'liq"
+        },
+        "correct_answer": "B",
+        "explanation": "Kirxgofning ikkinchi qonuni (kuchlanishlar qonuni) bo'yicha, yopiq zanjir bo'ylab kuchlanishlarning algebraik yig'indisi nolga teng (ΣV = 0)."
+      },
+      {
+        "id": 3,
+        "question": "RLC zanjiridagi rezistorni (R) kuchlanishi qanday ifodalanadi?",
+        "options": {
+          "A": "V_R = L(dI/dt)",
+          "B": "V_R = (1/C)∫Idt",
+          "C": "V_R = IR",
+          "D": "V_R = LI"
+        },
+        "correct_answer": "C",
+        "explanation": "Rezistor (qarshilik) kuchlanishi Om qonuni bo'yicha V_R = IR ko'rinishida bo'ladi, bu yerda I - tok kuchi, R - qarshilik."
+      },
+      {
+        "id": 4,
+        "question": "RLC zanjirida induktor (L) kuchlanishi qanday ifodalanadi?",
+        "options": {
+          "A": "V_L = L(dI/dt)",
+          "B": "V_L = IR",
+          "C": "V_L = (1/C)∫Idt",
+          "D": "V_L = LI"
+        },
+        "correct_answer": "A",
+        "explanation": "Induktivlik (L) kuchlanishi tokning o'zgarish tezligiga proporsional: V_L = L(dI/dt). Bu Faradey qonunining ifodasidir."
+      },
+      {
+        "id": 5,
+        "question": "RLC zanjirida kondensator (C) kuchlanishi qanday ifodalanadi?",
+        "options": {
+          "A": "V_C = L(dI/dt)",
+          "B": "V_C = (1/C)∫Idt",
+          "C": "V_C = IR",
+          "D": "V_C = LI"
+        },
+        "correct_answer": "B",
+        "explanation": "Kondensator (C) kuchlanishi uning zaryadiga bog'liq: V_C = Q/C = (1/C)∫Idt, bu yerda Q - kondensatordagi zaryad, I - tok."
+      },
+      {
+        "id": 6,
+        "question": "Zanjirda seriyali RLC uchun Kirxgofning ikkinchi qonuni asosida differensial tenglama qanday yoziladi?",
+        "options": {
+          "A": "L(dI/dt) + IR + (1/C)∫Idt = 0",
+          "B": "L(dI/dt) - IR - (1/C)∫Idt = 0",
+          "C": "I + R + L = 0",
+          "D": "dI/dt + IR = 0"
+        },
+        "correct_answer": "A",
+        "explanation": "Seriyali RLC zanjirida Kirxgofning ikkinchi qonuni bo'yicha: L(dI/dt) + IR + (1/C)∫Idt = 0 yoki L(dI/dt) + IR + Q/C = 0, bu yerda L(dI/dt) - induktiv kuchlanish, IR - aktiv kuchlanish, Q/C - kapasitiv kuchlanish."
+      },
+      {
+        "id": 7,
+        "question": "Seriyali RLC zanjirida tokning umumiy differensial tenglamasi qanday bo'ladi?",
+        "options": {
+          "A": "L(d²I/dt²) + R(dI/dt) + (1/C)I = 0",
+          "B": "L(dI/dt) + IR + (1/C)∫Idt = 0",
+          "C": "dI/dt + IR = 0",
+          "D": "I + V = 0"
+        },
+        "correct_answer": "A",
+        "explanation": "Integralli tenglamani t vaqt bo'yicha differensiallaganda ikkinchi tartibli ODE hosil bo'ladi: L(d²I/dt²) + R(dI/dt) + (1/C)I = 0."
+      },
+      {
+        "id": 8,
+        "question": "Seriyali RLC zanjirida tebranish turi qaysi omillarga bog'liq?",
+        "options": {
+          "A": "Faqat R ga",
+          "B": "Faqat L va C ga",
+          "C": "R, L va C ga",
+          "D": "Faqat L ga"
+        },
+        "correct_answer": "C",
+        "explanation": "RLC zanjirida tebranish turi (so'nimlanishli, kritik so'nimlanishli yoki so'nimsiz) R, L va C barcha uchta kattalikka bog'liq. Ayniqsa, R² va 4L/C nisbatiga qarab aniqlanadi."
+      },
+      {
+        "id": 9,
+        "question": "Zanjirda kritik so'nimlanish qachon sodir bo'ladi?",
+        "options": {
+          "A": "R² < 4L/C",
+          "B": "R² = 4L/C",
+          "C": "R² > 4L/C",
+          "D": "Har doim"
+        },
+        "correct_answer": "B",
+        "explanation": "Kritik so'nimlanish (critical damping) R² = 4L/C shartida yuzaga keladi. Bu holatda zanjir eng tez orada muvozanat holatiga yetadi va tebranishsiz. Agar R² < 4L/C bo'lsa so'nimsiz tebranish, R² > 4L/C bo'lsa so'nimlanishli holat bo'ladi."
+      },
+      {
+        "id": 10,
+        "question": "Quyidagi ifodalardan qaysi biri kondensator orqali o'tgan tok va uning kuchlanishiga bog'liq?",
+        "options": {
+          "A": "I = C(dV/dt)",
+          "B": "I = L(dV/dt)",
+          "C": "I = V/R",
+          "D": "I = ∫Vdt"
+        },
+        "correct_answer": "A",
+        "explanation": "Kondensator uchun I = dQ/dt va Q = CV, shuning uchun I = C(dV/dt). Bu kondensator tokining kuchlanish o'zgarish tezligiga proporsionalligini ifodalaydi."
+      }
+    ],
+    "metadata": {
+      "subject": "Matematika (Elektrotexnika)",
+      "topic": "RLC elektr zanjiri modellari va Kirxgof qonunlari",
+      "difficulty": "Yuqori",
+      "category": "Elektr zanjirlari",
+      "keywords": [
+        "Kirxgof qonunlari",
+        "RLC zanjir",
+        "induktivlik",
+        "kondensator",
+        "rezistor",
+        "kritik so'nimlanish"
+      ]
+    }
+  }
+}

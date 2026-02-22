@@ -1,0 +1,140 @@
+{
+  "quiz": {
+    "title": "7-mavzu: Hosilaga nisbatan yechilmagan birinchi tartibli differensial tenglamalar va ularni integrallash usullari",
+    "language": "uz",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Hosilaga nisbatan yechilmagan birinchi tartibli differensial tenglama qanday ko'rinishda yoziladi?",
+        "options": {
+          "A": "y'=f(x,y)",
+          "B": "F(x,y,y')=0",
+          "C": "y''=f(x)",
+          "D": "y'+p(x)y=q(x)"
+        },
+        "correct_answer": "B",
+        "explanation": "Hosilaga nisbatan yechilmagan tenglama F(x,y,y')=0 umumiy ko'rinishida bo'ladi, bu yerda y' noma'lum qiymat sifatida ifodalangan va y' bo'yicha yechilmagan (ya'ni y' = f(x,y) ko'rinishida emas)."
+      },
+      {
+        "id": 2,
+        "question": "Quyidagi tenglamalardan qaysi biri hosilaga nisbatan yechilmagan tenglamaga misol bo'la oladi?",
+        "options": {
+          "A": "y'=x+y",
+          "B": "y'+y=x",
+          "C": "y=xy'",
+          "D": "y''+y=0"
+        },
+        "correct_answer": "C",
+        "explanation": "y=xy' tenglamasi y' bo'yicha yechilmagan, chunki u y' ning funksiyasi sifatida emas, balki y bilan bog'liqlik sifatida berilgan. Bu tenglama y=p(x) deb olib qo'yib yechiladi."
+      },
+      {
+        "id": 3,
+        "question": "Hosilaga nisbatan yechilmagan tenglamani yechishning asosiy g'oyasi nimadan iborat?",
+        "options": {
+          "A": "Hosilani differensiallashtirishdan",
+          "B": "Hosilani yangi o'zgaruvchi deb qabul qilishdan",
+          "C": "Tenglamani kvadratlashtirishdan",
+          "D": "Grafik usuldan"
+        },
+        "correct_answer": "B",
+        "explanation": "Asosiy g'oya - y' = p deb yangi o'zgaruvchi kiritish va tenglamani parametr ko'rinishiga keltirish. Bu orqali tenglamani yechish parametrik usulda amalga oshiriladi."
+      },
+      {
+        "id": 4,
+        "question": "Agar tenglama F(y,y')=0 ko'rinishida bo'lsa, u qanday yechiladi?",
+        "options": {
+          "A": "Ajraluvchi tenglama sifatida",
+          "B": "To'la differensial tenglama sifatida",
+          "C": "Algebraik tenglama sifatida y' ni topib",
+          "D": "Ikkinchi tartibli tenglama sifatida"
+        },
+        "correct_answer": "C",
+        "explanation": "Agar tenglama faqat y va y' ga bog'liq bo'lsa (F(y,y')=0), u algebraik tenglama sifatida y' ni (ya'ni dy/dx ni) topib, keyin ajraluvchi tenglama sifatida integrallash mumkin."
+      },
+      {
+        "id": 5,
+        "question": "Agar tenglama F(x,y')=0 ko'rinishida bo'lsa, yechish usuli qaysi?",
+        "options": {
+          "A": "y'=φ(x) deb olib integrallash",
+          "B": "y=vx almashtirish",
+          "C": "Integrallovchi ko'paytuvchi",
+          "D": "Grafik usul"
+        },
+        "correct_answer": "A",
+        "explanation": "F(x,y')=0 ko'rinishidagi tenglamada y' = p(x) deb echiladi va x = ψ(p) ko'rinishiga keltiriladi. Keyin parametrik usulda dx va dy ni topib integrallanadi."
+      },
+      {
+        "id": 6,
+        "question": "Quyidagi tenglamalardan qaysi biri Lagrange turidagi tenglama hisoblanadi?",
+        "options": {
+          "A": "y=xy'+f(y')",
+          "B": "y'+y=x",
+          "C": "y'=xy",
+          "D": "y''+y=0"
+        },
+        "correct_answer": "A",
+        "explanation": "Lagrange tenglamasi y = xφ(y') + ψ(y') ko'rinishida bo'ladi. Maxsus holatda y = xy' + f(y') ko'rinishidagi tenglama ham Lagrange turiga kiradi (Clairaut tenglamasi bunday maxsus holat hisoblanadi)."
+      },
+      {
+        "id": 7,
+        "question": "Klairaut (Clairaut) tenglamasi qaysi ko'rinishga ega?",
+        "options": {
+          "A": "y=xy'+f(y')",
+          "B": "y=y'+x",
+          "C": "y=xy'+C",
+          "D": "y'=f(x,y)"
+        },
+        "correct_answer": "A",
+        "explanation": "Klairaut tenglamasi y = xy' + f(y') ko'rinishida bo'ladi, bu Lagrange tenglamasining maxsus holatidir (φ(y') = y' bo'lganda). Bu tenglama y'=C deb ehib oson yechiladi."
+      },
+      {
+        "id": 8,
+        "question": "Klairaut tenglamasining umumiy yechimi qanday ko'rinishda bo'ladi?",
+        "options": {
+          "A": "y=f(x)",
+          "B": "y=Cx+f(C)",
+          "C": "y=Ceˣ",
+          "D": "y=x²+C"
+        },
+        "correct_answer": "B",
+        "explanation": "Klairaut tenglamasining umumiy yechimi y = Cx + f(C) ko'rinishida bo'ladi, bu to'g'ri chiziqlar oilasini ifodalaydi. Bundan tashqari maxsus yechim (singular solution) ham mavjud bo'lib, bu chiziqlar oilasining uglab chizig'i (envelope) bo'ladi."
+      },
+      {
+        "id": 9,
+        "question": "Lagrange tenglamasida maxsus (singular) yechim qanday topiladi?",
+        "options": {
+          "A": "Integrallash orqali",
+          "B": "dy/dx=0 qilib",
+          "C": "Parametrni yo'qotish orqali",
+          "D": "Grafik chizish orqali"
+        },
+        "correct_answer": "C",
+        "explanation": "Lagrange tenglamasida maxsus yechim parametrik yechimdan (x=φ(p), y=ψ(p)) p parametri eliminatsiya qilingan holda topiladi. Bu umumiy yechimlar oilasining uglab chizig'ini ifodalaydi."
+      },
+      {
+        "id": 10,
+        "question": "Hosilaga nisbatan yechilmagan tenglamalar qaysi fizik masalalarda uchradi?",
+        "options": {
+          "A": "Issiqlik o'tkazuvchanlikda",
+          "B": "Mexanik trayektoriyalarni aniqlashda",
+          "C": "Elektr zanjirlarida",
+          "D": "Optikada"
+        },
+        "correct_answer": "B",
+        "explanation": "Hosilaga nisbatan yechilmagan tenglamalar asosan mexanikada, ayniqsa harakat trayektoriyalarini aniqlashda, geometrik masalalarda (masalan, o'ziga xos egri chiziqlarni topishda) keng qo'llaniladi."
+      }
+    ],
+    "metadata": {
+      "total_questions": 10,
+      "subject": "Matematika",
+      "topic": "Hosilaga nisbatan yechilmagan differensial tenglamalar",
+      "subtopics": [
+        "Lagrange tenglamasi",
+        "Clairaut (Klairaut) tenglamasi",
+        "Parametr usuli",
+        "Maxsus (singular) yechimlar"
+      ],
+      "difficulty": "Yuqori"
+    }
+  }
+}

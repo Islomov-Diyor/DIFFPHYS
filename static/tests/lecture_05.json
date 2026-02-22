@@ -1,0 +1,141 @@
+{
+  "quiz": {
+    "title": "5-mavzu: Birinchi tartibli tenglama uchun Koshi masalasi. Yechimning mavjudligi va yagonaligi",
+    "language": "uz",
+    "questions": [
+      {
+        "id": 1,
+        "question": "Birinchi tartibli differensial tenglama uchun Koshi masalasi nimadan iborat?",
+        "options": {
+          "A": "Faqat differensial tenglamadan",
+          "B": "Differensial tenglama va chegaraviy shartlardan",
+          "C": "Differensial tenglama va boshlang'ich shartdan",
+          "D": "Integral tenglamadan"
+        },
+        "correct_answer": "C",
+        "explanation": "Koshi masalasi (boshlang'ich qiymatlar masalasi) differensial tenglama va boshlang'ich shart y(x₀)=y₀ dan iborat."
+      },
+      {
+        "id": 2,
+        "question": "Koshi masalasida boshlang'ich shart qanday ko'rinishda beriladi?",
+        "options": {
+          "A": "y'(x₀) = y₀",
+          "B": "y(x₀) = y₀",
+          "C": "y''(x₀) = y₀",
+          "D": "y(x) = y₀"
+        },
+        "correct_answer": "B",
+        "explanation": "Birinchi tartibli tenglamalar uchun boshlang'ich shart y(x₀)=y₀ ko'rinishida beriladi, bu berilgan x₀ nuqtada funksiyaning qiymatini aniqlaydi."
+      },
+      {
+        "id": 3,
+        "question": "Birinchi tartibli differensial tenglama umumiy ko'rinishi qaysi?",
+        "options": {
+          "A": "y'' = f(x,y)",
+          "B": "y' = f(x,y)",
+          "C": "y'' + y = 0",
+          "D": "y⁽ⁿ⁾ = f(x)"
+        },
+        "correct_answer": "B",
+        "explanation": "Birinchi tartibli differensial tenglama y' = f(x,y) yoki dy/dx = f(x,y) ko'rinishida bo'ladi, bu yerda f(x,y) berilgan funksiya."
+      },
+      {
+        "id": 4,
+        "question": "Yechimning mavjudligi teoremasi nimani kafolatlaydi?",
+        "options": {
+          "A": "Yechim faqat bitta bo'lishini",
+          "B": "Yechim mavjud emasligini",
+          "C": "Ma'lum sohada hech bo'lmaganda bitta yechim mavjudligini",
+          "D": "Yechimni aniq formulada topishni"
+        },
+        "correct_answer": "C",
+        "explanation": "Yechimning mavjudligi teoremasi ma'lum shartlar bajarilganda (f uzluksiz bo'lsa) yechimning mavjudligini kafolatlaydi, lekin u yagona emas bo'lishi mumkin."
+      },
+      {
+        "id": 5,
+        "question": "Yechimning yagonaligi teoremasi nimani bildiradi?",
+        "options": {
+          "A": "Yechim har doim mavjud bo'ladi",
+          "B": "Yechimlar cheksiz ko'p bo'ladi",
+          "C": "Berilgan boshlang'ich shart uchun yechim yagona bo'ladi",
+          "D": "Yechim faqat sonli bo'ladi"
+        },
+        "correct_answer": "C",
+        "explanation": "Yagonalik teoremasi berilgan boshlang'ich shart uchun yechimning yagona (birgina) ekanligini ta'minlaydi, ya'ni bir nechta yechim bo'lmaydi."
+      },
+      {
+        "id": 6,
+        "question": "Koshi masalasida yechimning mavjudligi va yagonaligi qaysi shartlarda ta'minlanadi?",
+        "options": {
+          "A": "f(x,y) uzluksiz bo'lsa",
+          "B": "f(x,y) va ∂f/∂y uzluksiz bo'lsa",
+          "C": "Faqat ∂f/∂x mavjud bo'lsa",
+          "D": "Har qanday holatda"
+        },
+        "correct_answer": "B",
+        "explanation": "Koshi teoremasiga ko'ra, agar f(x,y) va ∂f/∂y funksiyalari (x₀, y₀) nuqta atrofida uzluksiz bo'lsa, u holda yechim mavjud va yagona bo'ladi."
+      },
+      {
+        "id": 7,
+        "question": "Agar yagonalik sharti bajarilmasa, nima sodir bo'lishi mumkin?",
+        "options": {
+          "A": "Yechim mavjud bo'lmaydi",
+          "B": "Yechim cheksiz ko'p bo'lishi mumkin",
+          "C": "Yechim har doim nolga teng bo'ladi",
+          "D": "Tenglama yechilmaydi"
+        },
+        "correct_answer": "B",
+        "explanation": "Agar Lipschitz sharti (yoki ∂f/∂y uzluksizligi) bajarilmasa, yechim mavjud bo'lishi mumkin, lekin u yagona bo'lmaydi - cheksiz ko'p yechimlar bo'lishi mumkin."
+      },
+      {
+        "id": 8,
+        "question": "Quyidagi tenglamalardan qaysi biri Koshi masalasiga misol bo'la oladi?",
+        "options": {
+          "A": "y' = x + y",
+          "B": "y' = x + y, y(0) = 1",
+          "C": "y = x²",
+          "D": "y'' + y = 0"
+        },
+        "correct_answer": "B",
+        "explanation": "Koshi masalasi tenglama va boshlang'ich shartdan iborat. B variantida y' = x + y tenglamasi va y(0) = 1 boshlang'ich sharti berilgan."
+      },
+      {
+        "id": 9,
+        "question": "Koshi masalasining geometrik ma'nosi nimadan iborat?",
+        "options": {
+          "A": "Grafiklarning kesishmasi",
+          "B": "Boshlang'ich nuqtadan o'tuvchi integral egri chizig'ini topish",
+          "C": "Funksiyaning ekstremumlarini aniqlash",
+          "D": "Grafikni simmetriklik qilish"
+        },
+        "correct_answer": "B",
+        "explanation": "Geometrik jihatdan Koshi masalasi berilgan (x₀, y₀) nuqtadan o'tuvchi y(x) integral egri chiziqlari oilasidan o'sha nuqtadan o'tuvchi bitta egri chiziqni ajratib olishdir."
+      },
+      {
+        "id": 10,
+        "question": "Yechimning mavjudligi va yagonaligi teoremasi qaysi olim nomi bilan bog'liq?",
+        "options": {
+          "A": "Nyuton",
+          "B": "Eyler",
+          "C": "Koshi (Cauchy)",
+          "D": "Lagranj"
+        },
+        "correct_answer": "C",
+        "explanation": "Yechimning mavjudligi va yagonaligi teoremasi Augustin Louis Cauchy nomi bilan bog'liq va 'Koshi teoremasi' deb yuritiladi (ba'zan Peano teoremasi ham qo'shiladi)."
+      }
+    ],
+    "metadata": {
+      "total_questions": 10,
+      "subject": "Matematika",
+      "topic": "Koshi masalasi va yechimning mavjudligi va yagonaligi",
+      "subtopics": [
+        "Koshi masalasining ta'rifi",
+        "Boshlang'ich shartlar",
+        "Mavjudlik teoremasi",
+        "Yagonalik teoremasi",
+        "Geometrik talqin"
+      ],
+      "difficulty": "Yuqori"
+    }
+  }
+}

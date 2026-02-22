@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Me'yoriy Hujjatlar</h1>
+
+{% for hujjat in hujjatlar %}
+    <div>
+        <h3>{{ hujjat.sarlavha }}</h3>
+        <a href="{{ hujjat.fayl.url }}">Yuklab olish</a>
+        <p>Yuklashlar soni: {{ hujjat.yuklashlar_soni }}</p>
+    </div>
+{% empty %}
+    <p>Hali hujjatlar yuklanmagan.</p>
+{% endfor %}
+
+{% endblock %}
