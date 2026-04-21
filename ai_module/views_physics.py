@@ -1763,7 +1763,10 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 # ---- ODE solver ----
-from scipy.integrate import solve_ivp
+try:
+    from scipy.integrate import solve_ivp
+except ImportError:
+    solve_ivp = None
 
 # ---- Plotly (3D) ----
 from plotly.offline import plot
