@@ -7,3 +7,17 @@ media/
 .idea/
 staticfiles/
 *.log
+
+# Zip archives
+*.zip
+
+# Word temp files
+~$*.docx
+*.docx
+
+# ML model binaries
+*.pkl
+
+# PDF files in data dirs
+baholash_mezonlari/
+docs/
