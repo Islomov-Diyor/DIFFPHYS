@@ -44,7 +44,10 @@ def nazorat_view(request):
     return render(request, "docs/nazorat.html")
 
 
-import fitz  # PyMuPDF
+try:
+    import fitz  # PyMuPDF
+except ImportError:
+    fitz = None
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from .models import Presentation
@@ -66,7 +69,6 @@ def presentation_thumb(request, pk):
 
     return HttpResponse(pix.tobytes("png"), content_type="image/png")
 
-import fitz
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from .models import Practical
