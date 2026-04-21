@@ -19,7 +19,10 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.template.loader import get_template
 
-from xhtml2pdf import pisa
+try:
+    from xhtml2pdf import pisa
+except ImportError:
+    pisa = None
 
 from .forms import (
     MassSpringForm,
