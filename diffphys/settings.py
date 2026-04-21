@@ -4,18 +4,15 @@ from decouple import config
 import mimetypes
 mimetypes.add_type("text/javascript", ".mjs", True)
 
-HF_TOKEN = config("HF_TOKEN")
+HF_TOKEN = config("HF_TOKEN", default="")
 
-# Bazaviy katalog (loyihaning ildizi)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Xavfsizlik uchun secret key (prod uchun o'zgartir)
-SECRET_KEY = 'django-insecure-very-secret-key-change-me'
+SECRET_KEY = config("SECRET_KEY", default='django-insecure-very-secret-key-change-me')
 
-# Debug rejimi (prod uchun False qil)
-DEBUG = True
+DEBUG = config("DEBUG", default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="127.0.0.1,localhost", cast=lambda v: [s.strip() for s in v.split(",")])
 
 # Jazzmin va boshqa ilovalar
 INSTALLED_APPS = [
