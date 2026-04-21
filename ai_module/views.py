@@ -12,7 +12,10 @@ from django.core.files.storage import default_storage
 from .forms import PronunciationForm, TextAnalysisForm
 
 from docx import Document
-import fitz  # PyMuPDF
+try:
+    import fitz  # PyMuPDF
+except ImportError:
+    fitz = None
 from decouple import config
 
 import speech_recognition as sr

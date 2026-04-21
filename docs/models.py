@@ -167,7 +167,10 @@ class Lecture(models.Model):
 import os
 from django.db import models
 from django.core.files.base import ContentFile
-import fitz  # PyMuPDF
+try:
+    import fitz  # PyMuPDF
+except ImportError:
+    fitz = None
 
 class Presentation(models.Model):
     title = models.CharField(max_length=255)
@@ -186,6 +189,8 @@ class Presentation(models.Model):
             try:
                 pdf_path = self.file.path
 
+                if fitz is None:
+                    return
                 doc = fitz.open(pdf_path)
                 page = doc.load_page(0)  # 1-bet
                 pix = page.get_pixmap(matrix=fitz.Matrix(2, 2))
