@@ -19,7 +19,7 @@
         margin: 30px 0;
     }
 
-    .action-buttons a, .action-buttons button {
+    .action-buttons a {
         padding: 12px 24px;
         font-size: 1.1rem;
         border-radius: 8px;
@@ -31,35 +31,8 @@
         text-decoration: none;
     }
 
-    .action-buttons a:hover,
-    .action-buttons button:hover {
+    .action-buttons a:hover {
         opacity: 0.85;
-    }
-
-    .question-card {
-        background: #f8f9fa;
-        border-radius: 12px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        padding: 20px;
-        margin-bottom: 20px;
-    }
-
-    #timer {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 100px;
-    height: 100px;
-    background-color: #28a745;
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.8rem; /* KATTA QILINDI */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
 
     body {
@@ -67,98 +40,22 @@
     }
 </style>
 
-<!-- Taymer -->
-<div id="timer" class="d-none">00:00</div>
-
 <div class="container mt-5">
-    <h1 class="text-center fw-bold text-primary mb-4">Nazorat savollari + testlar</h1>
+    <h1 class="text-center fw-bold text-primary mb-4">
+        Nazorat savollari
+    </h1>
 
-    <iframe src="{% static 'docs/files/nazorat-savollari.pdf' %}" class="pdf-viewer">
+    <iframe src="{% static 'docs/files/nazorat-savollar1.pdf' %}" class="pdf-viewer">
         Brauzeringiz PDF-ni ko‘rsata olmaydi.
-        <a href="{% static 'docs/files/nazorat-savollari.pdf' %}">PDF-ni yuklab oling</a>
+        <a href="{% static 'docs/files/nazorat-savollar1.pdf' %}">PDF-ni yuklab oling</a>
     </iframe>
 
     <div class="action-buttons">
-        <a href="{% static 'docs/files/nazorat-savollari.pdf' %}" download>PDF faylni yuklab olish</a>
-        <button onclick="startTest()">Testni boshlash</button>
+        <a href="{% static 'docs/files/nazorat-savollar1.pdf' %}" download>
+            PDF faylni yuklab olish
+        </a>
     </div>
 
-    <!-- Test joyi -->
-    <div id="test-container" class="mt-4"></div>
 </div>
 
-<script>
-function startTest() {
-    fetch("{% static 'docs/files/questions.json' %}")
-    .then(response => response.json())
-    .then(data => {
-        const selected = data.sort(() => 0.5 - Math.random()).slice(0, 30);
-        let html = '<form id="testForm">';
-        selected.forEach((item, index) => {
-            html += `<div class="question-card">
-                <p><strong>${index + 1}. ${item.question}</strong></p>`;
-            item.options.sort(() => 0.5 - Math.random());
-            item.options.forEach(option => {
-                html += `<div class="form-check">
-                    <input class="form-check-input" type="radio" name="q${index}" value="${option}">
-                    <label class="form-check-label">${option}</label>
-                </div>`;
-            });
-            html += '</div>';
-        });
-        html += `<button type="submit" class="btn btn-success px-4 py-2">Natijani ko‘rish</button></form>
-                 <div id="result" class="mt-4 text-center"></div>`;
-        document.getElementById("test-container").innerHTML = html;
-
-        // Taymer boshlanishi
-        let timeLeft = 1800;
-        const timerDisplay = document.getElementById("timer");
-        timerDisplay.classList.remove("d-none");
-
-        function updateTimer() {
-            const minutes = Math.floor(timeLeft / 60);
-            const seconds = timeLeft % 60;
-            timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
-           if (timeLeft > 600) {
-    timerDisplay.style.backgroundColor = "#28a745"; // yashil
-} else if (timeLeft > 300) {
-    timerDisplay.style.backgroundColor = "#ffc107"; // sariq
-} else {
-    timerDisplay.style.backgroundColor = "#dc3545"; // qizil
-}
-
-            if (timeLeft === 0) {
-                clearInterval(timerInterval);
-                document.getElementById("testForm").requestSubmit();
-            }
-            timeLeft--;
-        }
-
-        updateTimer();
-        const timerInterval = setInterval(updateTimer, 1000);
-
-        document.getElementById("testForm").onsubmit = function(e) {
-            e.preventDefault();
-            clearInterval(timerInterval);
-            let correct = 0;
-            selected.forEach((item, index) => {
-                const selectedOption = document.querySelector(`input[name="q${index}"]:checked`);
-                if (selectedOption && selectedOption.value === item.correct_answer) {
-                    correct++;
-                }
-            });
-            const percent = (correct / 30) * 100;
-            let grade = 2;
-            if (percent >= 86) grade = 5;
-            else if (percent >= 71) grade = 4;
-            else if (percent >= 51) grade = 3;
-
-            document.getElementById("result").innerHTML =
-                `<h4 class="fw-bold">To‘g‘ri javoblar soni: ${correct} / 30</h4>
-                 <h4>Baho: <span class="badge bg-primary fs-5">${grade}</span></h4>
-                 <button class="btn btn-primary mt-3" onclick="startTest()">Yangi test</button>`;
-        };
-    });
-}
-</script>
 {% endblock %}

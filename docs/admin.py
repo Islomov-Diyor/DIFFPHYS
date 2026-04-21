@@ -8,7 +8,11 @@ from .models import (
     Lecture,
     Presentation,
     Practical,
+    VideoLesson,
 )
+
+
+# ---------------- PEDAGOGIK HUJJATLAR ----------------
 
 @admin.register(PedagogikTexnologiya)
 class PedagogikTexnologiyaAdmin(admin.ModelAdmin):
@@ -35,27 +39,33 @@ class MeyoriyHujjatAdmin(admin.ModelAdmin):
     list_display = ('sarlavha', 'tur', 'fayl', 'yuklashlar_soni')
 
 
+# ---------------- LECTURE ----------------
+
 @admin.register(Lecture)
 class LectureAdmin(admin.ModelAdmin):
     list_display = ("title", "subject", "lecture_number", "download_count")
+    ordering = ("lecture_number",)
 
+
+# ---------------- PRESENTATION ----------------
 
 @admin.register(Presentation)
 class PresentationAdmin(admin.ModelAdmin):
-    list_display = ('title', 'lecture_number', 'subject', 'download_count', 'upload_date')
+    list_display = ('title', 'lecture_number', 'subject', 'download_count')
     list_editable = ('lecture_number',)
     ordering = ('lecture_number',)
 
 
+# ---------------- PRACTICAL ----------------
+
 @admin.register(Practical)
 class PracticalAdmin(admin.ModelAdmin):
-    list_display = ('title', 'subject', 'download_count', 'upload_date')
+    list_display = ('title', 'subject', 'download_count')
 
-#---Videolar---
 
-from django.contrib import admin
-from .models import VideoLesson
+# ---------------- VIDEO ----------------
 
 @admin.register(VideoLesson)
 class VideoLessonAdmin(admin.ModelAdmin):
     list_display = ('lesson_number', 'title', 'youtube_url')
+    ordering = ('lesson_number',)

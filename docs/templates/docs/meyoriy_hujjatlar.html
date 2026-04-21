@@ -1,16 +1,78 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<h1>Me'yoriy Hujjatlar</h1>
 
-{% for hujjat in hujjatlar %}
-    <div>
-        <h3>{{ hujjat.sarlavha }}</h3>
-        <a href="{{ hujjat.fayl.url }}">Yuklab olish</a>
-        <p>Yuklashlar soni: {{ hujjat.yuklashlar_soni }}</p>
+<!-- HERO (professional, ixcham) -->
+<section class="page-hero">
+  <div class="page-hero__bg" style="background-image:url('{% static 'images/norm_docs.jpeg' %}');"></div>
+  <div class="page-hero__overlay"></div>
+
+  <div class="container page-hero__content">
+    <div class="page-hero__badge">
+      <i class="fas fa-file-signature me-2"></i> Rasmiy hujjatlar to‘plami
     </div>
-{% empty %}
-    <p>Hali hujjatlar yuklanmagan.</p>
-{% endfor %}
+
+    <h1 class="page-hero__title">Me’yoriy hujjatlar</h1>
+    <p class="page-hero__subtitle">
+      Kerakli hujjat turini tanlang va bir tugma orqali yuklab oling.
+    </p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<section class="section">
+  <div class="container">
+
+    <div class="section__head">
+      <h2 class="section__title">Hujjat turlari</h2>
+      <p class="section__subtitle">Yuklab olish va yuklashlar sonini kuzatish qulay.</p>
+    </div>
+
+    <div class="row g-4">
+      {% for tur, hujjatlar in turkumlar.items %}
+        {% if hujjatlar %}
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="doc-card h-100">
+
+              <div class="doc-card__top">
+                <div class="doc-card__icon">
+                  <i class="fas fa-folder-open"></i>
+                </div>
+
+                <div class="doc-card__title">
+                  {{ hujjatlar.0.get_tur_display }}
+                </div>
+
+                <div class="doc-card__meta">
+                  <span class="doc-card__badge">
+                    <i class="fas fa-download me-1"></i> {{ hujjatlar.0.yuklashlar_soni }}
+                  </span>
+                  <span class="doc-card__hint">Yuklashlar soni</span>
+                </div>
+              </div>
+
+              <div class="doc-card__bottom">
+                <a href="{% url 'download_hujjat' hujjatlar.0.id %}" class="btn btn-primary w-100 doc-card__btn">
+                  Yuklab olish <i class="fas fa-arrow-down ms-2"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        {% endif %}
+      {% empty %}
+        <div class="col-12">
+          <div class="empty-state">
+            <div class="empty-state__icon"><i class="fas fa-circle-info"></i></div>
+            <div class="empty-state__title">Hali hujjatlar yuklanmagan.</div>
+            <div class="empty-state__text">Admin panel orqali hujjat qo‘shilgach, bu yerda avtomatik chiqadi.</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
 
 {% endblock %}

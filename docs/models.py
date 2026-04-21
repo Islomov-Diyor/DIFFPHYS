@@ -164,24 +164,43 @@ class Lecture(models.Model):
             return os.path.join(str(settings.MEDIA_ROOT), self.pdf_file.name)
 
 
+import os
+from django.db import models
+from django.core.files.base import ContentFile
+import fitz  # PyMuPDF
+
 class Presentation(models.Model):
     title = models.CharField(max_length=255)
     subject = models.CharField(max_length=255)
-
-    lecture_number = models.PositiveIntegerField(default=1, verbose_name="Mashg‘ulot raqami")
+    lecture_number = models.PositiveIntegerField()
     download_count = models.PositiveIntegerField(default=0)
 
-    file = models.FileField(upload_to=upload_presentation_file, max_length=500)
-    image = models.ImageField(
-        upload_to=upload_presentation_image,
-        blank=True, null=True,
-        max_length=500
-    )
+    file = models.FileField(upload_to="presentations/")
+    image = models.ImageField(upload_to="presentations/images/", blank=True, null=True)
 
-    upload_date = models.DateTimeField(auto_now_add=True)
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
 
-    class Meta:
-        ordering = ["lecture_number", "-upload_date", "id"]
+        # Agar rasm yuklanmagan bo‘lsa va PDF bo‘lsa
+        if not self.image and self.file and self.file.name.lower().endswith(".pdf"):
+            try:
+                pdf_path = self.file.path
+
+                doc = fitz.open(pdf_path)
+                page = doc.load_page(0)  # 1-bet
+                pix = page.get_pixmap(matrix=fitz.Matrix(2, 2))
+                doc.close()
+
+                img_bytes = pix.tobytes("png")
+
+                base = os.path.splitext(os.path.basename(self.file.name))[0]
+                img_name = f"{base}_thumb.png"
+
+                self.image.save(img_name, ContentFile(img_bytes), save=False)
+                super().save(update_fields=["image"])
+
+            except Exception as e:
+                print("Thumbnail error:", e)
 
     def __str__(self):
         return self.title

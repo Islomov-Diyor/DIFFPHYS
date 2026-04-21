@@ -69,7 +69,9 @@
           <span class="badge badge-soft rounded-pill px-3 py-2">
             Yechish usuli: {% if scipy_ok %}SciPy solve_ivp{% else %}RK4 (fallback){% endif %}
           </span>
-          <a href="/" class="btn btn-light btn-pill">Interaktiv xizmatlarga qaytish</a>
+          <a href="{% url 'is_tech' %}" class="btn btn-light">
+    ← Interaktiv masalalarga qaytish
+</a>
         </div>
       </div>
     </div>

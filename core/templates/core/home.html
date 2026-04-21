@@ -2,119 +2,161 @@
 {% load static %}
 
 {% block content %}
-<!-- TOP BANNER IMAGE -->
-<div class="top-banner">
- <img src="{% static 'images/diffphys_hero.jpg' %}"
-     alt="DiffPhys banner"
-     class="top-banner-img"
-     style="height: 750px; object-fit: cover; width: 100%; display:block;">
-</div>
 
-<div class="container py-5">
-    <div class="row">
+<!-- HERO / BANNER -->
+<section class="hero hero--compact">
+  <div class="hero__bg" style="background-image:url('{% static 'images/diffphys_hero.jpg' %}');"></div>
+  <div class="hero__overlay"></div>
 
-        <!-- Chap tomondagi matn -->
-        <div class="col-md-6 mb-4">
-            <h2 class="fw-bold text-dark">Bizning platformamizda quyidagi bo'limlar mavjud.</h2>
-            <p class="text-secondary">
-                Bu bo‘limlar orqali siz o‘qish va o‘rganishda tezroq va samaraliroq bo‘lasiz.
-            </p>
-            <a href="{% url 'is_tech' %}" class="btn btn-dark">
-                Barcha yo'nalishlar <i class="fas fa-arrow-right"></i>
-            </a>
+  <div class="container hero__content">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-7">
+        <div class="hero__badge">
+          <i class="fas fa-atom me-2"></i> Interaktiv ta’lim platformasi
         </div>
 
-        <!-- O'ng tomondagi bloklar -->
-        <div class="col-md-6">
+        <h1 class="hero__title">
+          DiffPhys.uz — <span>fizik jarayonlarni</span> interaktiv o‘rganish
+        </h1>
 
-            <!-- Video darslar -->
-            <a href="{% url 'videos' %}" class="text-decoration-none text-dark d-block">
-                <div class="mb-3 p-3 rounded bg-light border border-1">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-video fa-2x text-primary me-3"></i>
-                        <div>
-                            <h5 class="mb-0">Video darslar</h5>
-                            <small class="text-muted">Interaktiv video darslar bilan tanishing.</small>
-                        </div>
-                    </div>
-                </div>
-            </a>
+        <p class="hero__subtitle">
+          Video darslar, ma’ruza va taqdimotlar, amaliy mashg‘ulotlar, nazorat savollari hamda interaktiv xizmatlar
+          orqali o‘rganishni tez va samarali tashkil qiling.
+        </p>
 
-            <!-- Ma'ruza mashg'ulotlari -->
-            <a href="{% url 'lecture_list' %}" class="text-decoration-none text-dark d-block">
-                <div class="mb-3 p-3 rounded bg-light border border-1">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-search fa-2x text-primary me-3"></i>
-                        <div>
-                            <h5 class="mb-0">Ma'ruza mashg'ulotlari</h5>
-                            <small class="text-muted">Darslar uchun ma'ruza mashg'ulotlarini kuzatib boring.</small>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Amaliy mashg'ulotlar -->
-            <a href="{% url 'practicals' %}" class="text-decoration-none text-dark d-block">
-                <div class="mb-3 p-3 rounded bg-light border border-1">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-puzzle-piece fa-2x text-primary me-3"></i>
-                        <div>
-                            <h5 class="mb-0">Amaliy mashg'ulotlar</h5>
-                            <small class="text-muted">Amaliy mashg'ulotlar uchun namunalar.</small>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Testlar -->
-            <a href="{% url 'nazorat' %}" class="text-decoration-none text-dark d-block">
-                <div class="mb-3 p-3 rounded bg-light border border-1">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-vials fa-2x text-primary me-3"></i>
-                        <div>
-                            <h5 class="mb-0">Testlar</h5>
-                            <small class="text-muted">Oraliq va yakuniy nazorat uchun interaktiv testlar.</small>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Taqdimotlar -->
-            <a href="{% url 'presentation_list' %}" class="text-decoration-none text-dark d-block">
-                <div class="mb-3 p-3 rounded bg-light border border-1">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-chalkboard-teacher fa-2x text-primary me-3"></i>
-                        <div>
-                            <h5 class="mb-0">Taqdimotlar</h5>
-                            <small class="text-muted">Taqdimotlar uchun lifehacklarni o‘rganib boring.</small>
-                        </div>
-                    </div>
-                </div>
-            </a>
-
+        <div class="hero__actions">
+          <a href="{% url 'is_tech' %}" class="btn btn-primary btn-lg">
+            Interaktiv xizmatlar <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+          <a href="{% url 'videos' %}" class="btn btn-outline-light btn-lg">
+            Video darslar <i class="fas fa-play ms-2"></i>
+          </a>
         </div>
-    </div>
-</div>
 
-<div class="container my-5">
-  <div class="logo-marquee">
-    <div class="logo-track">
+        <div class="hero__meta">
+          <div class="hero__meta-item">
+            <i class="fas fa-layer-group"></i> Bo‘limlar: 4+
+          </div>
+          <div class="hero__meta-item">
+            <i class="fas fa-bolt"></i> Tezkor kirish
+          </div>
+          <div class="hero__meta-item">
+            <i class="fas fa-graduation-cap"></i> PhD tadqiqoti uchun
+          </div>
+        </div>
+      </div>
 
-      {% for logo, fullname, site, url in links %}
-        <a class="logo-item" href="{{ url }}" target="_blank">
-          <img src="{% static logo %}" alt="{{ fullname }}">
-          <span>{{ fullname }}</span>
-        </a>
-      {% endfor %}
+      <div class="col-lg-5">
+        <div class="hero__card">
+          <div class="hero__card-title">
+            <i class="fas fa-compass me-2 text-primary"></i> Tezkor navigatsiya
+          </div>
 
-      {% for logo, fullname, site, url in links %}
-        <a class="logo-item" href="{{ url }}" target="_blank">
-          <img src="{% static logo %}" alt="{{ fullname }}">
-          <span>{{ fullname }}</span>
-        </a>
-      {% endfor %}
+          <div class="list-group list-group-flush hero__list">
+            <a href="{% url 'videos' %}" class="list-group-item list-group-item-action">
+              <i class="fas fa-video me-2 text-primary"></i>
+              Video darslar
+              <span class="ms-auto text-muted small">Ko‘rish</span>
+            </a>
+            <a href="{% url 'lecture_list' %}" class="list-group-item list-group-item-action">
+              <i class="fas fa-book-open me-2 text-primary"></i>
+              Ma’ruza mashg‘ulotlari
+              <span class="ms-auto text-muted small">Ochish</span>
+            </a>
+            <a href="{% url 'practicals' %}" class="list-group-item list-group-item-action">
+              <i class="fas fa-flask me-2 text-primary"></i>
+              Amaliy mashg‘ulotlar
+              <span class="ms-auto text-muted small">Boshlash</span>
+            </a>
+            <a href="{% url 'nazorat' %}" class="list-group-item list-group-item-action">
+              <i class="fas fa-clipboard-check me-2 text-primary"></i>
+              Nazorat savollari
+              <span class="ms-auto text-muted small">O‘tish</span>
+            </a>
+            <a href="{% url 'presentations' %}" class="list-group-item list-group-item-action">
+              <i class="fas fa-chalkboard-teacher me-2 text-primary"></i>
+              Taqdimotlar
+              <span class="ms-auto text-muted small">Ko‘rish</span>
+            </a>
+          </div>
+
+          <div class="hero__card-footer">
+            <a href="{% url 'contact' %}" class="btn btn-sm btn-outline-secondary w-100">
+              Bog‘lanish <i class="fas fa-envelope ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
-</div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">Platforma bo‘limlari</h2>
+      <p class="section__subtitle">Kerakli resursga 1 klikda o‘ting.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <a href="{% url 'videos' %}" class="feature">
+          <div class="feature__icon"><i class="fas fa-video"></i></div>
+          <div class="feature__title">Video darslar</div>
+          <div class="feature__text">Interaktiv video darslar bilan tanishing.</div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <a href="{% url 'lecture_list' %}" class="feature">
+          <div class="feature__icon"><i class="fas fa-book-open"></i></div>
+          <div class="feature__title">Ma’ruzalar</div>
+          <div class="feature__text">Darslar uchun ma’ruza materiallari.</div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <a href="{% url 'practicals' %}" class="feature">
+          <div class="feature__icon"><i class="fas fa-flask"></i></div>
+          <div class="feature__title">Amaliylar</div>
+          <div class="feature__text">Amaliy mashg‘ulotlar uchun topshiriqlar.</div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <a href="{% url 'nazorat' %}" class="feature">
+          <div class="feature__icon"><i class="fas fa-clipboard-check"></i></div>
+          <div class="feature__title">Nazorat</div>
+          <div class="feature__text">Nazorat savollari va testlar sahifasi.</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO MARQUEE (sizdagi kod saqlangan) -->
+<section class="section section--tight">
+  <div class="container">
+    <div class="logo-marquee">
+      <div class="logo-track">
+        {% for logo, fullname, site, url in links %}
+          <a class="logo-item" href="{{ url }}" target="_blank">
+            <img src="{% static logo %}" alt="{{ fullname }}">
+            <span>{{ fullname }}</span>
+          </a>
+        {% endfor %}
+
+        {% for logo, fullname, site, url in links %}
+          <a class="logo-item" href="{{ url }}" target="_blank">
+            <img src="{% static logo %}" alt="{{ fullname }}">
+            <span>{{ fullname }}</span>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

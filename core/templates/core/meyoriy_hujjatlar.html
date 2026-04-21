@@ -3,48 +3,96 @@
 
 {% block content %}
 
-<!-- Hero Section -->
-<div class="hero-section text-center text-white d-flex align-items-start justify-content-center"
-     style="
-        background-image: url('{% static 'images/norm_docs.jpeg' %}');
-        height: 400px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        padding-top: 20px;">
-    <div>
-        <h2 class="fw-bold display-4">Me'yoriy hujjatlar</h2>
-    </div>
-</div>
+<!-- Compact Hero -->
+<section class="hero-mini">
+  <div class="hero-mini__bg" style="background-image:url('{% static 'images/norm_docs.jpeg' %}');"></div>
+  <div class="hero-mini__overlay"></div>
 
-<div class="container my-5">
-    <div class="row justify-content-right">
-        {% for tur, hujjatlar in turkumlar.items %}
-            {% if hujjatlar %}
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="card shadow interactive-block" style="min-height: 200px;">
-                        <div class="card-body text-center">
-                            <h5 class="card-title fw-bold">
-                                {{ hujjatlar.0.get_tur_display }}
-                            </h5>
-                            <a href="{% url 'download_hujjat' hujjatlar.0.id %}"
-                               class="btn btn-outline-success d-flex justify-content-center align-items-center">
-                                Yuklab olish
-                                <i class="fas fa-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                        <div class="card-footer bg-info bg-opacity-25 text-center">
-                            <p class="mb-0 fw-bold text-primary">
-                                Yuklashlar soni: {{ hujjatlar.0.yuklashlar_soni }}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-        {% empty %}
-            <p>Hali hujjatlar yuklanmagan.</p>
-        {% endfor %}
+  <div class="container hero-mini__content">
+    <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end gap-3">
+      <div>
+        <div class="hero-mini__crumbs">
+          <a href="{% url 'home' %}">Bosh sahifa</a> <span>/</span>
+          <span>O‘qituvchilarga</span> <span>/</span>
+          <span class="active">Me’yoriy hujjatlar</span>
+        </div>
+
+        <h1 class="hero-mini__title">Me’yoriy hujjatlar</h1>
+        <p class="hero-mini__subtitle">
+          Rasmiy hujjatlar to‘plami — turini tanlang va bir tugma orqali yuklab oling.
+        </p>
+
+        <div class="hero-mini__chips">
+          <span class="chip"><i class="fas fa-shield-halved"></i> Rasmiy</span>
+          <span class="chip"><i class="fas fa-file-arrow-down"></i> Yuklab olish</span>
+          <span class="chip"><i class="fas fa-chart-line"></i> Statistika</span>
+        </div>
+      </div>
+
+      <div class="hero-mini__actions">
+        <a href="{% url 'metodik_taminot' %}" class="btn btn-outline-light btn-lg">
+          Metodik ta’minot <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+      </div>
     </div>
-</div>
+  </div>
+</section>
+
+<!-- Cards -->
+<section class="section-pro">
+  <div class="container">
+
+    <div class="section-pro__head">
+      <div>
+        <h2 class="section-pro__title">Hujjat turlari</h2>
+        <p class="section-pro__desc">Har bir tur bo‘yicha eng so‘nggi hujjatni yuklab oling.</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      {% for tur, hujjatlar in turkumlar.items %}
+        {% if hujjatlar %}
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="doc-card-pro h-100">
+
+              <div class="doc-card-pro__top">
+                <div class="doc-card-pro__icon">
+                  <i class="fas fa-folder-open"></i>
+                </div>
+
+                <div class="doc-card-pro__title">
+                  {{ hujjatlar.0.get_tur_display }}
+                </div>
+
+                <div class="doc-card-pro__meta">
+                  <span class="badge-soft">
+                    <i class="fas fa-download me-1"></i> {{ hujjatlar.0.yuklashlar_soni }}
+                  </span>
+                  <span class="meta-text">yuklash</span>
+                </div>
+              </div>
+
+              <div class="doc-card-pro__bottom">
+                <a href="{% url 'download_hujjat' hujjatlar.0.id %}" class="btn btn-primary w-100 btn-pro">
+                  Yuklab olish <i class="fas fa-arrow-down ms-2"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        {% endif %}
+      {% empty %}
+        <div class="col-12">
+          <div class="empty-pro">
+            <div class="empty-pro__icon"><i class="fas fa-circle-info"></i></div>
+            <div class="empty-pro__title">Hali hujjatlar yuklanmagan.</div>
+            <div class="empty-pro__text">Admin panel orqali hujjat qo‘shilgach, bu sahifada ko‘rinadi.</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
 
 {% endblock %}

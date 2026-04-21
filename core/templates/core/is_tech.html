@@ -24,18 +24,18 @@
 </style>
 
 <div class="container mt-5">
-  <h2 class="text-center fw-bold mb-4 text-primary">Interaktiv xizmatlar</h2>
+  <h2 class="text-center fw-bold mb-4 text-primary">Interaktiv masalalar</h2>
 
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
 
     <!-- 1 -->
     <div class="col">
       <div class="card h-100 shadow text-center">
-        <img src="{% static 'images/pronunciation.png' %}" class="card-img-top">
+        <img src="{% static 'images/1.png' %}" class="card-img-top" alt="1-masala">
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Talaffuz tekshiruvchi</h5>
-          <p class="card-text">AI yordamida talaffuzni tahlil qiladi.</p>
-          <a href="{% url 'pronunciation_checker' %}" class="btn btn-success">Ishga tushirish</a>
+          <h5 class="card-title">1-masala: Prujina–massa</h5>
+          <p class="card-text">Hooke qonuni asosida prujina–massa tizimini modellashtirish.</p>
+          <a href="{% url 'ai_module:prujina_massa' %}" class="btn btn-success">Ishga tushirish</a>
         </div>
       </div>
     </div>
@@ -43,11 +43,11 @@
     <!-- 2 -->
     <div class="col">
       <div class="card h-100 shadow text-center">
-        <img src="{% static 'images/text_analys.png' %}" class="card-img-top">
+        <img src="{% static 'images/2.png' %}" class="card-img-top" alt="2-masala">
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Matn tahlil qilish</h5>
-          <p class="card-text">Yozilgan matndagi xatolarni aniqlaydi.</p>
-          <a href="{% url 'text_analysis' %}" class="btn btn-success">Ishga tushirish</a>
+          <h5 class="card-title">2-masala: RLC</h5>
+          <p class="card-text">RLC ketma-ket zanjirida tebranish jarayonini tahlil qilish.</p>
+          <a href="{% url 'ai_module:rlc_series' %}" class="btn btn-success">Ishga tushirish</a>
         </div>
       </div>
     </div>
@@ -55,11 +55,11 @@
     <!-- 3 -->
     <div class="col">
       <div class="card h-100 shadow text-center">
-        <img src="{% static 'images/dialog.png' %}" class="card-img-top">
+        <img src="{% static 'images/3.png' %}" class="card-img-top" alt="3-masala">
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Dialog mashqlari</h5>
-          <p class="card-text">Virtual suhbat bilan mashq qilish.</p>
-          <a href="{% url 'dialog_exercises_view' %}" class="btn btn-success">Ishga tushirish</a>
+          <h5 class="card-title">3-masala: Erkin tushish</h5>
+          <p class="card-text">Havo qarshiligi bilan erkin tushish modelini yechish.</p>
+          <a href="{% url 'ai_module:free_fall' %}" class="btn btn-success">Ishga tushirish</a>
         </div>
       </div>
     </div>
@@ -67,25 +67,23 @@
     <!-- 4 -->
     <div class="col">
       <div class="card h-100 shadow text-center">
-        <img src="{% static 'images/fill_blank.png' %}" class="card-img-top">
+        <img src="{% static 'images/4.png' %}" class="card-img-top" alt="4-masala">
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Tinglab to‘ldirish mashqi</h5>
-          <p class="card-text">Bo‘sh joylarni to‘ldirish orqali tilni o‘rganish.</p>
-          <a href="{% url 'listening_fill_view' %}" class="btn btn-success">Ishga tushirish</a>
+          <h5 class="card-title">4-masala: Radioaktiv parchalanish</h5>
+          <p class="card-text">Eksponensial parchalanish modelini parametrlar bilan tahlil qilish.</p>
+          <a href="{% url 'ai_module:decay' %}" class="btn btn-success">Ishga tushirish</a>
         </div>
       </div>
     </div>
 
-    <!-- ===== O‘QITUVCHILAR UCHUN ===== -->
-
     <!-- 5 -->
     <div class="col">
       <div class="card h-100 shadow text-center">
-        <img src="{% static 'images/context_translate.jpeg' %}" class="card-img-top">
+        <img src="{% static 'images/5.png' %}" class="card-img-top" alt="5-masala">
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Gramatika tekshiruv</h5>
-          <p class="card-text">Talaba matnidagi grammatik xatolarni tekshiradi.</p>
-          <a href="{% url 'grammar_check_start' %}" class="btn btn-success">Ishga tushirish</a>
+          <h5 class="card-title">5-masala: Fourier issiqlik tenglamasi</h5>
+          <p class="card-text">Issiqlik tarqalishi (Fourier) jarayonini modellashtirish.</p>
+          <a href="{% url 'ai_module:heat_fourier' %}" class="btn btn-success">Ishga tushirish</a>
         </div>
       </div>
     </div>
@@ -93,11 +91,11 @@
     <!-- 6 -->
     <div class="col">
       <div class="card h-100 shadow text-center">
-        <img src="{% static 'images/tarjima.jpeg' %}" class="card-img-top">
+        <img src="{% static 'images/6.png' %}" class="card-img-top" alt="6-masala">
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Kontekstual tarjima</h5>
-          <p class="card-text">Matnni kontekst asosida tarjima qiladi.</p>
-          <a href="{% url 'context_translate_start' %}" class="btn btn-success">Ishga tushirish</a>
+          <h5 class="card-title">6-masala: Prujina–massa (kuchaytirilgan)</h5>
+          <p class="card-text">Damped/undamped holatlar uchun mass-spring2 modeli.</p>
+          <a href="{% url 'ai_module:mass_spring2' %}" class="btn btn-success">Ishga tushirish</a>
         </div>
       </div>
     </div>
@@ -105,11 +103,11 @@
     <!-- 7 -->
     <div class="col">
       <div class="card h-100 shadow text-center">
-        <img src="{% static 'images/AI_asosida_dars.jpeg' %}" class="card-img-top">
+        <img src="{% static 'images/7.png' %}" class="card-img-top" alt="7-masala">
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">AI asosida Dars Rejasi</h5>
-          <p class="card-text">AI yordamida dars rejasi yaratish.</p>
-          <a href="{% url 'lesson_plans_view' %}" class="btn btn-success">Ishga tushirish</a>
+          <h5 class="card-title">7-masala: RC zanjir</h5>
+          <p class="card-text">RC zanjiridagi zaryadlanish/razryadlanish jarayoni.</p>
+          <a href="{% url 'ai_module:rc_circuit' %}" class="btn btn-success">Ishga tushirish</a>
         </div>
       </div>
     </div>
@@ -117,11 +115,11 @@
     <!-- 8 -->
     <div class="col">
       <div class="card h-100 shadow text-center">
-        <img src="{% static 'images/image_word.jpeg' %}" class="card-img-top">
+        <img src="{% static 'images/8.png' %}" class="card-img-top" alt="8-masala">
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title">Resurslar uchun kerakli saytlar</h5>
-          <p class="card-text">Ingliz tili uchun foydali resurslar.</p>
-          <a href="{% url 'lesson_resources_view' %}" class="btn btn-success">Ishga tushirish</a>
+          <h5 class="card-title">8-masala: RL zanjir</h5>
+          <p class="card-text">RL zanjirida tokning o‘zgarishi (o‘tish jarayoni) modeli.</p>
+          <a href="{% url 'ai_module:rl_circuit' %}" class="btn btn-success">Ishga tushirish</a>
         </div>
       </div>
     </div>
