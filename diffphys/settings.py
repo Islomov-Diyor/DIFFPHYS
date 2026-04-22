@@ -14,6 +14,12 @@ DEBUG = config("DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS = config("ALLOWED_HOSTS", default="127.0.0.1,localhost", cast=lambda v: [s.strip() for s in v.split(",")])
 
+CSRF_TRUSTED_ORIGINS = config(
+    "CSRF_TRUSTED_ORIGINS",
+    default="https://*.up.railway.app,https://*.railway.app",
+    cast=lambda v: [s.strip() for s in v.split(",") if s.strip()],
+)
+
 # Jazzmin va boshqa ilovalar
 INSTALLED_APPS = [
     'jazzmin',
