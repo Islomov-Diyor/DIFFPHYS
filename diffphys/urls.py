@@ -1,7 +1,7 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import include, path, re_path
 from django.conf import settings
-from django.conf.urls.static import static
+from django.views.static import serve as static_serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -12,8 +12,15 @@ urlpatterns = [
     # Docs
     path('', include('docs.urls')),
 
-    # 🔥 AI PHYSICS MODULE (ENG MUHIM)
+    # AI physics module
     path('ai/', include('ai_module.urls')),
-]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    # Serve user-uploaded media (documents + thumbnails) in both DEBUG and
+    # production. django.conf.urls.static.static() is a no-op when DEBUG=False,
+    # so we wire the serve view directly.
+    re_path(
+        r'^media/(?P<path>.*)$',
+        static_serve,
+        {'document_root': settings.MEDIA_ROOT},
+    ),
+]
