@@ -98,8 +98,8 @@
 
           <label class="fw-semibold">V(t) turi</label>
           <select class="form-select" name="v_type">
-            <option value="step" {% if params.v_type ==> "step" %}selected{% endif %}>step</option>
-            <option value="sinus" {% if params.v_type ==> "sinus" %}selected{% endif %}>sinus</option>
+            <option value="step" {% if params.v_type == "step" %}selected{% endif %}>step</option>
+            <option value="sinus" {% if params.v_type == "sinus" %}selected{% endif %}>sinus</option>
           </select>
 
           <label class="fw-semibold">V0 (V)</label>

@@ -110,7 +110,7 @@
 
                 <!-- Interaktiv xizmatlar -->
                 <li class="nav-item">
-                    <a class="nav-link {% if 'is_tech' in request.path %}active{% endif %}"
+                    <a class="nav-link {% if 'teacher' in request.path or '/ai/' in request.path %}active{% endif %}"
                        href="{% url 'is_tech' %}">
                         Interaktiv masalalar
                     </a>
@@ -118,7 +118,7 @@
 
                 <!-- Men haqimda -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% if 'about' in request.path %}active{% endif %}"
+                    <a class="nav-link dropdown-toggle"
                        href="#" id="aboutMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Men haqimda
                     </a>

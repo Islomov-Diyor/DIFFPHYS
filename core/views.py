@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 
 import requests
+from decouple import config
 from django.conf import settings
 from django.http import FileResponse, Http404
 from django.shortcuts import get_object_or_404, render
@@ -62,27 +63,25 @@ def is_tech(request):
 # 2) CONTACT
 # =========================
 def contact_view(request):
-    """
-    Eslatma: token/chat_id ni idealda .env orqali yashirish kerak.
-    """
     success = False
     if request.method == "POST":
         name = request.POST.get("name", "")
         telegram = request.POST.get("telegram", "")
         message = request.POST.get("message", "")
 
-        token = "8309490232:AAF_Qa-csaRznN7KhMK6IqMy-and9EWZ3go"
-        chat_id = "6202834978"
+        token = config("TELEGRAM_BOT_TOKEN", default="")
+        chat_id = config("TELEGRAM_CHAT_ID", default="")
 
-        text = f"Yangi xabar:\n👤 Ismi: {name}\n📨 Telegram: {telegram}\n📝 Xabar: {message}"
-        url = f"https://api.telegram.org/bot{token}/sendMessage"
-        data = {"chat_id": chat_id, "text": text}
+        if token and chat_id:
+            text = f"Yangi xabar:\n👤 Ismi: {name}\n📨 Telegram: {telegram}\n📝 Xabar: {message}"
+            url = f"https://api.telegram.org/bot{token}/sendMessage"
+            data = {"chat_id": chat_id, "text": text}
 
-        try:
-            r = requests.post(url, data=data, timeout=15)
-            success = (r.status_code == 200)
-        except requests.RequestException:
-            success = False
+            try:
+                r = requests.post(url, data=data, timeout=15)
+                success = (r.status_code == 200)
+            except requests.RequestException:
+                success = False
 
     return render(request, "core/contact.html", {"success": success})
 
