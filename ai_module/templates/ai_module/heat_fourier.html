@@ -187,26 +187,10 @@
               </div>
             {% endif %}
 
-            <!-- PDF FORM -->
+            <!-- PDF (GET) -->
             <div class="d-flex gap-2 mt-3 flex-wrap">
-              <form id="pdfForm" method="post" action="{% url 'ai_module:heat_fourier_pdf' %}">
-                {% csrf_token %}
-                <input type="hidden" name="L" value="{{ form.L }}">
-                <input type="hidden" name="alpha" value="{{ form.alpha }}">
-                <input type="hidden" name="nx" value="{{ form.nx }}">
-                <input type="hidden" name="tmax" value="{{ form.tmax }}">
-                <input type="hidden" name="nt" value="{{ form.nt }}">
-                <input type="hidden" name="T_left" value="{{ form.T_left }}">
-                <input type="hidden" name="T_right" value="{{ form.T_right }}">
-                <input type="hidden" name="ic_type" value="{{ form.ic_type }}">
-                <input type="hidden" name="amp" value="{{ form.amp }}">
-                <input type="hidden" name="x0" value="{{ form.x0 }}">
-                <input type="hidden" name="sigma" value="{{ form.sigma }}">
-                <input type="hidden" name="plot_tx_base64" value="{{ plot_tx_base64 }}">
-                <input type="hidden" name="plot_tmid_base64" value="{{ plot_tmid_base64 }}">
-                <input type="hidden" name="conclusion" value="{{ conclusion }}">
-                <button type="submit" class="btn btn-outline-dark btn-pill">PDF yuklab olish</button>
-              </form>
+              <a href="{% url 'ai_module:heat_fourier_pdf' %}?L={{ form.L }}&alpha={{ form.alpha }}&nx={{ form.nx }}&tmax={{ form.tmax }}&nt={{ form.nt }}&T_left={{ form.T_left }}&T_right={{ form.T_right }}&ic_type={{ form.ic_type }}&amp={{ form.amp }}&x0={{ form.x0 }}&sigma={{ form.sigma }}"
+                 class="btn btn-outline-dark btn-pill">PDF yuklab olish</a>
             </div>
 
           {% else %}

@@ -318,31 +318,10 @@
               </div>
             {% endif %}
 
-            <!-- PDF (POST) -->
+            <!-- PDF (GET) -->
             <div class="d-flex gap-2 mt-3 flex-wrap">
-              <form method="post" action="{% url 'ai_module:free_fall_pdf' %}">
-                {% csrf_token %}
-
-                <!-- Parametrlar -->
-                <input type="hidden" name="m" value="{{ form.m.value }}">
-                <input type="hidden" name="g" value="{{ form.g.value }}">
-                <input type="hidden" name="drag_type" value="{{ form.drag_type.value }}">
-                <input type="hidden" name="k" value="{{ form.k.value }}">
-                <input type="hidden" name="y0" value="{{ form.y0.value }}">
-                <input type="hidden" name="v0" value="{{ form.v0.value }}">
-                <input type="hidden" name="t_end" value="{{ form.t_end.value }}">
-                <input type="hidden" name="dt" value="{{ form.dt.value }}">
-
-                <!-- Grafiklar -->
-                <input type="hidden" name="img_h" value="{{ img_h }}">
-                <input type="hidden" name="img_v" value="{{ img_v }}">
-                <input type="hidden" name="img_a" value="{{ img_a }}">
-
-                <!-- Xulosa -->
-                <input type="hidden" name="conclusion" value="{{ conclusion }}">
-
-                <button type="submit" class="btn btn-outline-dark btn-pill">PDF yuklab olish</button>
-              </form>
+              <a href="{% url 'ai_module:free_fall_pdf' %}?m={{ form.m.value }}&g={{ form.g.value }}&drag_type={{ form.drag_type.value }}&k={{ form.k.value }}&y0={{ form.y0.value }}&v0={{ form.v0.value }}&t_end={{ form.t_end.value }}&dt={{ form.dt.value }}"
+                 class="btn btn-outline-dark btn-pill">PDF yuklab olish</a>
             </div>
 
           {% else %}

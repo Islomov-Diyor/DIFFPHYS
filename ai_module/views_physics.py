@@ -344,29 +344,64 @@ def prujina_massa_view(request):
 
 
 def mass_spring_pdf_view(request):
-    if request.method != "POST":
-        return HttpResponse("PDF faqat POST orqali yaratiladi.", status=405)
+    def _p(key, default):
+        v = request.GET.get(key) or request.POST.get(key)
+        try:
+            return float(str(v).replace(",", "."))
+        except Exception:
+            return default
 
-    data = request.POST
-    context = {
-        "m": data.get("m"),
-        "k": data.get("k"),
-        "c": data.get("c"),
-        "x0": data.get("x0"),
-        "v0": data.get("v0"),
-        "t_end": data.get("t_end"),
-        "dt": data.get("dt"),
-        "img_x": data.get("img_x"),
-        "img_v": data.get("img_v"),
-        "img_E": data.get("img_E"),
-        "conclusion": data.get("conclusion"),
-    }
+    m = _p("m", 1.0)
+    k = _p("k", 10.0)
+    c = _p("c", 0.5)
+    x0 = _p("x0", 1.0)
+    v0 = _p("v0", 0.0)
+    t_end = _p("t_end", 10.0)
+    dt = _p("dt", 0.01)
 
-    pdf_bytes = _render_to_pdf("ai_module/mass_spring_pdf.html", context)
-    response = HttpResponse(pdf_bytes, content_type="application/pdf")
-    response["Content-Disposition"] = 'attachment; filename="MassSpring_natijalar.pdf"'
-    response["X-Content-Type-Options"] = "nosniff"
-    return response
+    t, x, v, E = _solve_mass_spring(m, k, c, x0, v0, t_end, dt)
+    conclusion = _build_conclusion_mass_spring(m, k, c, x, v, E)
+
+    imgs = []
+    for (title, ydata, ylabel) in [
+        ("Siljish x(t)", x, "x (m)"),
+        ("Tezlik v(t)", v, "v (m/s)"),
+        ("Energiya E(t)", E, "E (J)"),
+    ]:
+        fig = plt.figure()
+        plt.plot(t, ydata)
+        plt.xlabel("t (s)")
+        plt.ylabel(ylabel)
+        plt.title(title)
+        buf = io.BytesIO()
+        fig.savefig(buf, format="png", dpi=150, bbox_inches="tight")
+        plt.close(fig)
+        buf.seek(0)
+        imgs.append(buf)
+
+    out = io.BytesIO()
+    cpdf = canvas.Canvas(out, pagesize=A4)
+    _pdf_header(cpdf, "Prujina–massa — PDF hisobot")
+    _pdf_params_block(cpdf, [
+        ("m (kg)", f"{m:g}"), ("k (N/m)", f"{k:g}"), ("c (N·s/m)", f"{c:g}"),
+        ("x0 (m)", f"{x0:g}"), ("v0 (m/s)", f"{v0:g}"),
+        ("T (s)", f"{t_end:g}"), ("dt (s)", f"{dt:g}"),
+    ], y=27.2*cm)
+
+    x0_pdf, w, h, y_top = 2*cm, 17.0*cm, 5.8*cm, 22.0*cm
+    for idx, img_buf in enumerate(imgs):
+        y = y_top - idx*(h + 0.5*cm)
+        cpdf.drawImage(ImageReader(img_buf), x0_pdf, y - h, width=w, height=h, preserveAspectRatio=True, anchor='c')
+
+    _pdf_conclusion(cpdf, conclusion)
+    _pdf_page_number(cpdf, 1)
+    cpdf.showPage()
+    cpdf.save()
+
+    out.seek(0)
+    resp = HttpResponse(out.getvalue(), content_type="application/pdf")
+    resp["Content-Disposition"] = 'attachment; filename="MassSpring_natijalar.pdf"'
+    return resp
 
 
 # =========================
@@ -568,30 +603,65 @@ def rlc_series_view(request):
 
 
 def rlc_pdf_view(request):
-    if request.method != "POST":
-        return HttpResponse("PDF faqat POST orqali yaratiladi.", status=405)
+    def _p(key, default):
+        v = request.GET.get(key) or request.POST.get(key)
+        try:
+            return float(str(v).replace(",", "."))
+        except Exception:
+            return default
 
-    data = request.POST
-    context = {
-        "R": data.get("R"),
-        "L": data.get("L"),
-        "C": data.get("C"),
-        "V0": data.get("V0"),
-        "q0": data.get("q0"),
-        "i0": data.get("i0"),
-        "t_end": data.get("t_end"),
-        "dt": data.get("dt"),
-        "img_i": data.get("img_i"),
-        "img_vc": data.get("img_vc"),
-        "img_q": data.get("img_q"),
-        "conclusion": data.get("conclusion"),
-    }
+    R = _p("R", 5.0)
+    L = _p("L", 0.5)
+    C = _p("C", 0.01)
+    V0 = _p("V0", 10.0)
+    q0 = _p("q0", 0.0)
+    i0 = _p("i0", 0.0)
+    t_end = _p("t_end", 10.0)
+    dt = _p("dt", 0.001)
 
-    pdf_bytes = _render_to_pdf("ai_module/rlc_pdf.html", context)
-    response = HttpResponse(pdf_bytes, content_type="application/pdf")
-    response["Content-Disposition"] = 'attachment; filename="RLC_natijalar.pdf"'
-    response["X-Content-Type-Options"] = "nosniff"
-    return response
+    t, q, i, Vc = _solve_rlc_series(R, L, C, V0, q0, i0, t_end, dt)
+    conclusion = _build_conclusion_rlc(R, L, C, V0, q, i, Vc)
+
+    imgs = []
+    for (title, ydata, ylabel) in [
+        ("Zaryad q(t)", q, "q (C)"),
+        ("Tok i(t)", i, "i (A)"),
+        ("Kondensator kuchlanishi Vc(t)", Vc, "Vc (V)"),
+    ]:
+        fig = plt.figure()
+        plt.plot(t, ydata)
+        plt.xlabel("t (s)")
+        plt.ylabel(ylabel)
+        plt.title(title)
+        buf = io.BytesIO()
+        fig.savefig(buf, format="png", dpi=150, bbox_inches="tight")
+        plt.close(fig)
+        buf.seek(0)
+        imgs.append(buf)
+
+    out = io.BytesIO()
+    cpdf = canvas.Canvas(out, pagesize=A4)
+    _pdf_header(cpdf, "RLC zanjiri — PDF hisobot")
+    _pdf_params_block(cpdf, [
+        ("R (Ohm)", f"{R:g}"), ("L (H)", f"{L:g}"), ("C (F)", f"{C:g}"),
+        ("V0 (V)", f"{V0:g}"), ("q0 (C)", f"{q0:g}"), ("i0 (A)", f"{i0:g}"),
+        ("T (s)", f"{t_end:g}"), ("dt (s)", f"{dt:g}"),
+    ], y=27.2*cm)
+
+    x0_pdf, w, h, y_top = 2*cm, 17.0*cm, 5.8*cm, 22.0*cm
+    for idx, img_buf in enumerate(imgs):
+        y = y_top - idx*(h + 0.5*cm)
+        cpdf.drawImage(ImageReader(img_buf), x0_pdf, y - h, width=w, height=h, preserveAspectRatio=True, anchor='c')
+
+    _pdf_conclusion(cpdf, conclusion)
+    _pdf_page_number(cpdf, 1)
+    cpdf.showPage()
+    cpdf.save()
+
+    out.seek(0)
+    resp = HttpResponse(out.getvalue(), content_type="application/pdf")
+    resp["Content-Disposition"] = 'attachment; filename="RLC_natijalar.pdf"'
+    return resp
 
 
 # =========================
@@ -805,30 +875,65 @@ def free_fall_view(request):
 
 
 def free_fall_pdf_view(request):
-    if request.method != "POST":
-        return HttpResponse("PDF faqat POST orqali yaratiladi.", status=405)
+    def _p(key, default):
+        v = request.GET.get(key) or request.POST.get(key)
+        try:
+            return float(str(v).replace(",", "."))
+        except Exception:
+            return default
 
-    data = request.POST
-    context = {
-        "m": data.get("m"),
-        "g": data.get("g"),
-        "drag_type": data.get("drag_type"),
-        "k": data.get("k"),
-        "y0": data.get("y0"),
-        "v0": data.get("v0"),
-        "t_end": data.get("t_end"),
-        "dt": data.get("dt"),
-        "img_h": data.get("img_h"),
-        "img_v": data.get("img_v"),
-        "img_a": data.get("img_a"),
-        "conclusion": data.get("conclusion"),
-    }
+    m = _p("m", 70.0)
+    g = _p("g", 9.81)
+    k = _p("k", 0.5)
+    y0 = _p("y0", 1000.0)
+    v0 = _p("v0", 0.0)
+    t_end = _p("t_end", 30.0)
+    dt = _p("dt", 0.05)
+    drag_type = (request.GET.get("drag_type") or request.POST.get("drag_type") or "linear").strip()
 
-    pdf_bytes = _render_to_pdf("ai_module/free_fall_pdf.html", context)
-    response = HttpResponse(pdf_bytes, content_type="application/pdf")
-    response["Content-Disposition"] = 'attachment; filename="FreeFall_drag_natijalar.pdf"'
-    response["X-Content-Type-Options"] = "nosniff"
-    return response
+    t, _y, hgt, v, a = _solve_free_fall_drag(m, g, k, drag_type, y0, v0, t_end, dt)
+    conclusion = _build_conclusion_free_fall(m, g, k, drag_type, y0, v0, t, hgt, v, a)
+
+    imgs = []
+    for (title, ydata, ylabel) in [
+        ("Balandlik h(t)", hgt, "h (m)"),
+        ("Tezlik v(t)", v, "v (m/s)"),
+        ("Tezlanish a(t)", a, "a (m/s²)"),
+    ]:
+        fig = plt.figure()
+        plt.plot(t, ydata)
+        plt.xlabel("t (s)")
+        plt.ylabel(ylabel)
+        plt.title(title)
+        buf = io.BytesIO()
+        fig.savefig(buf, format="png", dpi=150, bbox_inches="tight")
+        plt.close(fig)
+        buf.seek(0)
+        imgs.append(buf)
+
+    out = io.BytesIO()
+    cpdf = canvas.Canvas(out, pagesize=A4)
+    _pdf_header(cpdf, "Erkin tushish — PDF hisobot")
+    _pdf_params_block(cpdf, [
+        ("m (kg)", f"{m:g}"), ("g (m/s²)", f"{g:g}"), ("k", f"{k:g}"),
+        ("Qarshilik turi", drag_type), ("h0 (m)", f"{y0:g}"),
+        ("v0 (m/s)", f"{v0:g}"), ("T (s)", f"{t_end:g}"), ("dt (s)", f"{dt:g}"),
+    ], y=27.2*cm)
+
+    x0_pdf, w, h_img, y_top = 2*cm, 17.0*cm, 5.8*cm, 22.0*cm
+    for idx, img_buf in enumerate(imgs):
+        y = y_top - idx*(h_img + 0.5*cm)
+        cpdf.drawImage(ImageReader(img_buf), x0_pdf, y - h_img, width=w, height=h_img, preserveAspectRatio=True, anchor='c')
+
+    _pdf_conclusion(cpdf, conclusion)
+    _pdf_page_number(cpdf, 1)
+    cpdf.showPage()
+    cpdf.save()
+
+    out.seek(0)
+    resp = HttpResponse(out.getvalue(), content_type="application/pdf")
+    resp["Content-Disposition"] = 'attachment; filename="FreeFall_drag_natijalar.pdf"'
+    return resp
 
 
 # =========================
@@ -986,25 +1091,60 @@ def decay_view(request):
 
 
 def decay_pdf_view(request):
-    if request.method != "POST":
-        return HttpResponse("PDF faqat POST orqali yaratiladi.", status=405)
+    def _p(key, default):
+        v = request.GET.get(key) or request.POST.get(key)
+        try:
+            return float(str(v).replace(",", "."))
+        except Exception:
+            return default
 
-    data = request.POST
-    ctx = {
-        "N0": data.get("N0"),
-        "lam": data.get("lam"),
-        "t_end": data.get("t_end"),
-        "dt": data.get("dt"),
-        "img_N": data.get("img_N"),
-        "img_A": data.get("img_A"),
-        "img_lnN": data.get("img_lnN"),
-        "conclusion": data.get("conclusion"),
-    }
+    N0 = _p("N0", 1000.0)
+    lam = _p("lam", 0.5)
+    t_end = _p("t_end", 10.0)
+    dt = _p("dt", 0.05)
 
-    pdf_bytes = _render_to_pdf("ai_module/decay_pdf.html", ctx)
-    resp = HttpResponse(pdf_bytes, content_type="application/pdf")
+    t, N, A = _solve_decay(N0, lam, t_end, dt)
+    lnN = np.log(np.maximum(N, 1e-300))
+    conclusion = _build_conclusion_decay(N0, lam, t_end)
+
+    imgs = []
+    for (title, ydata, ylabel) in [
+        ("Atom soni N(t)", N, "N(t)"),
+        ("Faollik A(t)", A, "A(t)"),
+        ("ln N(t)", lnN, "ln N"),
+    ]:
+        fig = plt.figure()
+        plt.plot(t, ydata)
+        plt.xlabel("t (s)")
+        plt.ylabel(ylabel)
+        plt.title(title)
+        buf = io.BytesIO()
+        fig.savefig(buf, format="png", dpi=150, bbox_inches="tight")
+        plt.close(fig)
+        buf.seek(0)
+        imgs.append(buf)
+
+    out = io.BytesIO()
+    cpdf = canvas.Canvas(out, pagesize=A4)
+    _pdf_header(cpdf, "Radioaktiv parchalanish — PDF hisobot")
+    _pdf_params_block(cpdf, [
+        ("N0 (boshlang'ich)", f"{N0:g}"), ("λ (parchalanish doimiysi)", f"{lam:g}"),
+        ("T (s)", f"{t_end:g}"), ("dt (s)", f"{dt:g}"),
+    ], y=27.2*cm)
+
+    x0_pdf, w, h_img, y_top = 2*cm, 17.0*cm, 5.8*cm, 22.0*cm
+    for idx, img_buf in enumerate(imgs):
+        y = y_top - idx*(h_img + 0.5*cm)
+        cpdf.drawImage(ImageReader(img_buf), x0_pdf, y - h_img, width=w, height=h_img, preserveAspectRatio=True, anchor='c')
+
+    _pdf_conclusion(cpdf, conclusion)
+    _pdf_page_number(cpdf, 1)
+    cpdf.showPage()
+    cpdf.save()
+
+    out.seek(0)
+    resp = HttpResponse(out.getvalue(), content_type="application/pdf")
     resp["Content-Disposition"] = 'attachment; filename="RadioactiveDecay_natijalar.pdf"'
-    resp["X-Content-Type-Options"] = "nosniff"
     return resp
 
 # ===================================================================
@@ -1242,41 +1382,119 @@ def heat_fourier_view(request):
 # 1D issiqlik – PDF View (POST orqali)
 # ============================================================
 def heat_fourier_pdf_view(request):
-    L = float(request.POST.get("L", 1.0))
-    alpha = float(request.POST.get("alpha", 0.2))
-    nx = int(request.POST.get("nx", 40))
-    tmax = float(request.POST.get("tmax", 1.0))
-    nt = int(request.POST.get("nt", 60))
-    T_left = float(request.POST.get("T_left", 0.0))
-    T_right = float(request.POST.get("T_right", 0.0))
-    ic_type = request.POST.get("ic_type", "sine")
-    amp = float(request.POST.get("amp", 1.0))
-    x0 = float(request.POST.get("x0", 0.35))
-    sigma = float(request.POST.get("sigma", 0.08))
-    plot_tx_base64 = request.POST.get("plot_tx_base64", "")
-    plot_tmid_base64 = request.POST.get("plot_tmid_base64", "")
-    conclusion = request.POST.get("conclusion", "")
+    def _gp(key, default):
+        v = request.GET.get(key) or request.POST.get(key)
+        return v if v is not None and str(v).strip() != "" else default
 
-    context = {
-        "page_title": "Fourier issiqlik — hisobot",
-        "L": L,
-        "alpha": alpha,
-        "nx": nx,
-        "tmax": tmax,
-        "nt": nt,
-        "T_left": T_left,
-        "T_right": T_right,
-        "ic_type": ic_type,
-        "amp": amp,
-        "x0": x0,
-        "sigma": sigma,
-        "plot_tx_base64": plot_tx_base64,
-        "plot_tmid_base64": plot_tmid_base64,
-        "conclusion": conclusion,
-    }
+    def _fp(key, default):
+        try:
+            return float(str(_gp(key, default)).replace(",", "."))
+        except Exception:
+            return default
 
-    pdf_bytes = _render_to_pdf("ai_module/heat_fourier_pdf.html", context)
-    return _pdf_download_response(pdf_bytes, "heat_fourier_report.pdf")
+    def _ip(key, default):
+        try:
+            return max(int(float(str(_gp(key, default)))), 1)
+        except Exception:
+            return default
+
+    L = _fp("L", 1.0)
+    alpha = _fp("alpha", 0.2)
+    nx = max(10, _ip("nx", 40))
+    tmax = max(0.05, _fp("tmax", 1.0))
+    nt = max(10, _ip("nt", 60))
+    T_left = _fp("T_left", 0.0)
+    T_right = _fp("T_right", 0.0)
+    ic_type = str(_gp("ic_type", "sine")).strip().lower()
+    amp = _fp("amp", 1.0)
+    x0_ic = _fp("x0", 0.35)
+    sigma = max(1e-4, _fp("sigma", 0.08))
+
+    x = np.linspace(0.0, L, nx)
+    dx = x[1] - x[0]
+
+    if ic_type == "gaussian":
+        T0 = amp * np.exp(-0.5 * ((x - x0_ic) / sigma) ** 2)
+    elif ic_type == "step":
+        T0 = amp * (x >= x0_ic).astype(float)
+    else:
+        ic_type = "sine"
+        T0 = amp * np.sin(np.pi * x / L)
+    T0[0] = T_left
+    T0[-1] = T_right
+
+    def rhs(ti, y):
+        T = np.empty(nx, dtype=float)
+        T[0] = T_left
+        T[-1] = T_right
+        T[1:-1] = y
+        d2 = (T[2:] - 2.0 * T[1:-1] + T[:-2]) / (dx * dx)
+        return alpha * d2
+
+    y0 = T0[1:-1].copy()
+    t_eval = np.linspace(0.0, tmax, nt)
+    sol = solve_ivp(rhs, (0.0, tmax), y0, t_eval=t_eval, method="RK45", rtol=1e-6, atol=1e-8)
+
+    T_mat = np.zeros((len(sol.t), nx), dtype=float)
+    T_mat[:, 0] = T_left
+    T_mat[:, -1] = T_right
+    T_mat[:, 1:-1] = sol.y.T
+
+    conclusion = _build_conclusion_heat(alpha, L, tmax, nx, nt, ic_type, amp, x0_ic, sigma,
+                                        T_left, T_right, T_mat, x, sol.t)
+
+    imgs = []
+    fig1 = plt.figure(figsize=(6, 3))
+    ax1 = fig1.add_subplot(111)
+    idxs = sorted(list(set([0, len(sol.t)//3, 2*len(sol.t)//3, len(sol.t)-1])))
+    for i in [j for j in idxs if 0 <= j < len(sol.t)]:
+        ax1.plot(x, T_mat[i, :], label=f"t={sol.t[i]:.3f}")
+    ax1.set_xlabel("x (m)")
+    ax1.set_ylabel("T (°C)")
+    ax1.set_title("T(x,t) – tanlangan vaqtlar")
+    ax1.legend()
+    buf1 = io.BytesIO()
+    fig1.savefig(buf1, format="png", dpi=150, bbox_inches="tight")
+    plt.close(fig1)
+    buf1.seek(0)
+    imgs.append(buf1)
+
+    mid_j = nx // 2
+    fig2 = plt.figure(figsize=(6, 3))
+    ax2 = fig2.add_subplot(111)
+    ax2.plot(sol.t, T_mat[:, mid_j])
+    ax2.set_xlabel("t (s)")
+    ax2.set_ylabel(f"T(x={x[mid_j]:.3f}, t) (°C)")
+    ax2.set_title("O'rtadagi nuqtada T(t)")
+    buf2 = io.BytesIO()
+    fig2.savefig(buf2, format="png", dpi=150, bbox_inches="tight")
+    plt.close(fig2)
+    buf2.seek(0)
+    imgs.append(buf2)
+
+    out = io.BytesIO()
+    cpdf = canvas.Canvas(out, pagesize=A4)
+    _pdf_header(cpdf, "Fourier issiqlik tenglamasi — PDF hisobot")
+    _pdf_params_block(cpdf, [
+        ("L (m)", f"{L:g}"), ("α (m²/s)", f"{alpha:g}"), ("nx", f"{nx}"),
+        ("tmax (s)", f"{tmax:g}"), ("nt", f"{nt}"), ("T_left", f"{T_left:g}"),
+        ("T_right", f"{T_right:g}"), ("IC turi", ic_type),
+    ], y=27.2*cm)
+
+    x0_pdf, w, h_img, y_top = 2*cm, 17.0*cm, 7.0*cm, 22.5*cm
+    for idx, img_buf in enumerate(imgs):
+        y = y_top - idx*(h_img + 0.8*cm)
+        cpdf.drawImage(ImageReader(img_buf), x0_pdf, y - h_img, width=w, height=h_img, preserveAspectRatio=True, anchor='c')
+
+    _pdf_conclusion(cpdf, conclusion)
+    _pdf_page_number(cpdf, 1)
+    cpdf.showPage()
+    cpdf.save()
+
+    out.seek(0)
+    resp = HttpResponse(out.getvalue(), content_type="application/pdf")
+    resp["Content-Disposition"] = 'attachment; filename="heat_fourier_report.pdf"'
+    return resp
 
 
 

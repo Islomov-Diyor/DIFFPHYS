@@ -186,27 +186,12 @@
               </div>
             {% endif %}
 
-            <!-- PDF FORM: faqat POST + CSRF -->
+            <!-- PDF (GET) -->
             <div class="d-flex gap-2 mt-3 flex-wrap">
-              <form id="pdfForm" method="post" action="{% url 'ai_module:decay_pdf' %}">
-                {% csrf_token %}
-
-                <!-- Parametrlar -->
-                <input type="hidden" name="N0" value="{{ form.N0.value }}">
-                <input type="hidden" name="lam" value="{{ form.lam.value }}">
-                <input type="hidden" name="t_end" value="{{ form.t_end.value }}">
-                <input type="hidden" name="dt" value="{{ form.dt.value }}">
-
-                <!-- Tayyor natijalar (PDFga uzatamiz) -->
-                <input type="hidden" name="img_N" value="{{ img_N }}">
-                <input type="hidden" name="img_A" value="{{ img_A }}">
-                <input type="hidden" name="img_lnN" value="{{ img_lnN }}">
-                <input type="hidden" name="conclusion" value="{{ conclusion }}">
-
-                <button type="submit" class="btn btn-outline-dark btn-pill">
-                  PDF yuklab olish
-                </button>
-              </form>
+              <a href="{% url 'ai_module:decay_pdf' %}?N0={{ form.N0.value }}&lam={{ form.lam.value }}&t_end={{ form.t_end.value }}&dt={{ form.dt.value }}"
+                 class="btn btn-outline-dark btn-pill">
+                PDF yuklab olish
+              </a>
             </div>
 
           {% else %}

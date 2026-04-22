@@ -251,27 +251,11 @@
             </div>
 
             <!-- PDF YUKLAB OLISH (faqat natija chiqqandan keyin) -->
-            <form method="post" action="{% url 'ai_module:rlc_pdf' %}">
-              {% csrf_token %}
-              <input type="hidden" name="R" value="{{ form.R.value }}">
-              <input type="hidden" name="L" value="{{ form.L.value }}">
-              <input type="hidden" name="C" value="{{ form.C.value }}">
-              <input type="hidden" name="V0" value="{{ form.V0.value }}">
-              <input type="hidden" name="q0" value="{{ form.q0.value }}">
-              <input type="hidden" name="i0" value="{{ form.i0.value }}">
-              <input type="hidden" name="t_end" value="{{ form.t_end.value }}">
-              <input type="hidden" name="dt" value="{{ form.dt.value }}">
-
-              <input type="hidden" name="img_i" value="{{ img_i }}">
-              <input type="hidden" name="img_vc" value="{{ img_vc }}">
-              <input type="hidden" name="img_q" value="{{ img_q }}">
-              <input type="hidden" name="conclusion" value="{{ conclusion }}">
-
-              <button class="btn btn-outline-primary">
-                <i class="bi bi-file-earmark-pdf me-1"></i>
-                PDF yuklab olish
-              </button>
-            </form>
+            <a href="{% url 'ai_module:rlc_pdf' %}?R={{ form.R.value }}&L={{ form.L.value }}&C={{ form.C.value }}&V0={{ form.V0.value }}&q0={{ form.q0.value }}&i0={{ form.i0.value }}&t_end={{ form.t_end.value }}&dt={{ form.dt.value }}"
+               class="btn btn-outline-primary">
+              <i class="bi bi-file-earmark-pdf me-1"></i>
+              PDF yuklab olish
+            </a>
           {% endif %}
 
         {% else %}

@@ -237,30 +237,10 @@
 
               <!-- PDF YUKLAB OLISH -->
               <div class="d-flex gap-2 mt-3 flex-wrap">
-                <form method="post" action="{% url 'ai_module:mass_spring_pdf' %}">
-                  {% csrf_token %}
-
-                  <!-- Parametrlar -->
-                  <input type="hidden" name="m" value="{{ form.m.value }}">
-                  <input type="hidden" name="k" value="{{ form.k.value }}">
-                  <input type="hidden" name="c" value="{{ form.c.value }}">
-                  <input type="hidden" name="x0" value="{{ form.x0.value }}">
-                  <input type="hidden" name="v0" value="{{ form.v0.value }}">
-                  <input type="hidden" name="t_end" value="{{ form.t_end.value }}">
-                  <input type="hidden" name="dt" value="{{ form.dt.value }}">
-
-                  <!-- Grafiklar (base64) -->
-                  <input type="hidden" name="img_x" value="{{ img_x }}">
-                  <input type="hidden" name="img_v" value="{{ img_v }}">
-                  <input type="hidden" name="img_E" value="{{ img_E }}">
-
-                  <!-- Xulosa -->
-                  <input type="hidden" name="conclusion" value="{{ conclusion }}">
-
-                  <button type="submit" class="btn btn-outline-dark btn-pill">
-                    PDF yuklab olish
-                  </button>
-                </form>
+                <a href="{% url 'ai_module:mass_spring_pdf' %}?m={{ form.m.value }}&k={{ form.k.value }}&c={{ form.c.value }}&x0={{ form.x0.value }}&v0={{ form.v0.value }}&t_end={{ form.t_end.value }}&dt={{ form.dt.value }}"
+                   class="btn btn-outline-dark btn-pill">
+                  PDF yuklab olish
+                </a>
               </div>
 
             {% else %}
