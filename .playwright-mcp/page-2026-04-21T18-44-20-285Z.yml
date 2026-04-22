@@ -1,0 +1,205 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link " Diffphys.uz" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: 
+        - text: Diffphys.uz
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Bosh sahifa" [ref=e9] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e10]:
+          - link "O'qituvchilarga" [ref=e11] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e12]:
+          - link "Talabalarga" [ref=e13] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e14]:
+          - link "Interaktiv masalalar" [ref=e15] [cursor=pointer]:
+            - /url: /teacher/
+        - listitem [ref=e16]:
+          - button "Men haqimda" [ref=e17] [cursor=pointer]
+        - listitem [ref=e18]:
+          - link "Bog'lanish" [ref=e19] [cursor=pointer]:
+            - /url: /contact/
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - img "Amaliy mashg'ulotlar" [ref=e22]
+      - generic [ref=e23]: Amaliy mashg‘ulotlar
+    - generic [ref=e25]:
+      - generic [ref=e27]:
+        - img "1-Mavzu. Tekislikda berilgan egri chiziqlar asosida differensial tenglamalar tuzish" [ref=e28]
+        - generic [ref=e29]:
+          - heading "1-Mavzu. Tekislikda berilgan egri chiziqlar asosida differensial tenglamalar tuzish" [level=5] [ref=e30]
+          - paragraph [ref=e31]:
+            - strong [ref=e32]: "Fan:"
+            - text: Differensial tenglamalar
+          - paragraph [ref=e33]: "Mashg‘ulot raqami: 1"
+          - paragraph [ref=e34]: "Yuklab olindi: 57 marta"
+          - link "Yuklab olish" [ref=e35] [cursor=pointer]:
+            - /url: /practicals/3/download/
+      - generic [ref=e37]:
+        - img "2-Mavzu. O‘zgaruvchilari ajralgan va ajraladigan tenglamalar" [ref=e38]
+        - generic [ref=e39]:
+          - heading "2-Mavzu. O‘zgaruvchilari ajralgan va ajraladigan tenglamalar" [level=5] [ref=e40]
+          - paragraph [ref=e41]:
+            - strong [ref=e42]: "Fan:"
+            - text: Differensial tenglamalar
+          - paragraph [ref=e43]: "Mashg‘ulot raqami: 2"
+          - paragraph [ref=e44]: "Yuklab olindi: 57 marta"
+          - link "Yuklab olish" [ref=e45] [cursor=pointer]:
+            - /url: /practicals/4/download/
+      - generic [ref=e47]:
+        - img "3-Mavzu. O’zgaruvchilariga nisbatan bir jinsli va unga keltiriladigan bir jinsli tenglamalar" [ref=e48]
+        - generic [ref=e49]:
+          - heading "3-Mavzu. O’zgaruvchilariga nisbatan bir jinsli va unga keltiriladigan bir jinsli tenglamalar" [level=5] [ref=e50]
+          - paragraph [ref=e51]:
+            - strong [ref=e52]: "Fan:"
+            - text: Differensial tenglamalar
+          - paragraph [ref=e53]: "Mashg‘ulot raqami: 3"
+          - paragraph [ref=e54]: "Yuklab olindi: 56 marta"
+          - link "Yuklab olish" [ref=e55] [cursor=pointer]:
+            - /url: /practicals/5/download/
+      - generic [ref=e57]:
+        - img "4-Mavzu. To'la differensial tenglamalar. Integrallovchi ko‘paytuvchini topish" [ref=e58]
+        - generic [ref=e59]:
+          - heading "4-Mavzu. To'la differensial tenglamalar. Integrallovchi ko‘paytuvchini topish" [level=5] [ref=e60]
+          - paragraph [ref=e61]:
+            - strong [ref=e62]: "Fan:"
+            - text: Differensial tenglamalar
+          - paragraph [ref=e63]: "Mashg‘ulot raqami: 4"
+          - paragraph [ref=e64]: "Yuklab olindi: 55 marta"
+          - link "Yuklab olish" [ref=e65] [cursor=pointer]:
+            - /url: /practicals/6/download/
+      - generic [ref=e67]:
+        - img "5-Mavzu. Birinchi tartibli tenglama uchun Koshi masalasi. Yechimning mavjudligi va yagonaligi haqidagi teorema" [ref=e68]
+        - generic [ref=e69]:
+          - heading "5-Mavzu. Birinchi tartibli tenglama uchun Koshi masalasi. Yechimning mavjudligi va yagonaligi haqidagi teorema" [level=5] [ref=e70]
+          - paragraph [ref=e71]:
+            - strong [ref=e72]: "Fan:"
+            - text: Differensial tenglamalar
+          - paragraph [ref=e73]: "Mashg‘ulot raqami: 5"
+          - paragraph [ref=e74]: "Yuklab olindi: 55 marta"
+          - link "Yuklab olish" [ref=e75] [cursor=pointer]:
+            - /url: /practicals/7/download/
+      - generic [ref=e77]:
+        - img "6-Mavzu. Issiqlik o'tkazuvchanlik jarayonining differensial modeli (Fourier qonuni asosida)" [ref=e78]
+        - generic [ref=e79]:
+          - heading "6-Mavzu. Issiqlik o'tkazuvchanlik jarayonining differensial modeli (Fourier qonuni asosida)" [level=5] [ref=e80]
+          - paragraph [ref=e81]:
+            - strong [ref=e82]: "Fan:"
+            - text: Differensial tenglamalar
+          - paragraph [ref=e83]: "Mashg‘ulot raqami: 6"
+          - paragraph [ref=e84]: "Yuklab olindi: 56 marta"
+          - link "Yuklab olish" [ref=e85] [cursor=pointer]:
+            - /url: /practicals/8/download/
+      - generic [ref=e87]:
+        - img "7-Mavzu. Hosilaga nisbatan yechilmagan tenglamani yechish usullar" [ref=e88]
+        - generic [ref=e89]:
+          - heading "7-Mavzu. Hosilaga nisbatan yechilmagan tenglamani yechish usullar" [level=5] [ref=e90]
+          - paragraph [ref=e91]:
+            - strong [ref=e92]: "Fan:"
+            - text: Differensial tenglamalar
+          - paragraph [ref=e93]: "Mashg‘ulot raqami: 7"
+          - paragraph [ref=e94]: "Yuklab olindi: 55 marta"
+          - link "Yuklab olish" [ref=e95] [cursor=pointer]:
+            - /url: /practicals/9/download/
+      - generic [ref=e97]:
+        - img "8-MAVZU. Elastik element (prujina)ga ulangan massaning harakati (Hooke qonuni asosida 2-tartibli tenglama bilan)" [ref=e98]
+        - generic [ref=e99]:
+          - heading "8-MAVZU. Elastik element (prujina)ga ulangan massaning harakati (Hooke qonuni asosida 2-tartibli tenglama bilan)" [level=5] [ref=e100]
+          - paragraph [ref=e101]:
+            - strong [ref=e102]: "Fan:"
+            - text: Differensial tenglamalar
+          - paragraph [ref=e103]: "Mashg‘ulot raqami: 8"
+          - paragraph [ref=e104]: "Yuklab olindi: 55 marta"
+          - link "Yuklab olish" [ref=e105] [cursor=pointer]:
+            - /url: /practicals/10/download/
+      - generic [ref=e107]:
+        - img "9-Mavzu. O‘zgarmas koeffitsientli yuqori tartibli chiziqli differensial tenglamalarni yechish" [ref=e108]
+        - generic [ref=e109]:
+          - heading "9-Mavzu. O‘zgarmas koeffitsientli yuqori tartibli chiziqli differensial tenglamalarni yechish" [level=5] [ref=e110]
+          - paragraph [ref=e111]:
+            - strong [ref=e112]: "Fan:"
+            - text: Differensial tenglamalar
+          - paragraph [ref=e113]: "Mashg‘ulot raqami: 9"
+          - paragraph [ref=e114]: "Yuklab olindi: 56 marta"
+          - link "Yuklab olish" [ref=e115] [cursor=pointer]:
+            - /url: /practicals/11/download/
+      - generic [ref=e117]:
+        - img "10-Mavzu. Havo qarshiligi ta’sirida erkin tushayotgan jism harakati (og‘irlik + qarshilik)" [ref=e118]
+        - generic [ref=e119]:
+          - heading "10-Mavzu. Havo qarshiligi ta’sirida erkin tushayotgan jism harakati (og‘irlik + qarshilik)" [level=5] [ref=e120]
+          - paragraph [ref=e121]:
+            - strong [ref=e122]: "Fan:"
+            - text: Differensial tenglamalar
+          - paragraph [ref=e123]: "Mashg‘ulot raqami: 10"
+          - paragraph [ref=e124]: "Yuklab olindi: 55 marta"
+          - link "Yuklab olish" [ref=e125] [cursor=pointer]:
+            - /url: /practicals/12/download/
+      - generic [ref=e127]:
+        - img "11-Mavzu. O‘zgarmas koeffitsientli chiziqli differensial tenglamalar" [ref=e128]
+        - generic [ref=e129]:
+          - heading "11-Mavzu. O‘zgarmas koeffitsientli chiziqli differensial tenglamalar" [level=5] [ref=e130]
+          - paragraph [ref=e131]:
+            - strong [ref=e132]: "Fan:"
+            - text: Differensial tenglamalar
+          - paragraph [ref=e133]: "Mashg‘ulot raqami: 11"
+          - paragraph [ref=e134]: "Yuklab olindi: 56 marta"
+          - link "Yuklab olish" [ref=e135] [cursor=pointer]:
+            - /url: /practicals/13/download/
+      - generic [ref=e137]:
+        - img "12-Mavzu. Kirxgof qonunlari asosida RLC elektr zanjiri modellari" [ref=e138]
+        - generic [ref=e139]:
+          - heading "12-Mavzu. Kirxgof qonunlari asosida RLC elektr zanjiri modellari" [level=5] [ref=e140]
+          - paragraph [ref=e141]:
+            - strong [ref=e142]: "Fan:"
+            - text: Differensial tenglamalar
+          - paragraph [ref=e143]: "Mashg‘ulot raqami: 12"
+          - paragraph [ref=e144]: "Yuklab olindi: 56 marta"
+          - link "Yuklab olish" [ref=e145] [cursor=pointer]:
+            - /url: /practicals/14/download/
+      - generic [ref=e147]:
+        - img "13-Mavzu. O‘zgarmas koeffitsientli differensial tenglamalar sistemasi va uni yechish usullari" [ref=e148]
+        - generic [ref=e149]:
+          - heading "13-Mavzu. O‘zgarmas koeffitsientli differensial tenglamalar sistemasi va uni yechish usullari" [level=5] [ref=e150]
+          - paragraph [ref=e151]:
+            - strong [ref=e152]: "Fan:"
+            - text: Differensial tenglamalar
+          - paragraph [ref=e153]: "Mashg‘ulot raqami: 13"
+          - paragraph [ref=e154]: "Yuklab olindi: 55 marta"
+          - link "Yuklab olish" [ref=e155] [cursor=pointer]:
+            - /url: /practicals/15/download/
+      - generic [ref=e157]:
+        - img "14-Mavzu. Turg‘unlikni radioaktiv parchalanish yoki elektr rezonans asosida modellashtirish" [ref=e158]
+        - generic [ref=e159]:
+          - heading "14-Mavzu. Turg‘unlikni radioaktiv parchalanish yoki elektr rezonans asosida modellashtirish" [level=5] [ref=e160]
+          - paragraph [ref=e161]:
+            - strong [ref=e162]: "Fan:"
+            - text: Differensial tenglamalar
+          - paragraph [ref=e163]: "Mashg‘ulot raqami: 14"
+          - paragraph [ref=e164]: "Yuklab olindi: 55 marta"
+          - link "Yuklab olish" [ref=e165] [cursor=pointer]:
+            - /url: /practicals/16/download/
+      - generic [ref=e167]:
+        - img "15-Mavzu. Elastik element(prujina) va og‘irlik sistemasi orqali umumiy yechimlarni tahlil qilish" [ref=e168]
+        - generic [ref=e169]:
+          - heading "15-Mavzu. Elastik element(prujina) va og‘irlik sistemasi orqali umumiy yechimlarni tahlil qilish" [level=5] [ref=e170]
+          - paragraph [ref=e171]:
+            - strong [ref=e172]: "Fan:"
+            - text: Differensial tenglamalar
+          - paragraph [ref=e173]: "Mashg‘ulot raqami: 15"
+          - paragraph [ref=e174]: "Yuklab olindi: 55 marta"
+          - link "Yuklab olish" [ref=e175] [cursor=pointer]:
+            - /url: /practicals/17/download/
+  - contentinfo [ref=e176]:
+    - generic [ref=e177]:
+      - generic [ref=e178]:
+        - text: © 2023–2026 DIFFPHYS.UZ.
+        - generic [ref=e179]: Barcha huquqlar himoyalangan. Developed for PhD research
+      - generic [ref=e180]:
+        - link "Telegram" [ref=e181] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e182]: 
+        - generic [ref=e183]: "Loyiha muallifi: Xurramov Oybek Shermamatovich"

@@ -1,0 +1,162 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link " Diffphys.uz" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: 
+        - text: Diffphys.uz
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Bosh sahifa" [ref=e9] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e10]:
+          - link "O'qituvchilarga" [ref=e11] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e12]:
+          - link "Talabalarga" [ref=e13] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e14]:
+          - link "Interaktiv masalalar" [ref=e15] [cursor=pointer]:
+            - /url: /teacher/
+        - listitem [ref=e16]:
+          - button "Men haqimda" [ref=e17] [cursor=pointer]
+        - listitem [ref=e18]:
+          - link "Bog'lanish" [ref=e19] [cursor=pointer]:
+            - /url: /contact/
+  - generic [ref=e20]:
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e28]: 
+          - text: Interaktiv ta’lim platformasi
+        - heading "DiffPhys.uz — fizik jarayonlarni interaktiv o‘rganish" [level=1] [ref=e29]
+        - paragraph [ref=e30]: Video darslar, ma’ruza va taqdimotlar, amaliy mashg‘ulotlar, nazorat savollari hamda interaktiv xizmatlar orqali o‘rganishni tez va samarali tashkil qiling.
+        - generic [ref=e31]:
+          - link "Interaktiv xizmatlar " [ref=e32] [cursor=pointer]:
+            - /url: /teacher/
+            - text: Interaktiv xizmatlar
+            - generic [ref=e33]: 
+          - link "Video darslar " [ref=e34] [cursor=pointer]:
+            - /url: /videodarslar/
+            - text: Video darslar
+            - generic [ref=e35]: 
+        - generic [ref=e36]:
+          - generic [ref=e37]:
+            - generic [ref=e38]: 
+            - text: "Bo‘limlar: 4+"
+          - generic [ref=e39]:
+            - generic [ref=e40]: 
+            - text: Tezkor kirish
+          - generic [ref=e41]:
+            - generic [ref=e42]: 
+            - text: PhD tadqiqoti uchun
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: 
+          - text: Tezkor navigatsiya
+        - generic [ref=e47]:
+          - link " Video darslar Ko‘rish" [ref=e48] [cursor=pointer]:
+            - /url: /videodarslar/
+            - generic [ref=e49]: 
+            - text: Video darslar
+            - generic [ref=e50]: Ko‘rish
+          - link " Ma’ruza mashg‘ulotlari Ochish" [ref=e51] [cursor=pointer]:
+            - /url: /maruzalar/
+            - generic [ref=e52]: 
+            - text: Ma’ruza mashg‘ulotlari
+            - generic [ref=e53]: Ochish
+          - link " Amaliy mashg‘ulotlar Boshlash" [ref=e54] [cursor=pointer]:
+            - /url: /practicals/
+            - generic [ref=e55]: 
+            - text: Amaliy mashg‘ulotlar
+            - generic [ref=e56]: Boshlash
+          - link " Nazorat savollari O‘tish" [ref=e57] [cursor=pointer]:
+            - /url: /nazorat/
+            - generic [ref=e58]: 
+            - text: Nazorat savollari
+            - generic [ref=e59]: O‘tish
+          - link " Taqdimotlar Ko‘rish" [ref=e60] [cursor=pointer]:
+            - /url: /presentations/
+            - generic [ref=e61]: 
+            - text: Taqdimotlar
+            - generic [ref=e62]: Ko‘rish
+        - link "Bog‘lanish " [ref=e64] [cursor=pointer]:
+          - /url: /contact/
+          - text: Bog‘lanish
+          - generic [ref=e65]: 
+    - generic [ref=e67]:
+      - generic [ref=e68]:
+        - heading "Platforma bo‘limlari" [level=2] [ref=e69]
+        - paragraph [ref=e70]: Kerakli resursga 1 klikda o‘ting.
+      - generic [ref=e71]:
+        - link " Video darslar Interaktiv video darslar bilan tanishing." [ref=e73] [cursor=pointer]:
+          - /url: /videodarslar/
+          - generic [ref=e75]: 
+          - generic [ref=e76]: Video darslar
+          - generic [ref=e77]: Interaktiv video darslar bilan tanishing.
+        - link " Ma’ruzalar Darslar uchun ma’ruza materiallari." [ref=e79] [cursor=pointer]:
+          - /url: /maruzalar/
+          - generic [ref=e81]: 
+          - generic [ref=e82]: Ma’ruzalar
+          - generic [ref=e83]: Darslar uchun ma’ruza materiallari.
+        - link " Amaliylar Amaliy mashg‘ulotlar uchun topshiriqlar." [ref=e85] [cursor=pointer]:
+          - /url: /practicals/
+          - generic [ref=e87]: 
+          - generic [ref=e88]: Amaliylar
+          - generic [ref=e89]: Amaliy mashg‘ulotlar uchun topshiriqlar.
+        - link " Nazorat Nazorat savollari va testlar sahifasi." [ref=e91] [cursor=pointer]:
+          - /url: /nazorat/
+          - generic [ref=e93]: 
+          - generic [ref=e94]: Nazorat
+          - generic [ref=e95]: Nazorat savollari va testlar sahifasi.
+    - generic [ref=e99]:
+      - link "Fizika bo‘yicha onlayn portal Fizika bo‘yicha onlayn portal" [ref=e100] [cursor=pointer]:
+        - /url: https://www.physics.org
+        - img "Fizika bo‘yicha onlayn portal" [ref=e101]
+        - generic [ref=e102]: Fizika bo‘yicha onlayn portal
+      - link "Differensial tenglamalar (Khan Academy) Differensial tenglamalar (Khan Academy)" [ref=e103] [cursor=pointer]:
+        - /url: https://www.khanacademy.org/math/differential-equations
+        - img "Differensial tenglamalar (Khan Academy)" [ref=e104]
+        - generic [ref=e105]: Differensial tenglamalar (Khan Academy)
+      - link "MIT OpenCourseWare – Fizika kurslari MIT OpenCourseWare – Fizika kurslari" [ref=e106] [cursor=pointer]:
+        - /url: https://ocw.mit.edu
+        - img "MIT OpenCourseWare – Fizika kurslari" [ref=e107]
+        - generic [ref=e108]: MIT OpenCourseWare – Fizika kurslari
+      - link "Wolfram namoyishlari (modellar) Wolfram namoyishlari (modellar)" [ref=e109] [cursor=pointer]:
+        - /url: https://demonstrations.wolfram.com
+        - img "Wolfram namoyishlari (modellar)" [ref=e110]
+        - generic [ref=e111]: Wolfram namoyishlari (modellar)
+      - link "SciPy – differensial tenglamalar kutubxonasi SciPy – differensial tenglamalar kutubxonasi" [ref=e112] [cursor=pointer]:
+        - /url: https://scipy.org
+        - img "SciPy – differensial tenglamalar kutubxonasi" [ref=e113]
+        - generic [ref=e114]: SciPy – differensial tenglamalar kutubxonasi
+      - link "Fizika bo‘yicha onlayn portal Fizika bo‘yicha onlayn portal" [ref=e115] [cursor=pointer]:
+        - /url: https://www.physics.org
+        - img "Fizika bo‘yicha onlayn portal" [ref=e116]
+        - generic [ref=e117]: Fizika bo‘yicha onlayn portal
+      - link "Differensial tenglamalar (Khan Academy) Differensial tenglamalar (Khan Academy)" [ref=e118] [cursor=pointer]:
+        - /url: https://www.khanacademy.org/math/differential-equations
+        - img "Differensial tenglamalar (Khan Academy)" [ref=e119]
+        - generic [ref=e120]: Differensial tenglamalar (Khan Academy)
+      - link "MIT OpenCourseWare – Fizika kurslari MIT OpenCourseWare – Fizika kurslari" [ref=e121] [cursor=pointer]:
+        - /url: https://ocw.mit.edu
+        - img "MIT OpenCourseWare – Fizika kurslari" [ref=e122]
+        - generic [ref=e123]: MIT OpenCourseWare – Fizika kurslari
+      - link "Wolfram namoyishlari (modellar) Wolfram namoyishlari (modellar)" [ref=e124] [cursor=pointer]:
+        - /url: https://demonstrations.wolfram.com
+        - img "Wolfram namoyishlari (modellar)" [ref=e125]
+        - generic [ref=e126]: Wolfram namoyishlari (modellar)
+      - link "SciPy – differensial tenglamalar kutubxonasi SciPy – differensial tenglamalar kutubxonasi" [ref=e127] [cursor=pointer]:
+        - /url: https://scipy.org
+        - img "SciPy – differensial tenglamalar kutubxonasi" [ref=e128]
+        - generic [ref=e129]: SciPy – differensial tenglamalar kutubxonasi
+  - contentinfo [ref=e130]:
+    - generic [ref=e131]:
+      - generic [ref=e132]:
+        - text: © 2023–2026 DIFFPHYS.UZ.
+        - generic [ref=e133]: Barcha huquqlar himoyalangan. Developed for PhD research
+      - generic [ref=e134]:
+        - link "Telegram" [ref=e135] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e136]: 
+        - generic [ref=e137]: "Loyiha muallifi: Xurramov Oybek Shermamatovich"

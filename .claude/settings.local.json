@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git rm *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git rev-list *)",
+      "Bash(git cat-file *)",
+      "Bash(sort -k2 -rn)",
+      "Bash(git filter-repo *)",
+      "Bash(pip show *)",
+      "Bash(pip install *)",
+      "Bash(git count-objects *)",
+      "Bash(git fetch *)",
+      "Bash(git commit *)",
+      "Bash(git reset *)",
+      "Bash(cp media/lectures/images/1.png static/images/1.png)",
+      "Bash(cp media/lectures/images/2.png static/images/2.png)",
+      "Bash(cp media/lectures/images/3.png static/images/3.png)",
+      "Bash(cp media/lectures/images/4.png static/images/4.png)",
+      "Bash(cp media/lectures/images/5.png static/images/5.png)",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_navigate"
+    ]
+  }
+}

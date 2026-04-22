@@ -1,0 +1,415 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link " Diffphys.uz" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: 
+        - text: Diffphys.uz
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Bosh sahifa" [ref=e9] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e10]:
+          - link "O'qituvchilarga" [ref=e11] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e12]:
+          - link "Talabalarga" [ref=e13] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e14]:
+          - link "Interaktiv masalalar" [ref=e15] [cursor=pointer]:
+            - /url: /teacher/
+        - listitem [ref=e16]:
+          - button "Men haqimda" [ref=e17] [cursor=pointer]
+        - listitem [ref=e18]:
+          - link "Bog'lanish" [ref=e19] [cursor=pointer]:
+            - /url: /contact/
+  - generic [ref=e20]:
+    - generic [ref=e21]:
+      - img "Video darslar" [ref=e22]
+      - generic [ref=e23]: Video Darslar
+    - generic [ref=e25]:
+      - generic [ref=e27]:
+        - iframe [ref=e29]:
+          - generic [active] [ref=f16e1]:
+            - generic "YouTube Video Player" [ref=f16e3]
+            - generic [ref=f16e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f16e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f16e12] [cursor=pointer]
+                  - generic [ref=f16e19]:
+                    - generic [ref=f16e20]:
+                      - link "1 mavzu. Oddiy differensial tenglamalarning nazariy asoslari" [ref=f16e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=2z5fXaWn4Tc
+                      - link "DiffPhys Academy" [ref=f16e22] [cursor=pointer]:
+                        - /url: /channel/UCcbV_qfyK5mJn_GoHsH4p0w
+                        - generic [ref=f16e23]: DiffPhys Academy
+                    - generic [ref=f16e24]:
+                      - button [ref=f16e25] [cursor=pointer]
+                      - generic [ref=f16e27]:
+                        - generic: DiffPhys Academy
+                        - generic: No subscribers
+        - generic [ref=e30]:
+          - 'heading "1-dars: Oddiy differsial tenglamalarning nazariy asoslari" [level=5] [ref=e31]'
+          - link "YouTube’da ko‘rish" [ref=e32] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=2z5fXaWn4Tc
+      - generic [ref=e34]:
+        - iframe [ref=e36]:
+          - generic [active] [ref=f17e1]:
+            - generic "YouTube Video Player" [ref=f17e3]
+            - generic [ref=f17e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f17e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f17e12] [cursor=pointer]
+                  - generic [ref=f17e19]:
+                    - generic [ref=f17e20]:
+                      - link "2 mavzu O‘zgaruvchilari ajralgan va unga keltiriladigan differensial tenglamalar" [ref=f17e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=XK29BOGghSw
+                      - link "DiffPhys Academy" [ref=f17e22] [cursor=pointer]:
+                        - /url: /channel/UCcbV_qfyK5mJn_GoHsH4p0w
+                        - generic [ref=f17e23]: DiffPhys Academy
+                    - generic [ref=f17e24]:
+                      - button [ref=f17e25] [cursor=pointer]
+                      - generic [ref=f17e27]:
+                        - generic: DiffPhys Academy
+                        - generic: No subscribers
+        - generic [ref=e37]:
+          - 'heading "2-dars: O‘zgaruvchilari ajralgan va unga keltiriladigan differensial tenglamalar" [level=5] [ref=e38]'
+          - link "YouTube’da ko‘rish" [ref=e39] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=XK29BOGghSw
+      - generic [ref=e41]:
+        - iframe [ref=e43]:
+          - generic [active] [ref=f18e1]:
+            - generic "YouTube Video Player" [ref=f18e3]
+            - generic [ref=f18e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f18e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f18e12] [cursor=pointer]
+                  - generic [ref=f18e19]:
+                    - generic [ref=f18e20]:
+                      - link "3 mavzu Chiziqli differensial tenglamalar va unga keladigan tenglamalar Bernulli tenglamasi" [ref=f18e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=d4VDqbLL6IQ
+                      - link "DiffPhys Academy" [ref=f18e22] [cursor=pointer]:
+                        - /url: /channel/UCcbV_qfyK5mJn_GoHsH4p0w
+                        - generic [ref=f18e23]: DiffPhys Academy
+                    - generic [ref=f18e24]:
+                      - button [ref=f18e25] [cursor=pointer]
+                      - generic [ref=f18e27]:
+                        - generic: DiffPhys Academy
+                        - generic: No subscribers
+        - generic [ref=e44]:
+          - 'heading "3-dars: Chiziqli differensial tenglamalar va unga keladigan tenglamalar Bernulli tenglamasi" [level=5] [ref=e45]'
+          - link "YouTube’da ko‘rish" [ref=e46] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=d4VDqbLL6IQ
+      - generic [ref=e48]:
+        - iframe [ref=e50]:
+          - generic [active] [ref=f19e1]:
+            - generic "YouTube Video Player" [ref=f19e3]
+            - generic [ref=f19e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f19e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f19e12] [cursor=pointer]
+                  - generic [ref=f19e19]:
+                    - generic [ref=f19e20]:
+                      - link "4 mavzu To‘la differensial tenglamalar va unga keladigan tenglamalar" [ref=f19e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=wDaFocSsquY
+                      - link "DiffPhys Academy" [ref=f19e22] [cursor=pointer]:
+                        - /url: /channel/UCcbV_qfyK5mJn_GoHsH4p0w
+                        - generic [ref=f19e23]: DiffPhys Academy
+                    - generic [ref=f19e24]:
+                      - button [ref=f19e25] [cursor=pointer]
+                      - generic [ref=f19e27]:
+                        - generic: DiffPhys Academy
+                        - generic: No subscribers
+        - generic [ref=e51]:
+          - 'heading "4-dars: To‘la differensial tenglamalar va unga keladigan tenglamalar" [level=5] [ref=e52]'
+          - link "YouTube’da ko‘rish" [ref=e53] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=wDaFocSsquY
+      - generic [ref=e55]:
+        - iframe [ref=e57]:
+          - generic [active] [ref=f20e1]:
+            - generic "YouTube Video Player" [ref=f20e3]
+            - generic [ref=f20e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f20e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f20e12] [cursor=pointer]
+                  - generic [ref=f20e19]:
+                    - generic [ref=f20e20]:
+                      - link "5 mavzu Birinchi tartibli tenglama uchun Koshi masalasi Yechimning mavjudligi va yagonaligi" [ref=f20e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=iWsDWiuGS_k
+                      - link "DiffPhys Academy" [ref=f20e22] [cursor=pointer]:
+                        - /url: /channel/UCcbV_qfyK5mJn_GoHsH4p0w
+                        - generic [ref=f20e23]: DiffPhys Academy
+                    - generic [ref=f20e24]:
+                      - button [ref=f20e25] [cursor=pointer]
+                      - generic [ref=f20e27]:
+                        - generic: DiffPhys Academy
+                        - generic: No subscribers
+        - generic [ref=e58]:
+          - 'heading "5-dars: Birinchi tartibli tenglama uchun Koshi masalasi Yechimning mavjudligi va yagonaligi" [level=5] [ref=e59]'
+          - link "YouTube’da ko‘rish" [ref=e60] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=iWsDWiuGS_k
+      - generic [ref=e62]:
+        - iframe [ref=e64]:
+          - generic [active] [ref=f21e1]:
+            - generic "YouTube Video Player" [ref=f21e3]
+            - generic [ref=f21e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f21e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f21e12] [cursor=pointer]
+                  - generic [ref=f21e19]:
+                    - generic [ref=f21e20]:
+                      - link "6 ma’ruza Issiqlik o'tkazuvchanlik jarayonining differensial modeli" [ref=f21e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=kNS877CmYmc
+                      - link "DiffPhys Academy" [ref=f21e22] [cursor=pointer]:
+                        - /url: /channel/UCcbV_qfyK5mJn_GoHsH4p0w
+                        - generic [ref=f21e23]: DiffPhys Academy
+                    - generic [ref=f21e24]:
+                      - button [ref=f21e25] [cursor=pointer]
+                      - generic [ref=f21e27]:
+                        - generic: DiffPhys Academy
+                        - generic: No subscribers
+        - generic [ref=e65]:
+          - 'heading "6-dars: Issiqlik o''tkazuvchanlik jarayonining differensial modeli" [level=5] [ref=e66]'
+          - link "YouTube’da ko‘rish" [ref=e67] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=kNS877CmYmc
+      - generic [ref=e69]:
+        - iframe [ref=e71]:
+          - generic [active] [ref=f22e1]:
+            - generic "YouTube Video Player" [ref=f22e3]
+            - generic [ref=f22e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f22e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f22e12] [cursor=pointer]
+                  - generic [ref=f22e19]:
+                    - generic [ref=f22e20]:
+                      - link "7 mavzu Hosilaga nisbatan yechilmagan birinchi tartibli differensial tenglamalar va ularni integrall" [ref=f22e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=SkRrRsKGH_c
+                      - link "DiffPhys Academy" [ref=f22e22] [cursor=pointer]:
+                        - /url: /channel/UCcbV_qfyK5mJn_GoHsH4p0w
+                        - generic [ref=f22e23]: DiffPhys Academy
+                    - generic [ref=f22e24]:
+                      - button [ref=f22e25] [cursor=pointer]
+                      - generic [ref=f22e27]:
+                        - generic: DiffPhys Academy
+                        - generic: No subscribers
+        - generic [ref=e72]:
+          - 'heading "7-dars: Hosilaga nisbatan yechilmagan birinchi tartibli differensial tenglamalar va ularni integrall" [level=5] [ref=e73]'
+          - link "YouTube’da ko‘rish" [ref=e74] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=SkRrRsKGH_c
+      - generic [ref=e76]:
+        - iframe [ref=e78]:
+          - generic [active] [ref=f23e1]:
+            - generic "YouTube Video Player" [ref=f23e3]
+            - generic [ref=f23e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f23e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f23e12] [cursor=pointer]
+                  - generic [ref=f23e19]:
+                    - generic [ref=f23e20]:
+                      - link "8 mavzu Elastik element prujinaga ulangan massaning harakati Hooke qonuni asosida 2 tartibli tengla" [ref=f23e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=83fYazfn-b0
+                      - link "DiffPhys Academy" [ref=f23e22] [cursor=pointer]:
+                        - /url: /channel/UCcbV_qfyK5mJn_GoHsH4p0w
+                        - generic [ref=f23e23]: DiffPhys Academy
+                    - generic [ref=f23e24]:
+                      - button [ref=f23e25] [cursor=pointer]
+                      - generic [ref=f23e27]:
+                        - generic: DiffPhys Academy
+                        - generic: No subscribers
+        - generic [ref=e79]:
+          - 'heading "8-dars: Elastik element (prujina)ga ulangan massaning harakati (Hooke qonuni asosida 2-tartibli tenglama bilan)" [level=5] [ref=e80]'
+          - link "YouTube’da ko‘rish" [ref=e81] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=83fYazfn-b0
+      - generic [ref=e83]:
+        - iframe [ref=e85]:
+          - generic [active] [ref=f24e1]:
+            - generic "YouTube Video Player" [ref=f24e3]
+            - generic [ref=f24e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f24e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f24e12] [cursor=pointer]
+                  - generic [ref=f24e19]:
+                    - generic [ref=f24e20]:
+                      - link "9 mavzu Tartibini pasaytirish mumkin bo‘lgan tenglamalar Tenglamada noma’lum funksiya va uning hosi" [ref=f24e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=K3IqPL-uAWU
+                      - link "DiffPhys Academy" [ref=f24e22] [cursor=pointer]:
+                        - /url: /channel/UCcbV_qfyK5mJn_GoHsH4p0w
+                        - generic [ref=f24e23]: DiffPhys Academy
+                    - generic [ref=f24e24]:
+                      - button [ref=f24e25] [cursor=pointer]
+                      - generic [ref=f24e27]:
+                        - generic: DiffPhys Academy
+                        - generic: No subscribers
+        - generic [ref=e86]:
+          - 'heading "9-dars: Tartibini pasaytirish mumkin bo‘lgan tenglamalar Tenglamada noma’lum funksiya" [level=5] [ref=e87]'
+          - link "YouTube’da ko‘rish" [ref=e88] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=K3IqPL-uAWU
+      - generic [ref=e90]:
+        - iframe [ref=e92]:
+          - generic [active] [ref=f25e1]:
+            - generic "YouTube Video Player" [ref=f25e3]
+            - generic [ref=f25e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f25e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f25e12] [cursor=pointer]
+                  - generic [ref=f25e19]:
+                    - generic [ref=f25e20]:
+                      - link "10 mavzu Havo qarshiligi ta’sirida erkin tushayotgan jism harakati og‘irlik + qarshilik" [ref=f25e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=6TOtTS7Sq08
+                      - link "DiffPhys Academy" [ref=f25e22] [cursor=pointer]:
+                        - /url: /channel/UCcbV_qfyK5mJn_GoHsH4p0w
+                        - generic [ref=f25e23]: DiffPhys Academy
+                    - generic [ref=f25e24]:
+                      - button [ref=f25e25] [cursor=pointer]
+                      - generic [ref=f25e27]:
+                        - generic: DiffPhys Academy
+                        - generic: No subscribers
+        - generic [ref=e93]:
+          - 'heading "10-dars: Havo qarshiligi ta’sirida erkin tushayotgan jism harakati og‘irlik + qarshilik" [level=5] [ref=e94]'
+          - link "YouTube’da ko‘rish" [ref=e95] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=6TOtTS7Sq08
+      - generic [ref=e97]:
+        - iframe [ref=e99]:
+          - generic [active] [ref=f26e1]:
+            - generic "YouTube Video Player" [ref=f26e3]
+            - generic [ref=f26e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f26e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f26e12] [cursor=pointer]
+                  - generic [ref=f26e19]:
+                    - generic [ref=f26e20]:
+                      - link "11 mavzu O‘zgarmas koeffitsientli chiziqli differensial tenglamalar" [ref=f26e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=6dfm-FolAPo
+                      - link "DiffPhys Academy" [ref=f26e22] [cursor=pointer]:
+                        - /url: /channel/UCcbV_qfyK5mJn_GoHsH4p0w
+                        - generic [ref=f26e23]: DiffPhys Academy
+                    - generic [ref=f26e24]:
+                      - button [ref=f26e25] [cursor=pointer]
+                      - generic [ref=f26e27]:
+                        - generic: DiffPhys Academy
+                        - generic: No subscribers
+        - generic [ref=e100]:
+          - 'heading "11-dars: O‘zgarmas koeffitsientli chiziqli differensial tenglamalar" [level=5] [ref=e101]'
+          - link "YouTube’da ko‘rish" [ref=e102] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=6dfm-FolAPo
+      - generic [ref=e104]:
+        - iframe [ref=e106]:
+          - generic [active] [ref=f27e1]:
+            - generic "YouTube Video Player" [ref=f27e3]
+            - generic [ref=f27e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f27e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f27e12] [cursor=pointer]
+                  - generic [ref=f27e19]:
+                    - generic [ref=f27e20]:
+                      - link "12 mavzu Kirxgof qonunlari asosida RLC elektr zanjiri modellari" [ref=f27e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=0x5V8-BajX0
+                      - link "DiffPhys Academy" [ref=f27e22] [cursor=pointer]:
+                        - /url: /channel/UCcbV_qfyK5mJn_GoHsH4p0w
+                        - generic [ref=f27e23]: DiffPhys Academy
+                    - generic [ref=f27e24]:
+                      - button [ref=f27e25] [cursor=pointer]
+                      - generic [ref=f27e27]:
+                        - generic: DiffPhys Academy
+                        - generic: No subscribers
+        - generic [ref=e107]:
+          - 'heading "12-dars: Kirxgof qonunlari asosida RLC elektr zanjiri modellari" [level=5] [ref=e108]'
+          - link "YouTube’da ko‘rish" [ref=e109] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=0x5V8-BajX0
+      - generic [ref=e111]:
+        - iframe [ref=e113]:
+          - generic [active] [ref=f28e1]:
+            - generic "YouTube Video Player" [ref=f28e3]
+            - generic [ref=f28e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f28e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f28e12] [cursor=pointer]
+                  - generic [ref=f28e19]:
+                    - generic [ref=f28e20]:
+                      - link "13 mavzu O‘zgarmas koeffitsientli bir jinsli bo‘lmagan differensial tenglamalar sistemasi" [ref=f28e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=P5SP59KSFFc
+                      - link "DiffPhys Academy" [ref=f28e22] [cursor=pointer]:
+                        - /url: /channel/UCcbV_qfyK5mJn_GoHsH4p0w
+                        - generic [ref=f28e23]: DiffPhys Academy
+                    - generic [ref=f28e24]:
+                      - button [ref=f28e25] [cursor=pointer]
+                      - generic [ref=f28e27]:
+                        - generic: DiffPhys Academy
+                        - generic: No subscribers
+        - generic [ref=e114]:
+          - 'heading "13-dars: O‘zgarmas koeffitsientli bir jinsli bo‘lmagan differensial tenglamalar sistemasi" [level=5] [ref=e115]'
+          - link "YouTube’da ko‘rish" [ref=e116] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=P5SP59KSFFc
+      - generic [ref=e118]:
+        - iframe [ref=e120]:
+          - generic [active] [ref=f29e1]:
+            - generic "YouTube Video Player" [ref=f29e3]
+            - generic [ref=f29e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f29e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f29e12] [cursor=pointer]
+                  - generic [ref=f29e19]:
+                    - generic [ref=f29e20]:
+                      - link "14 mavzu Turg‘unlikni radioaktiv parchalanish yoki elektr rezonans asosida modellashtirish" [ref=f29e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=CiMPtdKHFZo
+                      - link "DiffPhys Academy" [ref=f29e22] [cursor=pointer]:
+                        - /url: /channel/UCcbV_qfyK5mJn_GoHsH4p0w
+                        - generic [ref=f29e23]: DiffPhys Academy
+                    - generic [ref=f29e24]:
+                      - button [ref=f29e25] [cursor=pointer]
+                      - generic [ref=f29e27]:
+                        - generic: DiffPhys Academy
+                        - generic: No subscribers
+        - generic [ref=e121]:
+          - 'heading "14-dars: Turg‘unlikni radioaktiv parchalanish yoki elektr rezonans asosida modellashtirish" [level=5] [ref=e122]'
+          - link "YouTube’da ko‘rish" [ref=e123] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=CiMPtdKHFZo
+      - generic [ref=e125]:
+        - iframe [ref=e127]:
+          - generic [active] [ref=f30e1]:
+            - generic "YouTube Video Player" [ref=f30e3]
+            - generic [ref=f30e5]:
+              - generic:
+                - generic:
+                  - button "Play video" [ref=f30e10] [cursor=pointer]
+                  - button "Hide player controls" [ref=f30e12] [cursor=pointer]
+                  - generic [ref=f30e19]:
+                    - generic [ref=f30e20]:
+                      - link "15 mavzu Elastik element prujina va og‘irlik sistemasi orqali umumiy yechimlarni tahlil qilish" [ref=f30e21] [cursor=pointer]:
+                        - /url: https://www.youtube.com/watch?v=xMPIvw7A5a8
+                      - link "DiffPhys Academy" [ref=f30e22] [cursor=pointer]:
+                        - /url: /channel/UCcbV_qfyK5mJn_GoHsH4p0w
+                        - generic [ref=f30e23]: DiffPhys Academy
+                    - generic [ref=f30e24]:
+                      - button [ref=f30e25] [cursor=pointer]
+                      - generic [ref=f30e27]:
+                        - generic: DiffPhys Academy
+                        - generic: No subscribers
+        - generic [ref=e128]:
+          - 'heading "15-dars: Elastik element prujina va og‘irlik sistemasi orqali umumiy yechimlarni tahlil qilish" [level=5] [ref=e129]'
+          - link "YouTube’da ko‘rish" [ref=e130] [cursor=pointer]:
+            - /url: https://www.youtube.com/watch?v=xMPIvw7A5a8
+  - contentinfo [ref=e131]:
+    - generic [ref=e132]:
+      - generic [ref=e133]:
+        - text: © 2023–2026 DIFFPHYS.UZ.
+        - generic [ref=e134]: Barcha huquqlar himoyalangan. Developed for PhD research
+      - generic [ref=e135]:
+        - link "Telegram" [ref=e136] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e137]: 
+        - generic [ref=e138]: "Loyiha muallifi: Xurramov Oybek Shermamatovich"

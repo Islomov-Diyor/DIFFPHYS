@@ -1,0 +1,66 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link " Diffphys.uz" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: 
+        - text: Diffphys.uz
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Bosh sahifa" [ref=e9] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e10]:
+          - link "O'qituvchilarga" [ref=e11] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e12]:
+          - link "Talabalarga" [ref=e13] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e14]:
+          - link "Interaktiv masalalar" [ref=e15] [cursor=pointer]:
+            - /url: /teacher/
+        - listitem [ref=e16]:
+          - button "Men haqimda" [ref=e17] [cursor=pointer]
+        - listitem [ref=e18]:
+          - link "Bog'lanish" [ref=e19] [cursor=pointer]:
+            - /url: /contact/
+  - generic [ref=e20]:
+    - heading "Metodik ta'minot" [level=1] [ref=e23]
+    - generic [ref=e25]:
+      - generic [ref=e28]:
+        - heading "Pedagogik texnologiyalar" [level=5] [ref=e29]
+        - link "Yuklab olish " [ref=e30] [cursor=pointer]:
+          - /url: /metodik/ped/1/download/
+          - text: Yuklab olish
+          - generic [ref=e31]: 
+        - paragraph [ref=e32]: "Yuklashlar soni: 52"
+      - generic [ref=e35]:
+        - heading "Baholash mezonlari" [level=5] [ref=e36]
+        - link "Yuklab olish " [ref=e37] [cursor=pointer]:
+          - /url: /metodik/mez/1/download/
+          - text: Yuklab olish
+          - generic [ref=e38]: 
+        - paragraph [ref=e39]: "Yuklashlar soni: 52"
+      - generic [ref=e42]:
+        - heading "Maslahat va tavsiyalar" [level=5] [ref=e43]
+        - link "Yuklab olish " [ref=e44] [cursor=pointer]:
+          - /url: /metodik/maslahat/1/download/
+          - text: Yuklab olish
+          - generic [ref=e45]: 
+        - paragraph [ref=e46]: "Yuklashlar soni: 50"
+      - generic [ref=e49]:
+        - heading "Mashg'ulot ishlanmalari" [level=5] [ref=e50]
+        - link "Yuklab olish " [ref=e51] [cursor=pointer]:
+          - /url: /metodik/mashgulot/1/download/
+          - text: Yuklab olish
+          - generic [ref=e52]: 
+        - paragraph [ref=e53]: "Yuklashlar soni: 48"
+  - contentinfo [ref=e54]:
+    - generic [ref=e55]:
+      - generic [ref=e56]:
+        - text: © 2023–2026 DIFFPHYS.UZ.
+        - generic [ref=e57]: Barcha huquqlar himoyalangan. Developed for PhD research
+      - generic [ref=e58]:
+        - link "Telegram" [ref=e59] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e60]: 
+        - generic [ref=e61]: "Loyiha muallifi: Xurramov Oybek Shermamatovich"

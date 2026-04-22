@@ -1,0 +1,41 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link " Diffphys.uz" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: 
+        - text: Diffphys.uz
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Bosh sahifa" [ref=e9] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e10]:
+          - link "O'qituvchilarga" [ref=e11] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e12]:
+          - link "Talabalarga" [ref=e13] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e14]:
+          - link "Interaktiv masalalar" [ref=e15] [cursor=pointer]:
+            - /url: /teacher/
+        - listitem [ref=e16]:
+          - button "Men haqimda" [ref=e17] [cursor=pointer]
+        - listitem [ref=e18]:
+          - link "Bog'lanish" [ref=e19] [cursor=pointer]:
+            - /url: /contact/
+  - generic [ref=e21]:
+    - heading "Nazorat savollari" [level=1] [ref=e22]
+    - iframe [ref=e23]: Brauzeringiz PDF-ni ko‘rsata olmaydi. <a href="/static/docs/files/nazorat-savollar1.pdf">PDF-ni yuklab oling</a>:
+      
+    - link "PDF faylni yuklab olish" [ref=e25] [cursor=pointer]:
+      - /url: /static/docs/files/nazorat-savollar1.pdf
+  - contentinfo [ref=e26]:
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - text: © 2023–2026 DIFFPHYS.UZ.
+        - generic [ref=e29]: Barcha huquqlar himoyalangan. Developed for PhD research
+      - generic [ref=e30]:
+        - link "Telegram" [ref=e31] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e32]: 
+        - generic [ref=e33]: "Loyiha muallifi: Xurramov Oybek Shermamatovich"

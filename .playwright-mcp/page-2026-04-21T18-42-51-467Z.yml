@@ -1,0 +1,265 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link " Diffphys.uz" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e5]: 
+        - text: Diffphys.uz
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Bosh sahifa" [ref=e9] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e10]:
+          - link "O'qituvchilarga" [ref=e11] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e12]:
+          - link "Talabalarga" [ref=e13] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=e14]:
+          - link "Interaktiv masalalar" [ref=e15] [cursor=pointer]:
+            - /url: /teacher/
+        - listitem [ref=e16]:
+          - button "Men haqimda" [ref=e17] [cursor=pointer]
+        - listitem [ref=e18]:
+          - link "Bog'lanish" [ref=e19] [cursor=pointer]:
+            - /url: /contact/
+  - generic [ref=e21]:
+    - generic [ref=e22]:
+      - img "hero" [ref=e23]
+      - generic [ref=e24]: Ma’ruza mashg‘ulotlari
+    - generic [ref=e25]:
+      - generic [ref=e26]:
+        - generic [ref=e30]:
+          - generic [ref=e31]: PDF preview ko‘rinmadi
+          - link "PDFni ochish" [ref=e32] [cursor=pointer]:
+            - /url: /media/lectures/9fe4f230d808489585c867d18196214b.pdf
+        - generic [ref=e33]:
+          - generic [ref=e34]: Oddiy differensial tenglamalar nazariyasining asosiy tushunchalari
+          - generic [ref=e35]: "Fan: Differensial tenglamalar"
+          - generic [ref=e36]: 1-Ma’ruza mashg‘uloti
+          - generic [ref=e37]: "Yuklab olindi: 26 marta"
+          - generic [ref=e38]:
+            - link "Yuklab olish" [ref=e39] [cursor=pointer]:
+              - /url: /maruzalar/5/download/
+            - link "Testni ishlash" [ref=e40] [cursor=pointer]:
+              - /url: /maruzalar/5/test/
+      - generic [ref=e41]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: PDF preview ko‘rinmadi
+          - link "PDFni ochish" [ref=e47] [cursor=pointer]:
+            - /url: /media/lectures/2-maru_poIKxet._Ozgaruvchilari_ajralgan_va_unga_keltiriladigan_differensial_tenglamalar.pdf
+        - generic [ref=e48]:
+          - generic [ref=e49]: O‘zgaruvchilari ajralgan va unga keltiriladigan differensial tenglamalar
+          - generic [ref=e50]: "Fan: Differensial tenglamalar"
+          - generic [ref=e51]: 2-Ma’ruza mashg‘uloti
+          - generic [ref=e52]: "Yuklab olindi: 26 marta"
+          - generic [ref=e53]:
+            - link "Yuklab olish" [ref=e54] [cursor=pointer]:
+              - /url: /maruzalar/3/download/
+            - link "Testni ishlash" [ref=e55] [cursor=pointer]:
+              - /url: /maruzalar/3/test/
+      - generic [ref=e56]:
+        - generic [ref=e60]:
+          - generic [ref=e61]: PDF preview ko‘rinmadi
+          - link "PDFni ochish" [ref=e62] [cursor=pointer]:
+            - /url: /media/lectures/8868e7b88de346949cb26fc5776275a9.pdf
+        - generic [ref=e63]:
+          - generic [ref=e64]: Chiziqli differensial tenglamalar va unga keladigan tenglamalar. Bernulli tenglamasi.
+          - generic [ref=e65]: "Fan: Differensial tenglamalar"
+          - generic [ref=e66]: 3-Ma’ruza mashg‘uloti
+          - generic [ref=e67]: "Yuklab olindi: 34 marta"
+          - generic [ref=e68]:
+            - link "Yuklab olish" [ref=e69] [cursor=pointer]:
+              - /url: /maruzalar/4/download/
+            - link "Testni ishlash" [ref=e70] [cursor=pointer]:
+              - /url: /maruzalar/4/test/
+      - generic [ref=e71]:
+        - generic [ref=e75]:
+          - generic [ref=e76]: PDF preview ko‘rinmadi
+          - link "PDFni ochish" [ref=e77] [cursor=pointer]:
+            - /url: /media/lectures/055495a6c1314f43a2bbdacb6cff79f1.pdf
+        - generic [ref=e78]:
+          - generic [ref=e79]: To‘la differensial tenglamalar va unga keladigan tenglamalar
+          - generic [ref=e80]: "Fan: Differensial tenglamalar"
+          - generic [ref=e81]: 4-Ma’ruza mashg‘uloti
+          - generic [ref=e82]: "Yuklab olindi: 25 marta"
+          - generic [ref=e83]:
+            - link "Yuklab olish" [ref=e84] [cursor=pointer]:
+              - /url: /maruzalar/6/download/
+            - link "Testni ishlash" [ref=e85] [cursor=pointer]:
+              - /url: /maruzalar/6/test/
+      - generic [ref=e86]:
+        - generic [ref=e90]:
+          - generic [ref=e91]: PDF preview ko‘rinmadi
+          - link "PDFni ochish" [ref=e92] [cursor=pointer]:
+            - /url: /media/lectures/55fc7ca235fe49f5918c95eae5127362.pdf
+        - generic [ref=e93]:
+          - generic [ref=e94]: Birinchi tartibli tenglama uchun Koshi masalasi. Yechimning mavjudligi va yagonaligi
+          - generic [ref=e95]: "Fan: Differensial tenglamalar"
+          - generic [ref=e96]: 5-Ma’ruza mashg‘uloti
+          - generic [ref=e97]: "Yuklab olindi: 25 marta"
+          - generic [ref=e98]:
+            - link "Yuklab olish" [ref=e99] [cursor=pointer]:
+              - /url: /maruzalar/7/download/
+            - link "Testni ishlash" [ref=e100] [cursor=pointer]:
+              - /url: /maruzalar/7/test/
+      - generic [ref=e101]:
+        - generic [ref=e105]:
+          - generic [ref=e106]: PDF preview ko‘rinmadi
+          - link "PDFni ochish" [ref=e107] [cursor=pointer]:
+            - /url: /media/lectures/c407fb90e9384064872ba6c3558e6acd.pdf
+        - generic [ref=e108]:
+          - generic [ref=e109]: Differensial tenglama yechimining parametrlarga va boshlang’ich shartlarga bog’liqligi. Maxsus yechimlar
+          - generic [ref=e110]: "Fan: Differensial tenglamalar"
+          - generic [ref=e111]: 6-Ma’ruza mashg‘uloti
+          - generic [ref=e112]: "Yuklab olindi: 25 marta"
+          - generic [ref=e113]:
+            - link "Yuklab olish" [ref=e114] [cursor=pointer]:
+              - /url: /maruzalar/8/download/
+            - link "Testni ishlash" [ref=e115] [cursor=pointer]:
+              - /url: /maruzalar/8/test/
+      - generic [ref=e116]:
+        - generic [ref=e120]:
+          - generic [ref=e121]: PDF preview ko‘rinmadi
+          - link "PDFni ochish" [ref=e122] [cursor=pointer]:
+            - /url: /media/lectures/4d9876c032964a14adde73f69fed6f26.pdf
+        - generic [ref=e123]:
+          - generic [ref=e124]: Hosilaga nisbatan yechilmagan birinchi tartibli differensial tenglamalarva ularni integrallash usullari
+          - generic [ref=e125]: "Fan: Differensial tenglamalar"
+          - generic [ref=e126]: 7-Ma’ruza mashg‘uloti
+          - generic [ref=e127]: "Yuklab olindi: 26 marta"
+          - generic [ref=e128]:
+            - link "Yuklab olish" [ref=e129] [cursor=pointer]:
+              - /url: /maruzalar/9/download/
+            - link "Testni ishlash" [ref=e130] [cursor=pointer]:
+              - /url: /maruzalar/9/test/
+      - generic [ref=e131]:
+        - generic [ref=e135]:
+          - generic [ref=e136]: PDF preview ko‘rinmadi
+          - link "PDFni ochish" [ref=e137] [cursor=pointer]:
+            - /url: /media/lectures/82a2ee467e8f4375a88c67c99b120ed9.pdf
+        - generic [ref=e138]:
+          - generic [ref=e139]: Yuqori tartibli differensial tenglamalar. Boshlang’ich shartlar. Yechimning mavjudligi va yagonaligi haqidagi teorema
+          - generic [ref=e140]: "Fan: Differensial tenglamalar"
+          - generic [ref=e141]: 8-Ma’ruza mashg‘uloti
+          - generic [ref=e142]: "Yuklab olindi: 25 marta"
+          - generic [ref=e143]:
+            - link "Yuklab olish" [ref=e144] [cursor=pointer]:
+              - /url: /maruzalar/10/download/
+            - link "Testni ishlash" [ref=e145] [cursor=pointer]:
+              - /url: /maruzalar/10/test/
+      - generic [ref=e146]:
+        - generic [ref=e150]:
+          - generic [ref=e151]: PDF preview ko‘rinmadi
+          - link "PDFni ochish" [ref=e152] [cursor=pointer]:
+            - /url: /media/lectures/b20266706dc94c2ba2c15cfdfc7cd21c.pdf
+        - generic [ref=e153]:
+          - generic [ref=e154]: Tenglamada noma’lum funksiya va uning hosilalari oshkor ko‘rinishda qatnashmagan hol
+          - generic [ref=e155]: "Fan: Differensial tenglamalar"
+          - generic [ref=e156]: 9-Ma’ruza mashg‘uloti
+          - generic [ref=e157]: "Yuklab olindi: 25 marta"
+          - generic [ref=e158]:
+            - link "Yuklab olish" [ref=e159] [cursor=pointer]:
+              - /url: /maruzalar/11/download/
+            - link "Testni ishlash" [ref=e160] [cursor=pointer]:
+              - /url: /maruzalar/11/test/
+      - generic [ref=e161]:
+        - generic [ref=e165]:
+          - generic [ref=e166]: PDF preview ko‘rinmadi
+          - link "PDFni ochish" [ref=e167] [cursor=pointer]:
+            - /url: /media/lectures/4b3370893dbd4dc7817abb73f63cbd60.pdf
+        - generic [ref=e168]:
+          - generic [ref=e169]: n-tartibli chiziqli differensial tenglamalar. Vronskiy determenanti. Fundamental yechimlar sistemasi
+          - generic [ref=e170]: "Fan: Differensial tenglamalar"
+          - generic [ref=e171]: 10-Ma’ruza mashg‘uloti
+          - generic [ref=e172]: "Yuklab olindi: 25 marta"
+          - generic [ref=e173]:
+            - link "Yuklab olish" [ref=e174] [cursor=pointer]:
+              - /url: /maruzalar/12/download/
+            - link "Testni ishlash" [ref=e175] [cursor=pointer]:
+              - /url: /maruzalar/12/test/
+      - generic [ref=e176]:
+        - generic [ref=e180]:
+          - generic [ref=e181]: PDF preview ko‘rinmadi
+          - link "PDFni ochish" [ref=e182] [cursor=pointer]:
+            - /url: /media/lectures/25f3f27186b14119b9ca7bc0312c0ddf.pdf
+        - generic [ref=e183]:
+          - generic [ref=e184]: O‘zgarmas koeffitsientli chiziqli differensial tenglamalar
+          - generic [ref=e185]: "Fan: Differensial tenglamalar"
+          - generic [ref=e186]: 11-Ma’ruza mashg‘uloti
+          - generic [ref=e187]: "Yuklab olindi: 25 marta"
+          - generic [ref=e188]:
+            - link "Yuklab olish" [ref=e189] [cursor=pointer]:
+              - /url: /maruzalar/13/download/
+            - link "Testni ishlash" [ref=e190] [cursor=pointer]:
+              - /url: /maruzalar/13/test/
+      - generic [ref=e191]:
+        - generic [ref=e195]:
+          - generic [ref=e196]: PDF preview ko‘rinmadi
+          - link "PDFni ochish" [ref=e197] [cursor=pointer]:
+            - /url: /media/lectures/4551e6bd2e7b4c179b5a38f61064a288.pdf
+        - generic [ref=e198]:
+          - generic [ref=e199]: Chiziqli differensial tenglamalar sistemasi. Chiziqli bir jinsli bo‘lmagan differensial tenglamalar sistemasi
+          - generic [ref=e200]: "Fan: Differensial tenglamalar"
+          - generic [ref=e201]: 12-Ma’ruza mashg‘uloti
+          - generic [ref=e202]: "Yuklab olindi: 25 marta"
+          - generic [ref=e203]:
+            - link "Yuklab olish" [ref=e204] [cursor=pointer]:
+              - /url: /maruzalar/14/download/
+            - link "Testni ishlash" [ref=e205] [cursor=pointer]:
+              - /url: /maruzalar/14/test/
+      - generic [ref=e206]:
+        - generic [ref=e210]:
+          - generic [ref=e211]: PDF preview ko‘rinmadi
+          - link "PDFni ochish" [ref=e212] [cursor=pointer]:
+            - /url: /media/lectures/5e8c0b63f9b7446cbc89c71d515cd3f0.pdf
+        - generic [ref=e213]:
+          - generic [ref=e214]: O‘zgarmas koeffitsientli bir jinsli bo‘lmagan differensial tenglamalar sistemasi
+          - generic [ref=e215]: "Fan: Differensial tenglamalar"
+          - generic [ref=e216]: 13-Ma’ruza mashg‘uloti
+          - generic [ref=e217]: "Yuklab olindi: 25 marta"
+          - generic [ref=e218]:
+            - link "Yuklab olish" [ref=e219] [cursor=pointer]:
+              - /url: /maruzalar/15/download/
+            - link "Testni ishlash" [ref=e220] [cursor=pointer]:
+              - /url: /maruzalar/15/test/
+      - generic [ref=e221]:
+        - generic [ref=e225]:
+          - generic [ref=e226]: PDF preview ko‘rinmadi
+          - link "PDFni ochish" [ref=e227] [cursor=pointer]:
+            - /url: /media/lectures/f0d21ad3d2fd401a9f803a55de4ad96c.pdf
+        - generic [ref=e228]:
+          - generic [ref=e229]: Turg’unlik nazariyasi. Lyapunov ma’nosida turg’unlik. Asimtotik turg’unlik haqidagi teoremalar
+          - generic [ref=e230]: "Fan: Differensial tenglamalar"
+          - generic [ref=e231]: 14-Ma’ruza mashg‘uloti
+          - generic [ref=e232]: "Yuklab olindi: 25 marta"
+          - generic [ref=e233]:
+            - link "Yuklab olish" [ref=e234] [cursor=pointer]:
+              - /url: /maruzalar/16/download/
+            - link "Testni ishlash" [ref=e235] [cursor=pointer]:
+              - /url: /maruzalar/16/test/
+      - generic [ref=e236]:
+        - generic [ref=e240]:
+          - generic [ref=e241]: PDF preview ko‘rinmadi
+          - link "PDFni ochish" [ref=e242] [cursor=pointer]:
+            - /url: /media/lectures/6e6025742631442ba2fd57990eb43bb5.pdf
+        - generic [ref=e243]:
+          - generic [ref=e244]: Xususiy hosilali birinchi tartibli chiziqli tenglama va uning umumiy yechimi
+          - generic [ref=e245]: "Fan: Differensial tenglamalar"
+          - generic [ref=e246]: 15-Ma’ruza mashg‘uloti
+          - generic [ref=e247]: "Yuklab olindi: 25 marta"
+          - generic [ref=e248]:
+            - link "Yuklab olish" [ref=e249] [cursor=pointer]:
+              - /url: /maruzalar/18/download/
+            - link "Testni ishlash" [ref=e250] [cursor=pointer]:
+              - /url: /maruzalar/18/test/
+  - contentinfo [ref=e251]:
+    - generic [ref=e252]:
+      - generic [ref=e253]:
+        - text: © 2023–2026 DIFFPHYS.UZ.
+        - generic [ref=e254]: Barcha huquqlar himoyalangan. Developed for PhD research
+      - generic [ref=e255]:
+        - link "Telegram" [ref=e256] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e257]: 
+        - generic [ref=e258]: "Loyiha muallifi: Xurramov Oybek Shermamatovich"

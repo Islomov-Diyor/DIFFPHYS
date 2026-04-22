@@ -1,0 +1,45 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - heading "Prujina–massa (Hooke qonuni) — interaktiv modul" [level=2] [ref=e6]
+      - generic [ref=e7]: "DiffPhys: ODE yechimi + vizualizatsiya + natijalar tahlili"
+    - generic [ref=e8]:
+      - generic [ref=e9]: "Yechish usuli: SciPy solve_ivp"
+      - link "← Interaktiv masalalarga qaytish" [ref=e10] [cursor=pointer]:
+        - /url: /teacher/
+  - generic [ref=e11]:
+    - generic [ref=e14]:
+      - heading "Parametrlar" [level=5] [ref=e15]
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - generic [ref=e18]: m (kg)
+          - spinbutton [ref=e19]: "1.0"
+        - generic [ref=e20]:
+          - generic [ref=e21]: k (N/m)
+          - spinbutton [ref=e22]: "10.0"
+        - generic [ref=e23]:
+          - generic [ref=e24]: c (N·s/m) — so‘nish
+          - spinbutton [ref=e25]: "0.0"
+        - separator [ref=e26]
+        - generic [ref=e27]:
+          - generic [ref=e28]: x0 (m) — boshlang‘ich siljish
+          - spinbutton [ref=e29]: "0.1"
+        - generic [ref=e30]:
+          - generic [ref=e31]: v0 (m/s) — boshlang‘ich tezlik
+          - spinbutton [ref=e32]: "0.0"
+        - separator [ref=e33]
+        - generic [ref=e34]:
+          - generic [ref=e35]: T (s) — vaqt oxiri
+          - spinbutton [ref=e36]: "10.0"
+        - generic [ref=e37]:
+          - generic [ref=e38]: dt (s) — qadam
+          - spinbutton [ref=e39]: "0.01"
+        - button "Hisoblash" [ref=e40] [cursor=pointer]
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - heading "Grafiklar" [level=5] [ref=e45]
+        - generic [ref=e46]: Natijalar avtomatik yangilanadi (POST)
+      - generic [ref=e47]:
+        - generic [ref=e48]: Grafiklar hali yo‘q
+        - generic [ref=e49]: Parametrlarni kiriting va Hisoblash tugmasini bosing.
+  - generic [ref=e50]: © DiffPhys • Django + Matplotlib • Interaktiv ODE modullar
